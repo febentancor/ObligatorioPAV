@@ -10,7 +10,7 @@ using namespace std;
 class ManejadorUsuario{
 private:
     static ManejadorUsuario* instancia;
-    map<string,Usuario*> Usuarios;
+    map<string,Usuario*> usuarios;
     ManejadorUsuario();
 public:
     static ManejadorUsuario* getInstancia();

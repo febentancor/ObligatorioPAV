@@ -1,9 +1,9 @@
 #include "Usuario.h"
 Usuario::Usuario(){}
-Usuario::Usuario(string nickname,string contrasena,string urlfoto){
+Usuario::Usuario(string nickname,string contrasena,string urlFoto){
     this->nickname=nickname;
     this->contrasena=contrasena;
-    this->urlfoto=urlfoto;
+    this->urlFoto=urlFoto;
 }
 string Usuario::getNickname(){
     return this->nickname;
@@ -20,7 +20,7 @@ void Usuario::setContrasena(string contrasena){
 string Usuario::getUrlfoto(){
     return this->urlFoto;
 }
-void Usuario::setUrlfoto(string urlfoto){
-    this->urlFoto=urlfoto;
+void Usuario::setUrlfoto(string urlFoto){
+    this->urlFoto=urlFoto;
 }
 Usuario::~Usuario(){}

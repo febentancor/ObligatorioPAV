@@ -13,8 +13,8 @@ Sesion* Sesion::getInstancia(){
 string Sesion::getNickname(){
    return this->nickname;
 }
-void Sesion::setSesion(string nick){
-    this->nickname=nick;
+void Sesion::setSesion(string nickname){
+    this->nickname=nickname;
 }
 Sesion::~Sesion(){}
 

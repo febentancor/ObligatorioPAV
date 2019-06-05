@@ -1,14 +1,16 @@
 #ifndef CODIGO_PUNTAJE_H
 #define CODIGO_PUNTAJE_H
 #include "Usuario.h"
+#include <map>
+#include <list>
 
 class Puntaje{
 private:
     int puntos;
-    map<string,Usuario*> Usuarios;
+    map<string,Usuario*> usuarios;
 public:
     Puntaje();
-    Puntaje(int,Usuario);
+    Puntaje(int);
     list<Usuario*> getUsuariosPuntaje();
     void agregarUsuarioPuntaje(Usuario*);
     int getPuntos();

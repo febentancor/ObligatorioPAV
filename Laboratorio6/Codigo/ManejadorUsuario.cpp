@@ -16,17 +16,17 @@ ManejadorUsuario* ManejadorUsuario::getInstancia(){
 list<Usuario*> ManejadorUsuario::getUsuarios(){
     list<Usuario*> lstUsuarios;
     for (map<string,Usuario*>::iterator it=this->usuarios.begin(); it!=usuarios.end(); ++it)
-        lstUsuario.push_back(it->second);
+        lstUsuarios.push_back(it->second);
     return lstUsuarios;
 }
 
-Usuario* ManejadorUsuario::buscarUsuario(string Usuario){
-    map<string,Usuario*>::iterator it = this->usuarios.find(usuario);
+Usuario* ManejadorUsuario::buscarUsuario(string x){ //se cambia a x porque tiene que ser otro nombre de la variable
+    map<string,Usuario*>::iterator it = this->usuarios.find(x);
     return it->second;
 }
 
 void ManejadorUsuario::agregarUsuario(Usuario* usuario){
-    usuario.insert(std::pair<string,Usuario*>(usuario->getNickname(),usuario));
+    usuarios.insert(std::pair<string,Usuario*>(usuario->getNickname(),usuario));
 }
 
 bool ManejadorUsuario::existeUsuario(string usuario){
