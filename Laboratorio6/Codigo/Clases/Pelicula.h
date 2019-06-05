@@ -17,6 +17,7 @@ private:
     string sipnosis;
     string poster;
     map<int, Cine*>cines;
+
 public:
     Pelicula();
     Pelicula (string, string, string);
@@ -26,7 +27,7 @@ public:
     string getSipnosis();
     void setPoster(string);
     string getPoster();
-   //virtual float puntajePromedio();
+    //virtual float puntajePromedio()=0;
    ~Pelicula();
 
 };

@@ -11,7 +11,7 @@ const string &dtHorario::getHoraCominezo() const {
 }
 
 void dtHorario::setHoraCominezo(const string &horaCominezo) {
-    dtHorario::horaCominezo = horaCominezo;
+    this->horaCominezo = horaCominezo;
 }
 
 const string &dtHorario::getHoraFin() const {
@@ -19,7 +19,7 @@ const string &dtHorario::getHoraFin() const {
 }
 
 void dtHorario::setHoraFin(const string &horaFin) {
-    dtHorario::horaFin = horaFin;
+    this->horaFin = horaFin;
 }
 
 dtHorario::dtHorario() {}

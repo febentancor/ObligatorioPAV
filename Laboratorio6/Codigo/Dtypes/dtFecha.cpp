@@ -18,7 +18,7 @@ int dtFecha::getDia() const {
 }
 
 void dtFecha::setDia(int dia) {
-    dtFecha::dia = dia;
+    this->dia = dia;
 }
 
 int dtFecha::getMes() const {
@@ -26,7 +26,7 @@ int dtFecha::getMes() const {
 }
 
 void dtFecha::setMes(int mes) {
-    dtFecha::mes = mes;
+    this->mes = mes;
 }
 
 int dtFecha::getAnio() const {
@@ -34,5 +34,5 @@ int dtFecha::getAnio() const {
 }
 
 void dtFecha::setAnio(int anio) {
-    dtFecha::anio = anio;
+    this->anio = anio;
 }

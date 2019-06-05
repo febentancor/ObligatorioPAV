@@ -15,7 +15,7 @@ const string &dtDireccion::getCalle() const {
 }
 
 void dtDireccion::setCalle(const string &calle) {
-    dtDireccion::calle = calle;
+    this->calle = calle;
 }
 
 int dtDireccion::getNumero() const {
@@ -23,7 +23,7 @@ int dtDireccion::getNumero() const {
 }
 
 void dtDireccion::setNumero(int numero) {
-    dtDireccion::numero = numero;
+    this->numero = numero;
 }
 
 dtDireccion::~dtDireccion() {}
