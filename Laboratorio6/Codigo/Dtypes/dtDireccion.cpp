@@ -5,20 +5,20 @@
 #include "dtDireccion.h"
 
 dtDireccion::dtDireccion(){}
-dtDireccion::dtDireccion(const string &calle, int numero)  {
+dtDireccion::dtDireccion(string &calle, int numero)  {
     this ->calle =calle;
     this ->numero= numero;
 }
 
-const string &dtDireccion::getCalle() const {
+string &dtDireccion::getCalle() {
     return calle;
 }
 
-void dtDireccion::setCalle(const string &calle) {
+void dtDireccion::setCalle(string calle) {
     this->calle = calle;
 }
 
-int dtDireccion::getNumero() const {
+int dtDireccion::getNumero() {
     return numero;
 }
 

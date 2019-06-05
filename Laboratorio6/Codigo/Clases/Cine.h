@@ -13,15 +13,15 @@ class Cine {
 public:
     Cine();
 
-    Cine(int id, const dtDireccion &direccion);
+    Cine(int id, dtDireccion &direccion);
 
-    int getId() const;
+    int getId() ;
 
     void setId(int id);
 
-    const dtDireccion &getDireccion() const;
+    dtDireccion getDireccion() ;
 
-    void setDireccion(const dtDireccion &direccion);
+    void setDireccion(dtDireccion direccion);
 
 private:
     int id;

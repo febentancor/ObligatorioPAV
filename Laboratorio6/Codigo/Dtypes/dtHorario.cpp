@@ -6,19 +6,19 @@
 
 
 
-const string &dtHorario::getHoraCominezo() const {
+string &dtHorario::getHoraCominezo() {
     return horaCominezo;
 }
 
-void dtHorario::setHoraCominezo(const string &horaCominezo) {
+void dtHorario::setHoraCominezo( string &horaCominezo) {
     this->horaCominezo = horaCominezo;
 }
 
-const string &dtHorario::getHoraFin() const {
+string &dtHorario::getHoraFin() {
     return horaFin;
 }
 
-void dtHorario::setHoraFin(const string &horaFin) {
+void dtHorario::setHoraFin(string &horaFin) {
     this->horaFin = horaFin;
 }
 

@@ -15,15 +15,15 @@ public:
     dtFecha();
     dtFecha(int dia, int mes, int anio);
 
-    int getDia() const;
+    int getDia();
 
     void setDia(int dia);
 
-    int getMes() const;
+    int getMes();
 
     void setMes(int mes);
 
-    int getAnio() const;
+    int getAnio();
 
     void setAnio(int anio);
 

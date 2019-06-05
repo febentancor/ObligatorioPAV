@@ -7,13 +7,13 @@
 
 Cine::Cine() {}
 
-Cine::Cine(int id, const dtDireccion &direccion){
+Cine::Cine(int id, dtDireccion &direccion){
     this -> id =id;
     this -> direccion =direccion;
 }
 
 
-int Cine::getId() const {
+int Cine::getId() {
     return id;
 }
 
@@ -21,10 +21,10 @@ void Cine::setId(int id) {
     this-> id = id;
 }
 
-const dtDireccion &Cine::getDireccion() const {
+dtDireccion Cine::getDireccion() {
     return direccion;
 }
 
-void Cine::setDireccion(const dtDireccion &direccion) {
+void Cine::setDireccion(dtDireccion direccion) {
     this-> direccion = direccion;
 }
