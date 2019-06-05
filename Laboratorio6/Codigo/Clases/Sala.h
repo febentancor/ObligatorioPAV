@@ -20,7 +20,7 @@ public:
     void setId(int);
     int getId();
     void setCapacidad(int);
-    int getCapacidad(int);
+    int getCapacidad();
     ~Sala();
 };
 

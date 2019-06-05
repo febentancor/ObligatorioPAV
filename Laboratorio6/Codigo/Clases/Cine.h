@@ -6,25 +6,26 @@
 #define LABORATORIO6_CINE_H
 
 #include "Sala.h"
+#include "Dtypes/dtDireccion.h"
 #include <map>
 
 class Cine {
 public:
     Cine();
 
-    Cine(int id, const Direccion &direccion);
+    Cine(int id, const dtDireccion &direccion);
 
     int getId() const;
 
     void setId(int id);
 
-    const Direccion &getDireccion() const;
+    const dtDireccion &getDireccion() const;
 
-    void setDireccion(const Direccion &direccion);
+    void setDireccion(const dtDireccion &direccion);
 
 private:
     int id;
-    Direccion direccion;
+    dtDireccion direccion;
     map<int,Sala*>salas;
 };
 

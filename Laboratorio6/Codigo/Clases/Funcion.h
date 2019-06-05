@@ -7,23 +7,23 @@
 
 
 #include "Pelicula.h"
-
+#include "Dtypes/dtFecha.h"
+#include "Dtypes/dtHorario.h"
 class Funcion {
 private:
     int id;
-    Fecha dia;
-    Horario horario;
+    dtFecha dia;
+    dtHorario horario;
     Pelicula *pelicula;
 public:
     Funcion();
-
-    Funcion(int, Fecha, Horario);
+    Funcion(int, dtFecha, dtHorario);
     int getId();
     void setId(int);
-    Fecha getDia();
-    void setDia(Fecha);
-    Horario getHora();
-    void setHora(Horario);
+    dtFecha getDia();
+    void setDia(dtFecha);
+    dtHorario getHora();
+    void setHora(dtHorario);
 };
 
 

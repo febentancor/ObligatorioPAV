@@ -16,7 +16,7 @@ void Sala::setId(int id) {
     this ->id=id;
 }
 int Sala::getCapacidad() {
-    retunr this -> id;
+    return this -> capacidad;
 }
 void Sala::setCapacidad(int capacidad) {
     this ->capacidad=capacidad;

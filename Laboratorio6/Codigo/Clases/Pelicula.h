@@ -6,6 +6,7 @@
 #define LABORATORIO6_PELICULA_H
 
 #include <map>
+#include "Dtypes/dtFecha.h"
 class Cine;
 using namespace std;
 

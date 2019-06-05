@@ -16,7 +16,7 @@ string Pelicula::getTitulo(){
 }
 
 void Pelicula::setTitulo(string titulo) {
-    this->titulo=titulo
+    this->titulo=titulo;
 }
 
 string Pelicula::getSipnosis(){
@@ -34,4 +34,5 @@ string Pelicula::getPoster() {
 void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
-Pelicula ~Pelicula(){}
+Pelicula::~Pelicula(){}
+

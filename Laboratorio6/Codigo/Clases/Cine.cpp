@@ -3,10 +3,11 @@
 //
 
 #include "Cine.h"
+#include "Dtypes/dtDireccion.h"
 
 Cine::Cine() {}
 
-Cine::Cine(int id, const Direccion &direccion){
+Cine::Cine(int id, const dtDireccion &direccion){
     this -> id =id;
     this -> direccion =direccion;
 }
@@ -20,10 +21,10 @@ void Cine::setId(int id) {
     this-> id = id;
 }
 
-const Direccion &Cine::getDireccion() const {
+const dtDireccion &Cine::getDireccion() const {
     return direccion;
 }
 
-void Cine::setDireccion(const Direccion &direccion) {
+void Cine::setDireccion(const dtDireccion &direccion) {
     this-> direccion = direccion;
 }
