@@ -3,13 +3,14 @@
 //
 
 #include "Pelicula.h"
+
 Pelicula::Pelicula() {}
 Pelicula::Pelicula(string titulo, string sipnosis, string poster) {
 
     this -> titulo=titulo;
     this -> sipnosis=sipnosis;
     this -> poster=poster;
-};
+}
 
 string Pelicula::getTitulo(){
     return this->titulo;
@@ -34,5 +35,6 @@ string Pelicula::getPoster() {
 void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
+
 Pelicula::~Pelicula(){}
 

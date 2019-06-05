@@ -4,7 +4,11 @@
 
 #include "dtDireccion.h"
 
-dtDireccion::dtDireccion(const string &calle, int numero) : calle(calle), numero(numero) {}
+dtDireccion::dtDireccion(){}
+dtDireccion::dtDireccion(const string &calle, int numero)  {
+    this ->calle =calle;
+    this ->numero= numero;
+}
 
 const string &dtDireccion::getCalle() const {
     return calle;

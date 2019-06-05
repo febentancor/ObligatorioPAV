@@ -1,9 +1,18 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Codigo.dir/main.cpp.obj"
+  "CMakeFiles/Codigo.dir/Clases/Cine.cpp.o"
+  "CMakeFiles/Codigo.dir/Clases/Funcion.cpp.o"
+  "CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.o"
+  "CMakeFiles/Codigo.dir/Clases/Sala.cpp.o"
+  "CMakeFiles/Codigo.dir/Dtypes/dtDireccion.cpp.o"
+  "CMakeFiles/Codigo.dir/Dtypes/dtFecha.cpp.o"
+  "CMakeFiles/Codigo.dir/Dtypes/dtHorario.cpp.o"
+  "CMakeFiles/Codigo.dir/main.cpp.o"
+  "CMakeFiles/Codigo.dir/ManejadorUsuario.cpp.o"
+  "CMakeFiles/Codigo.dir/Puntaje.cpp.o"
+  "CMakeFiles/Codigo.dir/Sesion.cpp.o"
+  "CMakeFiles/Codigo.dir/Usuario.cpp.o"
   "Codigo.pdb"
-  "Codigo.exe"
-  "Codigo.exe.manifest"
-  "libCodigo.dll.a"
+  "Codigo"
 )
 
 # Per-language clean rules from dependency scanning.

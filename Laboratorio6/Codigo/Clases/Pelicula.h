@@ -7,6 +7,7 @@
 
 #include <map>
 #include "Dtypes/dtFecha.h"
+
 class Cine;
 using namespace std;
 
@@ -25,8 +26,9 @@ public:
     string getSipnosis();
     void setPoster(string);
     string getPoster();
-    ~Pelicula();
-    virtual float puntajePromedio();
+   //virtual float puntajePromedio();
+   ~Pelicula();
+
 };
 
 

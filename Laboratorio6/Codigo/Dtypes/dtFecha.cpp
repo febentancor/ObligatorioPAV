@@ -3,12 +3,15 @@
 //
 
 #include "dtFecha.h"
+dtFecha::dtFecha(){}
+dtFecha::dtFecha(int dia, int mes, int anio){
 
-dtFecha::dtFecha(int dia, int mes, int anio) : dia(dia), mes(mes), anio(anio) {}
-
-dtFecha::~dtFecha() {
-
+    this->dia= dia;
+    this->mes= mes;
+    this->anio= anio;
 }
+
+dtFecha::~dtFecha() {}
 
 int dtFecha::getDia() const {
     return dia;
