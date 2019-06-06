@@ -26,7 +26,7 @@ public:
     void setPoster(string);
     string getPoster();
     ~Pelicula();
-    virtual float puntajePromedio();
+    virtual float puntajePromedio()=0;
 };
 
 

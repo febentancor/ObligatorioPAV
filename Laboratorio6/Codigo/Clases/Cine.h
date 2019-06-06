@@ -10,23 +10,20 @@
 #include <map>
 
 class Cine {
-public:
-    Cine();
-
-    Cine(int id, const dtDireccion &direccion);
-
-    int getId() const;
-
-    void setId(int id);
-
-    const dtDireccion &getDireccion() const;
-
-    void setDireccion(const dtDireccion &direccion);
 
 private:
     int id;
     dtDireccion direccion;
     map<int,Sala*>salas;
+
+public:
+    Cine();
+    Cine(int id, dtDireccion direccion);
+    int getId();
+    void setId(int id);
+    dtDireccion getDireccion();
+    void setDireccion(dtDireccion direccion);
+
 };
 
 

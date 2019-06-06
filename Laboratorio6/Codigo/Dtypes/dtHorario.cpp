@@ -5,22 +5,21 @@
 #include "dtHorario.h"
 
 
-
-const string &dtHorario::getHoraCominezo() const {
+dtHorario::dtHorario() {}
+string dtHorario::getHoraCominezo() {
     return horaCominezo;
 }
 
-void dtHorario::setHoraCominezo(const string &horaCominezo) {
+void dtHorario::setHoraCominezo(string horaCominezo) {
     dtHorario::horaCominezo = horaCominezo;
 }
 
-const string &dtHorario::getHoraFin() const {
+string dtHorario::getHoraFin() {
     return horaFin;
 }
 
-void dtHorario::setHoraFin(const string &horaFin) {
+void dtHorario::setHoraFin(string horaFin) {
     dtHorario::horaFin = horaFin;
 }
 
-dtHorario::dtHorario() {}
 

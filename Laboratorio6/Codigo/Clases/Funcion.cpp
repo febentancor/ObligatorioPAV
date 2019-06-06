@@ -31,4 +31,3 @@ dtHorario Funcion::getHora() {
 void Funcion::setHora(dtHorario horario)  {
     this->horario = horario;
 }
-#include "Funcion.h"
