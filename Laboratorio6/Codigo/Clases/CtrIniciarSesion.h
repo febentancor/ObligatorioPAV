@@ -12,6 +12,7 @@ public:
     void ingresarUsuario(string);
     bool ingresarContrasena(string);
     void iniciarSesion ();
+    void cargaDatos();
 
 private:
     string nickName;

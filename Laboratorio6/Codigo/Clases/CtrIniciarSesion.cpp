@@ -19,3 +19,9 @@ void CtrIniciarSesion::iniciarSesion (){
     Sesion* s =Sesion::getInstancia();
     s->setNickname(this->nickName);
 }
+
+void CtrIniciarSesion::cargaDatos(){
+    Usuario* u = new Usuario("Gonzalo","123","jsjsjsj");
+    ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
+    mU -> agregarUsuario(u);
+};
