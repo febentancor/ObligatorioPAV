@@ -4,7 +4,6 @@
 #include "./Dtypes/dtHorario.h"
 #include "./Clases/Fabrica.h"
 #include "./Clases/IctrInicioSesion.h"
-#include "ManejadorUsuario.h"
 #include "string.h"
 using namespace std;
 Fabrica* fabrica;
