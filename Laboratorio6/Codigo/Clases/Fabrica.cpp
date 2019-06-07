@@ -3,8 +3,8 @@
 //
 
 #include "Fabrica.h"
-#include "CtrIniciarSesion.h"
-#include "CtrAltaCine.h"
+#include "Controladores/CtrIniciarSesion.h"
+#include "Controladores/CtrAltaCine.h"
 Fabrica* Fabrica::instancia = NULL;
 
 Fabrica::Fabrica(){}

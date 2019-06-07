@@ -5,8 +5,8 @@
 #ifndef LABORATORIO6_FABRICA_H
 #define LABORATORIO6_FABRICA_H
 
-#include "IctrInicioSesion.h"
-#include "IctrAltaCine.h"
+#include "Inrterfaces/IctrInicioSesion.h"
+#include "Inrterfaces/IctrAltaCine.h"
 
 class Fabrica{
     private:

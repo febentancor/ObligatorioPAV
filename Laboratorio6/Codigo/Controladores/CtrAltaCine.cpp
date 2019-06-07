@@ -3,7 +3,7 @@
 //
 
 #include "CtrAltaCine.h"
-#include "ManejadorCine.h"
+#include "Manejadores/ManejadorCine.h"
 #include "./Dtypes/dtDireccion.h"
 #include "Cine.h"
 #include "Sala.h"

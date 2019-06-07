@@ -22,12 +22,24 @@ add_executable(Codigo
         Dtypes/dtFecha.h
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
+        Clases/Fabrica.cpp
+        Clases/Fabrica.h
         main.cpp
-        ManejadorUsuario.cpp
-        ManejadorUsuario.h
-        Puntaje.cpp
-        Puntaje.h
-        Sesion.cpp
-        Sesion.h
-        Usuario.cpp
-        Usuario.h)
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
+        Clases/Puntaje.cpp
+        Clases/Puntaje.h
+        Clases/Sesion.cpp
+        Clases/Sesion.h
+        Clases/Usuario.cpp
+        Clases/Usuario.h
+        Controladores/CtrAltaCine.h
+        Controladores/CtrAltaCine.cpp
+        Controladores/CtrIniciarSesion.h
+        Controladores/CtrIniciarSesion.cpp
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
+        Manejadores/ManejadorCine.cpp
+        Manejadores/ManejadorCine.h
+        Manejadores/ManejadorPelicula.cpp
+        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h)

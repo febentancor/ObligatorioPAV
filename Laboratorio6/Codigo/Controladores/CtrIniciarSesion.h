@@ -5,7 +5,7 @@
 #ifndef LABORATORIO6_CTRINICIARSESION_H
 #define LABORATORIO6_CTRINICIARSESION_H
 
-#include "IctrInicioSesion.h"
+#include "Inrterfaces/IctrInicioSesion.h"
 
 class CtrIniciarSesion: public IctrInicioSesion{
 public:

@@ -5,7 +5,7 @@
 #ifndef LABORATORIO6_CTRALTACINE_H
 #define LABORATORIO6_CTRALTACINE_H
 
-#include "IctrAltaCine.h"
+#include "Inrterfaces/IctrAltaCine.h"
 #include "./Dtypes/dtDireccion.h"
 #include <string.h>
 

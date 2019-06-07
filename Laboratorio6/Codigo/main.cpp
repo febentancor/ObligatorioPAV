@@ -3,9 +3,10 @@
 #include "./Dtypes/dtFecha.h"
 #include "./Dtypes/dtHorario.h"
 #include "./Clases/Fabrica.h"
-#include "./Clases/IctrInicioSesion.h"
-#include "./Clases/IctrAltaCine.h"
+#include "Inrterfaces/IctrInicioSesion.h"
+#include "Inrterfaces/IctrAltaCine.h"
 #include "string.h"
+#include "UI/ui.h"
 using namespace std;
 Fabrica* fabrica;
 IctrInicioSesion* ictrIS;
@@ -14,20 +15,7 @@ IctrAltaCine* ictrAC;
 //Operacion Inicio Sesion
 //void iniciarSesion(){};
 //void ingresarUsuario(){};
-void menu(){
-    //system("clear");
-    cout <<"_____________________________________________" <<endl;
-    cout <<"____________G R U P O    C I  S N E__________"<< endl;
-    cout <<"1. Iniciar Sesion"<<endl;
-    cout <<"2. Alta Cine"<<endl;
-    cout <<"3. Agregar Consulta"<<endl;
-    cout <<"4. Ver consultas antes de una fecha"<<endl;
-    cout <<"5. Eliminar Socio"<<endl;
-    cout <<"6. Obtener Mascotas de un Socio"<<endl;
-    cout <<"7. Salir"<<endl;
-    cout <<"_____________________________________________" <<endl;
-    cout <<"OPCION: ";
-}
+
 
 
 
@@ -49,10 +37,10 @@ int main() {
     while(opcion != 7){
         switch(opcion){
             case 1:
-                cout <<"Ingreses Usuario..."<<endl;
+                cout <<"Ingreses Usuario: "<<endl;
                 cin >> usr;
                 ictrIS->ingresarUsuario(usr);
-                cout <<"Ingresar contrasena"<<endl;
+                cout <<"Ingresar contrasena: "<<endl;
                 cin >> pass;
                 if(ictrIS->ingresarContrasena(pass)){
                     ictrIS->iniciarSesion();
