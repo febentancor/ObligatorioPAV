@@ -35,6 +35,10 @@ string Pelicula::getPoster() {
 void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
+float Pelicula::puntajePromedio() {
 
+    //Tenemos que recorrer la lista de puntaje que tenemos y calcular promedio
+
+}
 Pelicula::~Pelicula(){}
 

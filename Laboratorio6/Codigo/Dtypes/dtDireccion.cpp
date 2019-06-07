@@ -4,18 +4,15 @@
 
 #include "dtDireccion.h"
 
-dtDireccion::dtDireccion(){}
-dtDireccion::dtDireccion(string &calle, int numero)  {
-    this ->calle =calle;
-    this ->numero= numero;
-}
+dtDireccion::dtDireccion() {}
+dtDireccion::dtDireccion(string calle, int numero) : calle(calle), numero(numero) {}
 
-string &dtDireccion::getCalle() {
+string dtDireccion::getCalle() {
     return calle;
 }
 
 void dtDireccion::setCalle(string calle) {
-    this->calle = calle;
+    dtDireccion::calle = calle;
 }
 
 int dtDireccion::getNumero() {

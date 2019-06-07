@@ -15,13 +15,13 @@ private:
 public:
     dtHorario();
     dtHorario(string, string);
-    string &getHoraCominezo();
+    string getHoraCominezo() ;
 
-    void setHoraCominezo(string &horaCominezo);
+    void setHoraCominezo(string horaCominezo);
 
-    string &getHoraFin();
+    string getHoraFin();
 
-    void setHoraFin(string &horaFin);
+    void setHoraFin(string horaFin);
 
 };
 

@@ -13,14 +13,17 @@ class Sala {
 private:
     int id;
     int capacidad;
+    static int idAuto;
     map<int,Funcion*> funciones;
 public:
     Sala();
-    Sala (int, int);
+    Sala (int);
     void setId(int);
     int getId();
     void setCapacidad(int);
     int getCapacidad();
+    static int getIdAuto();
+
     ~Sala();
 };
 

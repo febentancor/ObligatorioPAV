@@ -4,8 +4,9 @@
 
 #include "Sala.h"
 Sala::Sala() {}
-Sala::Sala(int id, int capacidad) {
-    this -> id = id;
+int Sala::idAuto=-1;
+Sala::Sala(int capacidad) {
+    this -> id = Sala::getIdAuto();
     this ->capacidad = capacidad;
 };
 
@@ -22,3 +23,7 @@ void Sala::setCapacidad(int capacidad) {
     this ->capacidad=capacidad;
 }
 
+int Sala::getIdAuto() {
+    idAuto++;
+    return idAuto;
+}

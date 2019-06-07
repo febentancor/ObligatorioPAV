@@ -17,13 +17,13 @@ public:
     virtual ~dtDireccion();
 
     dtDireccion();
-    dtDireccion(string &calle, int numero);
+    dtDireccion(string calle, int numero);
 
-    string &getCalle() ;
+    string getCalle();
 
     void setCalle(string calle);
 
-    int getNumero() ;
+    int getNumero();
 
     void setNumero(int numero);
 };
