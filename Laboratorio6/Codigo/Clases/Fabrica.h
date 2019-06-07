@@ -6,6 +6,7 @@
 #define LABORATORIO6_FABRICA_H
 
 #include "IctrInicioSesion.h"
+#include "IctrAltaCine.h"
 
 class Fabrica{
     private:
@@ -14,6 +15,7 @@ class Fabrica{
     public:
         static Fabrica* getInstancia();
         IctrInicioSesion* getIControlador();
+        IctrAltaCine* getIControlador2();
         ~Fabrica();
 };
 

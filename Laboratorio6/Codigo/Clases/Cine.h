@@ -13,16 +13,19 @@ class Cine {
 
 private:
     int id;
+    static int idAuto;
     dtDireccion direccion;
     map<int,Sala*>salas;
 
 public:
     Cine();
-    Cine(int id, dtDireccion direccion);
+    Cine(dtDireccion direccion);
     int getId();
     void setId(int id);
     dtDireccion getDireccion();
     void setDireccion(dtDireccion direccion);
+    static int getIdAuto();
+    void agregarSala(Sala*);
 
 };
 

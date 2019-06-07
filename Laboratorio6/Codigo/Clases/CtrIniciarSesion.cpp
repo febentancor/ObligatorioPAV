@@ -4,6 +4,7 @@
 
 #include "CtrIniciarSesion.h"
 #include "ManejadorUsuario.h"
+#include "ManejadorPelicula.h"
 #include "Sesion.h"
 void CtrIniciarSesion::ingresarUsuario(string nickName){
     this -> nickName=nickName;
@@ -25,3 +26,7 @@ void CtrIniciarSesion::cargaDatos(){
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
     mU -> agregarUsuario(u);
 };
+
+void CtrIniciarSesion::cargaPelicula() {
+    Pelicula* p = new Pelicula("PELICULA1","TERROR","HOLA");
+}

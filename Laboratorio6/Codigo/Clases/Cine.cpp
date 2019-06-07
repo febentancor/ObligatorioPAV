@@ -6,10 +6,12 @@
 #include "Dtypes/dtDireccion.h"
 
 Cine::Cine() {}
+int Cine::idAuto=-1;
 
-Cine::Cine(int id, dtDireccion direccion){
-    this -> id =id;
+Cine::Cine(dtDireccion direccion){
+    this -> id =Cine::getIdAuto();
     this -> direccion =direccion;
+
 }
 
 
@@ -27,4 +29,12 @@ dtDireccion Cine::getDireccion() {
 
 void Cine::setDireccion(dtDireccion direccion) {
     this-> direccion = direccion;
+}
+int Cine::getIdAuto(){
+    idAuto++;
+    return idAuto;
+}
+
+void Cine::agregarSala(Sala* sala){
+    salas.insert(std::pair<int,Sala*>(sala->getId(),sala));
 }

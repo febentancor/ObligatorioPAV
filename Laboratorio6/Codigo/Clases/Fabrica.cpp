@@ -4,7 +4,7 @@
 
 #include "Fabrica.h"
 #include "CtrIniciarSesion.h"
-#
+#include "CtrAltaCine.h"
 Fabrica* Fabrica::instancia = NULL;
 
 Fabrica::Fabrica(){}
@@ -19,4 +19,7 @@ IctrInicioSesion* Fabrica::getIControlador(){
     return new CtrIniciarSesion();
 }
 
+IctrAltaCine* Fabrica::getIControlador2() {
+    return new CtrAltaCine();
+}
 Fabrica::~Fabrica(){}

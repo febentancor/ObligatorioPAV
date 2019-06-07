@@ -4,10 +4,12 @@
 #include "./Dtypes/dtHorario.h"
 #include "./Clases/Fabrica.h"
 #include "./Clases/IctrInicioSesion.h"
+#include "./Clases/IctrAltaCine.h"
 #include "string.h"
 using namespace std;
 Fabrica* fabrica;
 IctrInicioSesion* ictrIS;
+IctrAltaCine* ictrAC;
 
 //Operacion Inicio Sesion
 //void iniciarSesion(){};
@@ -17,7 +19,7 @@ void menu(){
     cout <<"_____________________________________________" <<endl;
     cout <<"____________G R U P O    C I  S N E__________"<< endl;
     cout <<"1. Iniciar Sesion"<<endl;
-    cout <<"2. Agregar Mascota"<<endl;
+    cout <<"2. Alta Cine"<<endl;
     cout <<"3. Agregar Consulta"<<endl;
     cout <<"4. Ver consultas antes de una fecha"<<endl;
     cout <<"5. Eliminar Socio"<<endl;
@@ -32,10 +34,15 @@ void menu(){
 /////main
 int main() {
     fabrica = Fabrica::getInstancia();
-    ictrIS = fabrica->getIControlador();
+    ictrIS = fabrica->getIControlador();//Contiene el controlador de inicio sesion
+    ictrAC = fabrica->getIControlador2();//Contien el controlador de alta cine
     int opcion;
     string usr;
+    string calle;
+    int numeroDir;
     string pass;
+    dtDireccion dir;
+    int capacidadSalas;
     ictrIS->cargaDatos();
     menu();
     cin >> opcion;
@@ -54,7 +61,17 @@ int main() {
                     cout <<"Usuario no existe o contrasena invalida"<<endl;
                 }
                 break;
-            case 2: //agregarMascota();
+            case 2:
+                cout <<"Ingreses calle: "<<endl;
+                cin >> calle;
+                cout <<"Ingreses numero: "<<endl;
+                cin >> numeroDir;
+                dir = dtDireccion(calle,numeroDir);
+                ictrAC->ingresarDireccion(dir);
+                cout <<"Ingreses capacidad: "<<endl;
+                cin >> capacidadSalas;
+                ictrAC->ingresarCapacidad(capacidadSalas);
+                ictrAC->darAltaCine();
                 break;
             case 3: //ingresarConsulta();
                 break;

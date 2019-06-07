@@ -13,6 +13,7 @@ public:
     bool ingresarContrasena(string);
     void iniciarSesion ();
     void cargaDatos();
+    void cargaPelicula();
 
 private:
     string nickName;

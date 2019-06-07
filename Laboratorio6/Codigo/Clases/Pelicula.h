@@ -6,6 +6,8 @@
 #define LABORATORIO6_PELICULA_H
 
 #include <map>
+#include <list>
+#include "Puntaje.h"
 #include "Dtypes/dtFecha.h"
 class Cine;
 using namespace std;
@@ -16,6 +18,7 @@ private:
     string sipnosis;
     string poster;
     map<int, Cine*>cines;
+    list<Puntaje*>puntajes;
 public:
     Pelicula();
     Pelicula (string, string, string);
@@ -26,7 +29,7 @@ public:
     void setPoster(string);
     string getPoster();
     ~Pelicula();
-    virtual float puntajePromedio()=0;
+    float puntajePromedio();
 };
 
 
