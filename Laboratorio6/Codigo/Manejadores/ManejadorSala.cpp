@@ -24,7 +24,7 @@ list<Sala*> ManejadorSala::getSalas() {
         lstSalas.push_back(it->second);
 }
 
-void ManejadorSala::buscarSala(int x) {
+Sala* ManejadorSala::buscarSala(int x) {
     map<int,Sala*>::iterator it = this->salas.find(x);
     return it->second;
 }
@@ -35,7 +35,7 @@ void ManejadorSala::agregarSala(Sala* sala) {
 
 bool ManejadorSala::existeSala(int id){
     map<int, Sala*>::iterator it= this->salas.find(id);
-    return (it != this-salas.end());
+    return (it != this->salas.end());
 }
 
 void ManejadorSala::eliminarSala(int id) {
