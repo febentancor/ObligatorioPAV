@@ -3,6 +3,7 @@
 //
 
 #include "Pelicula.h"
+#include <list>
 
 Pelicula::Pelicula() {}
 Pelicula::Pelicula(string titulo, string sipnosis, string poster) {
@@ -36,8 +37,13 @@ void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
 float Pelicula::puntajePromedio() {
-
-    //Tenemos que recorrer la lista de puntaje que tenemos y calcular promedio
+    int sumaPuntaje = 0;
+    int cant = 0;
+    for (list<Puntaje *>::iterator it = this->puntajes.begin(); it != puntajes.end(); ++it){
+        cant++;
+        sumaPuntaje=sumaPuntaje+(*it)->getPuntos();
+    }
+    return sumaPuntaje/cant;
 
 }
 Pelicula::~Pelicula(){}
