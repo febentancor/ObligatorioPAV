@@ -15,7 +15,7 @@ void menu(){
     cout <<"____________G R U P O    C I  S N E__________"<< endl;
     cout <<"1. Iniciar Sesion"<<endl;
     cout <<"2. Alta Cine"<<endl;
-    cout <<"3. Agregar Consulta"<<endl;
+    cout <<"3. Puntuar Pelicula"<<endl;
     cout <<"4. Ver consultas antes de una fecha"<<endl;
     cout <<"5. Eliminar Socio"<<endl;
     cout <<"6. Obtener Mascotas de un Socio"<<endl;

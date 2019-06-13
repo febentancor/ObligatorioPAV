@@ -5,12 +5,16 @@
 #include "./Clases/Fabrica.h"
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
+#include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "string.h"
 #include "UI/ui.h"
+#include <list>
+
 using namespace std;
 Fabrica* fabrica;
 IctrInicioSesion* ictrIS;
 IctrAltaCine* ictrAC;
+IctrPuntuarPelicula* ictrmP;
 
 //Operacion Inicio Sesion
 //void iniciarSesion(){};
@@ -24,6 +28,7 @@ int main() {
     fabrica = Fabrica::getInstancia();
     ictrIS = fabrica->getIControlador();//Contiene el controlador de inicio sesion
     ictrAC = fabrica->getIControlador2();//Contien el controlador de alta cine
+    ictrmP = fabrica->getIControlador3();//Contiene controlador de puntuar Pelicula
     int opcion;
     string usr;
     string calle;
@@ -32,6 +37,8 @@ int main() {
     dtDireccion dir;
     int capacidadSalas;
     ictrIS->cargaDatos();
+    string titulosPelicula;
+    list<string> listpl;
     menu();
     cin >> opcion;
     while(opcion != 7){
@@ -61,7 +68,11 @@ int main() {
                 ictrAC->ingresarCapacidad(capacidadSalas);
                 ictrAC->darAltaCine();
                 break;
-            case 3: //ingresarConsulta();
+            case 3:
+                listpl = ictrmP->listarTituloPelicula();
+                for (list<string>::iterator it=listpl.begin(); it != listpl.end(); ++it){
+                    cout << "\n" << *it;
+                }
                 break;
             case 4: //verConsultasAntesDeFecha();
                 break;

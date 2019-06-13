@@ -9,6 +9,7 @@
 
 class CtrIniciarSesion: public IctrInicioSesion{
 public:
+    //CtrIniciarSesion();
     void ingresarUsuario(string);
     bool ingresarContrasena(string);
     void iniciarSesion ();

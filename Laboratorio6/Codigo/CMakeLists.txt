@@ -42,4 +42,4 @@ add_executable(Codigo
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
-        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h)
+        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h Controladores/CtrPuntuarPelicula.cpp Controladores/CtrPuntuarPelicula.h Inrterfaces/IctrPuntuarPelicula.h)

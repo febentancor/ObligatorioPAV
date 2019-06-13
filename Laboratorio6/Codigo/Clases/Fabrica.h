@@ -7,6 +7,7 @@
 
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
+#include "Inrterfaces/IctrPuntuarPelicula.h"
 
 class Fabrica{
     private:
@@ -16,6 +17,7 @@ class Fabrica{
         static Fabrica* getInstancia();
         IctrInicioSesion* getIControlador();
         IctrAltaCine* getIControlador2();
+        IctrPuntuarPelicula* getIControlador3();
         ~Fabrica();
 };
 
