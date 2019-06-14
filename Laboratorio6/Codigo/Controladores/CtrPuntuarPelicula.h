@@ -12,10 +12,9 @@ class CtrPuntuarPelicula: public IctrPuntuarPelicula {
 public:
     //CtrPuntuarPelicula();
     list<string> listarTituloPelicula();
-
-   // virtual bool seleccionarPelicula(string)=0;
+   bool seleccionarPelicula(string);
     //virtual float verPuntaje ()=0;
-    //virtual void ingresarPuntaje(float)=0;
+    void ingresarPuntaje(float);
 
 private:
     string titulo;

@@ -39,6 +39,8 @@ int main() {
     ictrIS->cargaDatos();
     ictrIS->cargaPelicula();
     list<string> listpl;
+    string tituloPelicula;
+    bool tiene;
     menu();
     cin >> opcion;
     while(opcion != 7){
@@ -74,6 +76,9 @@ int main() {
                     cout << "\n" << *it;
                     cout << "\n";
                 }
+                cout <<"Seleccionar Pelicula: "<<endl;
+                cin >> tituloPelicula;
+                tiene=ictrmP->seleccionarPelicula(tituloPelicula);
                 break;
             case 4: //verConsultasAntesDeFecha();
                 break;

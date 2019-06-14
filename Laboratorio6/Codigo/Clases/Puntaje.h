@@ -7,14 +7,15 @@
 class Puntaje{
 private:
     int puntos;
-    map<string,Usuario*> usuarios;
+    Usuario* usuario;
 public:
     Puntaje();
     Puntaje(int);
-    list<Usuario*> getUsuariosPuntaje();
-    void agregarUsuarioPuntaje(Usuario*);
+    Usuario* getUsuario();
+    void setUsuario(Usuario*);
     int getPuntos();
     void setPuntos(int puntos);
+    string getNick();
 
     ~Puntaje();
 

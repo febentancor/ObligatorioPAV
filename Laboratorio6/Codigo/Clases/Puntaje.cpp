@@ -10,12 +10,13 @@ int Puntaje::getPuntos(){
 void Puntaje::setPuntos(int puntos) {
     this->puntos=puntos;
 }
-list<Usuario*> Puntaje::getUsuariosPuntaje(){
-    list<Usuario*> lstUsuarios;
-    for (map<string,Usuario*>::iterator it=this->usuarios.begin(); it!=usuarios.end(); ++it)
-        lstUsuarios.push_back(it->second);
-    return lstUsuarios;
+
+Usuario* Puntaje::getUsuario(){
+ return this->usuario;
 }
-void Puntaje::agregarUsuarioPuntaje(Usuario * usuario) {
-    usuarios.insert(std::pair<string,Usuario*>(usuario->getNickname(),usuario));
+void Puntaje::setUsuario(Usuario* u){
+ this->usuario= u;
+}
+string Puntaje::getNick(){
+    return this->usuario->getNickname();
 }

@@ -31,6 +31,7 @@ public:
     string getPoster();
     ~Pelicula();
     float puntajePromedio();
+    bool tengoPuntaje();
 };
 
 
