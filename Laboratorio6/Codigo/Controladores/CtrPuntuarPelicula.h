@@ -4,7 +4,7 @@
 
 #ifndef CODIGO_CTRPUNTUARPELICULA_H
 #define CODIGO_CTRPUNTUARPELICULA_H
-#include <Inrterfaces/IctrPuntuarPelicula.h>
+#include <IctrPuntuarPelicula.h>
 #include <string>
 using namespace std;
 
@@ -13,8 +13,8 @@ public:
     //CtrPuntuarPelicula();
     list<string> listarTituloPelicula();
    bool seleccionarPelicula(string);
-    //virtual float verPuntaje ()=0;
-    void ingresarPuntaje(float);
+   float verPuntaje ();
+   void ingresarPuntaje(float);
 
 private:
     string titulo;

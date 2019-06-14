@@ -8,14 +8,14 @@
 #include <list>
 #include <string>
 #include <Pelicula.h>
-#include <Manejadores/ManejadorPelicula.h>
+#include <ManejadorPelicula.h>
 
 class IctrPuntuarPelicula {
 public:
 
     virtual list<string> listarTituloPelicula()=0;
     virtual bool seleccionarPelicula(string)=0;
-    //virtual float verPuntaje ()=0;
+    virtual float verPuntaje ()=0;
     virtual void ingresarPuntaje(float)=0;
 };
 

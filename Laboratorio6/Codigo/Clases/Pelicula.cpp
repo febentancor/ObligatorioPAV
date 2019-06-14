@@ -5,6 +5,7 @@
 #include "Pelicula.h"
 #include <list>
 #include "Sesion.h"
+#include "Puntaje.h"
 
 Pelicula::Pelicula() {}
 Pelicula::Pelicula(string titulo, string sipnosis, string poster) {
@@ -59,5 +60,22 @@ bool Pelicula::tengoPuntaje() {
    }
    return tiene;
 }
+void Pelicula::ingresarPuntaje(Puntaje* pun){
+    puntajes.push_back(pun);
+}
+float Pelicula::puntajePelicula(){
+    Sesion* s= Sesion::getInstancia();
+    string nick = s->getNickname();
+    float valor;
+    list<Puntaje *>::iterator it = this->puntajes.begin();
+    while (it!=this->puntajes.end()){
+        if((*it)->getNick()==nick) {
+            valor=(*it)->getPuntos();
+        }
+        ++it;
+    }
+    return valor;
+}
+
 Pelicula::~Pelicula(){}
 

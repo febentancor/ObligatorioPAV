@@ -38,9 +38,14 @@ int main() {
     int capacidadSalas;
     ictrIS->cargaDatos();
     ictrIS->cargaPelicula();
+    // Se variables para ingresar puntaje
     list<string> listpl;
     string tituloPelicula;
     bool tiene;
+    float puntos;
+    string nuevoPuntaje;
+    float verPuntaje;
+    //
     menu();
     cin >> opcion;
     while(opcion != 7){
@@ -79,6 +84,22 @@ int main() {
                 cout <<"Seleccionar Pelicula: "<<endl;
                 cin >> tituloPelicula;
                 tiene=ictrmP->seleccionarPelicula(tituloPelicula);
+                if(tiene){
+                    verPuntaje=ictrmP->verPuntaje();
+                    cout <<"El puntaje que tiene ingresado es:"<<verPuntaje;
+                    cout << "\n";
+                    cout <<"Desea ingresar un nuevo puntaje a esta pelicula(y/n)"<<endl;
+                    cin >> nuevoPuntaje;
+                    if(nuevoPuntaje == "y" || nuevoPuntaje == "Y"){
+                        cout <<"Ingresar nuevo puntaje a la Pelicula: "<<endl;
+                        cin >> puntos;
+                        ictrmP->ingresarPuntaje(puntos);
+                    }
+                }else{
+                    cout <<"Ingresar puntaje a la Pelicula: "<<endl;
+                    cin >> puntos;
+                    ictrmP->ingresarPuntaje(puntos);
+                }
                 break;
             case 4: //verConsultasAntesDeFecha();
                 break;

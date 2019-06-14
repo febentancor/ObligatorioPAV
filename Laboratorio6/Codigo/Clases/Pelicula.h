@@ -8,7 +8,7 @@
 #include <map>
 #include <list>
 #include "Puntaje.h"
-#include "Dtypes/dtFecha.h"
+#include "dtFecha.h"
 
 class Cine;
 using namespace std;
@@ -32,6 +32,8 @@ public:
     ~Pelicula();
     float puntajePromedio();
     bool tengoPuntaje();
+    void ingresarPuntaje(Puntaje*);
+    float puntajePelicula();
 };
 
 
