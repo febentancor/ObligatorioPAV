@@ -29,4 +29,10 @@ void CtrIniciarSesion::cargaDatos(){
 
 void CtrIniciarSesion::cargaPelicula() {
     Pelicula* p = new Pelicula("PELICULA1","TERROR","HOLA");
+    ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
+    mP -> agregarPelicula(p);
+
+    Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
+    //ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
+    mP -> agregarPelicula(pe);
 }

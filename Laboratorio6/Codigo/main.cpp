@@ -37,7 +37,7 @@ int main() {
     dtDireccion dir;
     int capacidadSalas;
     ictrIS->cargaDatos();
-    string titulosPelicula;
+    ictrIS->cargaPelicula();
     list<string> listpl;
     menu();
     cin >> opcion;
@@ -72,6 +72,7 @@ int main() {
                 listpl = ictrmP->listarTituloPelicula();
                 for (list<string>::iterator it=listpl.begin(); it != listpl.end(); ++it){
                     cout << "\n" << *it;
+                    cout << "\n";
                 }
                 break;
             case 4: //verConsultasAntesDeFecha();

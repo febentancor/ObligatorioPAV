@@ -9,6 +9,9 @@ list<string> CtrPuntuarPelicula::listarTituloPelicula(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     list<Pelicula*> pelis = mP->getPeliculas();
     list<string> titulos;
+    for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
+        titulos.push_back((*it)->getTitulo());
+    }
     return titulos;
 };
 
