@@ -3,9 +3,11 @@
 #include "./Dtypes/dtFecha.h"
 #include "./Dtypes/dtHorario.h"
 #include "./Clases/Fabrica.h"
+#include "dtPelicula.h"
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
+#include "IctrAltaFuncion.h"
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
@@ -15,6 +17,7 @@ Fabrica* fabrica;
 IctrInicioSesion* ictrIS;
 IctrAltaCine* ictrAC;
 IctrPuntuarPelicula* ictrmP;
+IctrAltaFuncion* ictrAF;
 
 //Operacion Inicio Sesion
 //void iniciarSesion(){};
@@ -29,6 +32,7 @@ int main() {
     ictrIS = fabrica->getIControlador();//Contiene el controlador de inicio sesion
     ictrAC = fabrica->getIControlador2();//Contien el controlador de alta cine
     ictrmP = fabrica->getIControlador3();//Contiene controlador de puntuar Pelicula
+    ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
     int opcion;
     string usr;
     string calle;
@@ -45,7 +49,8 @@ int main() {
     float puntos;
     string nuevoPuntaje;
     float verPuntaje;
-    //
+    //Las variables de alta funcion
+    list<dtPelicula> listdtPe;
     menu();
     cin >> opcion;
     while(opcion != 7){
@@ -101,7 +106,16 @@ int main() {
                     ictrmP->ingresarPuntaje(puntos);
                 }
                 break;
-            case 4: //verConsultasAntesDeFecha();
+            case 4:
+                listdtPe = ictrAF->listarPeliculas();
+                for (list<dtPelicula>::iterator it=listdtPe.begin(); it != listdtPe.end(); ++it){
+                    cout << "\n" << (*it).getTitulo();
+                    cout << "\n" << (*it).getPoster();
+                    cout << "\n" << (*it).getSipnosis();
+                    cout << "\n" << (*it).getPuntaje();
+                    cout << "\n";
+                }
+
                 break;
             case 5: //eliminarSocio();
                 break;

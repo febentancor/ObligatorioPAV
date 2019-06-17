@@ -38,16 +38,6 @@ string Pelicula::getPoster() {
 void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
-float Pelicula::puntajePromedio() {
-    int sumaPuntaje = 0;
-    int cant = 0;
-    for (list<Puntaje *>::iterator it = this->puntajes.begin(); it != puntajes.end(); ++it){
-        cant++;
-        sumaPuntaje=sumaPuntaje+(*it)->getPuntos();
-    }
-    return sumaPuntaje/cant;
-
-}
 bool Pelicula::tengoPuntaje() {
    Sesion* s= Sesion::getInstancia();
    string nick = s->getNickname();
@@ -60,6 +50,23 @@ bool Pelicula::tengoPuntaje() {
    }
    return tiene;
 }
+float Pelicula::puntajePromedio() {
+    int sumaPuntaje = 0;
+    int cant = 0;
+    bool tiene=tengoPuntaje();
+    for (list<Puntaje *>::iterator it = this->puntajes.begin(); it != puntajes.end(); ++it) {
+         cant++;
+         sumaPuntaje = sumaPuntaje + (*it)->getPuntos();
+    }
+    if(cant>0) {
+        return sumaPuntaje / cant;
+    }else{
+        return 0;
+    }
+
+
+}
+
 void Pelicula::ingresarPuntaje(Puntaje* pun){
     puntajes.push_back(pun);
 }
