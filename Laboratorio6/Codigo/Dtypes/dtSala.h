@@ -14,7 +14,7 @@ class dtSala {
 private:
     int idSala;
     int capacidad;
-    list<dtFuncion*>dtfunciones;
+    list<dtFuncion*> dtfunciones;
 public:
     virtual ~dtSala();
 
