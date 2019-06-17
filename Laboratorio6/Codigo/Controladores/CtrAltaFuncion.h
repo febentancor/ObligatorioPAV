@@ -8,10 +8,12 @@
 #include "dtCine.h"
 #include "dtSala.h"
 #include <list>
-#include "IctrAltaFuncion.h"
+#include "../Inrterfaces/IctrAltaFuncion.h"
 
 class CtrAltaFuncion: public IctrAltaFuncion {
 
+public:
+    CtrAltaFuncion();
     list<dtPelicula> listarPeliculas();
     //list<dtCine> seleccionarPelicula(string);
     //list<dtSala> seleccionarCine(string);

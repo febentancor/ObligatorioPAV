@@ -2,12 +2,13 @@
 // Created by gsoto on 17/06/2019.
 //
 #include "CtrPuntuarPelicula.h"
-#include <ManejadorPelicula.h>
 #include "CtrAltaFuncion.h"
 #include "Sesion.h"
 #include "dtPelicula.h"
 #include <list>
 
+
+CtrAltaFuncion::CtrAltaFuncion() {}
 
 list<dtPelicula> CtrAltaFuncion:: listarPeliculas(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();

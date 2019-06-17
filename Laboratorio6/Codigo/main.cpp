@@ -1,13 +1,13 @@
 #include <iostream>
-#include "./Dtypes/dtDireccion.h"
-#include "./Dtypes/dtFecha.h"
-#include "./Dtypes/dtHorario.h"
-#include "./Clases/Fabrica.h"
-#include "dtPelicula.h"
+#include "Dtypes/dtDireccion.h"
+#include "Dtypes/dtFecha.h"
+#include "Dtypes/dtHorario.h"
+#include "Clases/Fabrica.h"
+#include "Dtypes/dtPelicula.h"
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
-#include "IctrAltaFuncion.h"
+#include "Inrterfaces/IctrAltaFuncion.h"
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
@@ -18,14 +18,7 @@ IctrInicioSesion* ictrIS;
 IctrAltaCine* ictrAC;
 IctrPuntuarPelicula* ictrmP;
 IctrAltaFuncion* ictrAF;
-Fabrica *fabrica;
-IctrInicioSesion *ictrIS;
-IctrAltaCine *ictrAC;
-IctrPuntuarPelicula *ictrmP;
 
-//Operacion Inicio Sesion
-//void iniciarSesion(){};
-//void ingresarUsuario(){};
 
 
 

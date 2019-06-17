@@ -20,6 +20,8 @@ add_executable(Codigo
         Dtypes/dtDireccion.h
         Dtypes/dtFecha.cpp
         Dtypes/dtFecha.h
+        Dtypes/dtPelicula.h
+        Dtypes/dtPelicula.cpp
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
         Clases/Fabrica.cpp
@@ -37,6 +39,9 @@ add_executable(Codigo
         Controladores/CtrAltaCine.cpp
         Controladores/CtrIniciarSesion.h
         Controladores/CtrIniciarSesion.cpp
+        Controladores/CtrAltaFuncion.cpp
+        Controladores/CtrAltaFuncion.h
+
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp

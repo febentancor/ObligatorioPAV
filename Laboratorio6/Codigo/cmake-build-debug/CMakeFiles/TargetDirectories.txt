@@ -1,3 +1,0 @@
-C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/cmake-build-debug/CMakeFiles/Codigo.dir
-C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
