@@ -8,7 +8,7 @@
 #include <list>
 #include <string>
 #include <Pelicula.h>
-#include <ManejadorPelicula.h>
+#include "Manejadores/ManejadorPelicula.h"
 
 class IctrPuntuarPelicula {
 public:

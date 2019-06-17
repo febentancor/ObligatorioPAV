@@ -392,6 +392,33 @@ Controladores/CtrIniciarSesion.cpp.s:
 	$(MAKE) -f CMakeFiles\Codigo.dir\build.make CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.s
 .PHONY : Controladores/CtrIniciarSesion.cpp.s
 
+Controladores/CtrPuntuarPelicula.obj: Controladores/CtrPuntuarPelicula.cpp.obj
+
+.PHONY : Controladores/CtrPuntuarPelicula.obj
+
+# target to build an object file
+Controladores/CtrPuntuarPelicula.cpp.obj:
+	$(MAKE) -f CMakeFiles\Codigo.dir\build.make CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj
+.PHONY : Controladores/CtrPuntuarPelicula.cpp.obj
+
+Controladores/CtrPuntuarPelicula.i: Controladores/CtrPuntuarPelicula.cpp.i
+
+.PHONY : Controladores/CtrPuntuarPelicula.i
+
+# target to preprocess a source file
+Controladores/CtrPuntuarPelicula.cpp.i:
+	$(MAKE) -f CMakeFiles\Codigo.dir\build.make CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.i
+.PHONY : Controladores/CtrPuntuarPelicula.cpp.i
+
+Controladores/CtrPuntuarPelicula.s: Controladores/CtrPuntuarPelicula.cpp.s
+
+.PHONY : Controladores/CtrPuntuarPelicula.s
+
+# target to generate assembly for a file
+Controladores/CtrPuntuarPelicula.cpp.s:
+	$(MAKE) -f CMakeFiles\Codigo.dir\build.make CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.s
+.PHONY : Controladores/CtrPuntuarPelicula.cpp.s
+
 Dtypes/dtDireccion.obj: Dtypes/dtDireccion.cpp.obj
 
 .PHONY : Dtypes/dtDireccion.obj
@@ -647,6 +674,9 @@ help:
 	@echo ... Controladores/CtrIniciarSesion.obj
 	@echo ... Controladores/CtrIniciarSesion.i
 	@echo ... Controladores/CtrIniciarSesion.s
+	@echo ... Controladores/CtrPuntuarPelicula.obj
+	@echo ... Controladores/CtrPuntuarPelicula.i
+	@echo ... Controladores/CtrPuntuarPelicula.s
 	@echo ... Dtypes/dtDireccion.obj
 	@echo ... Dtypes/dtDireccion.i
 	@echo ... Dtypes/dtDireccion.s

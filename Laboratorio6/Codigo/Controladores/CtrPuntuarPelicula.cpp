@@ -3,9 +3,9 @@
 //
 
 #include "CtrPuntuarPelicula.h"
-#include <ManejadorPelicula.h>
-#include <ManejadorUsuario.h>
-#include "Sesion.h"
+#include <Manejadores/ManejadorPelicula.h>
+#include <Manejadores/ManejadorUsuario.h>
+#include "Clases/Sesion.h"
 #include <list>
 #include "Puntaje.h"
 

@@ -6,7 +6,7 @@
 #define LABORATORIO6_CTRINICIARSESION_H
 
 #include "Inrterfaces/IctrInicioSesion.h"
-
+#include "Manejadores/ManejadorUsuario.h"
 class CtrIniciarSesion: public IctrInicioSesion{
 public:
     //CtrIniciarSesion();
@@ -15,6 +15,7 @@ public:
     void iniciarSesion ();
     void cargaDatos();
     void cargaPelicula();
+    bool existeUsuario(string);
 
 private:
     string nickName;

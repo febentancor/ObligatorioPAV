@@ -5,6 +5,7 @@
 #ifndef LABORATORIO6_ICTRINICIOSESION_H
 #define LABORATORIO6_ICTRINICIOSESION_H
 
+#include <Manejadores/ManejadorUsuario.h>
 #include <string>
 
 using namespace std;
@@ -17,6 +18,7 @@ public:
     virtual void iniciarSesion ()=0;
     virtual  void cargaDatos()=0;
     virtual void cargaPelicula()=0;
+    virtual bool existeUsuario(string)=0;
 };
 
 

@@ -18,6 +18,10 @@ IctrInicioSesion* ictrIS;
 IctrAltaCine* ictrAC;
 IctrPuntuarPelicula* ictrmP;
 IctrAltaFuncion* ictrAF;
+Fabrica *fabrica;
+IctrInicioSesion *ictrIS;
+IctrAltaCine *ictrAC;
+IctrPuntuarPelicula *ictrmP;
 
 //Operacion Inicio Sesion
 //void iniciarSesion(){};
@@ -34,6 +38,7 @@ int main() {
     ictrmP = fabrica->getIControlador3();//Contiene controlador de puntuar Pelicula
     ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
     int opcion;
+    bool existe = true;
     string usr;
     string calle;
     int numeroDir;
@@ -53,55 +58,64 @@ int main() {
     list<dtPelicula> listdtPe;
     menu();
     cin >> opcion;
-    while(opcion != 7){
-        switch(opcion){
+    while (opcion != 7) {
+        switch (opcion) {
             case 1:
-                cout <<"Ingreses Usuario: "<<endl;
+                cout << "Ingreses Usuario: " << endl;
                 cin >> usr;
-                ictrIS->ingresarUsuario(usr);
-                cout <<"Ingresar contrasena: "<<endl;
-                cin >> pass;
-                if(ictrIS->ingresarContrasena(pass)){
-                    ictrIS->iniciarSesion();
-                    cout <<"Sesion iniciada"<<endl;
-                }else{
-                    cout <<"Usuario no existe o contrasena invalida"<<endl;
+                try {
+                    if (ictrIS->existeUsuario(usr)) {
+                        ictrIS->ingresarUsuario(usr);
+                        cout << "Ingresar contrasena: " << endl;
+                        cin >> pass;
+                        try {
+                            ictrIS->ingresarContrasena(pass);
+                            ictrIS->iniciarSesion();
+                            cout << "Sesion iniciada" << endl;
+                        } catch (invalid_argument &a) {
+                            cout << a.what() << endl;
+                        }
+                    };
+                } catch (invalid_argument &e) {
+                    cout << e.what() << endl;
                 }
+
                 break;
+
             case 2:
-                cout <<"Ingreses calle: "<<endl;
+                cout << "Ingreses calle: " << endl;
                 cin >> calle;
-                cout <<"Ingreses numero: "<<endl;
+                cout << "Ingreses numero: " << endl;
                 cin >> numeroDir;
-                dir = dtDireccion(calle,numeroDir);
+                dir = dtDireccion(calle, numeroDir);
                 ictrAC->ingresarDireccion(dir);
-                cout <<"Ingreses capacidad: "<<endl;
+                cout << "Ingreses capacidad: " << endl;
                 cin >> capacidadSalas;
                 ictrAC->ingresarCapacidad(capacidadSalas);
                 ictrAC->darAltaCine();
                 break;
             case 3:
                 listpl = ictrmP->listarTituloPelicula();
-                for (list<string>::iterator it=listpl.begin(); it != listpl.end(); ++it){
+                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
                     cout << "\n" << *it;
                     cout << "\n";
                 }
-                cout <<"Seleccionar Pelicula: "<<endl;
+                cout << "Seleccionar Pelicula: " << endl;
                 cin >> tituloPelicula;
-                tiene=ictrmP->seleccionarPelicula(tituloPelicula);
-                if(tiene){
-                    verPuntaje=ictrmP->verPuntaje();
-                    cout <<"El puntaje que tiene ingresado es:"<<verPuntaje;
+                tiene = ictrmP->seleccionarPelicula(tituloPelicula);
+                if (tiene) {
+                    verPuntaje = ictrmP->verPuntaje();
+                    cout << "El puntaje que tiene ingresado es:" << verPuntaje;
                     cout << "\n";
-                    cout <<"Desea ingresar un nuevo puntaje a esta pelicula(y/n)"<<endl;
+                    cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
                     cin >> nuevoPuntaje;
-                    if(nuevoPuntaje == "y" || nuevoPuntaje == "Y"){
-                        cout <<"Ingresar nuevo puntaje a la Pelicula: "<<endl;
+                    if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
+                        cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
                         cin >> puntos;
                         ictrmP->ingresarPuntaje(puntos);
                     }
-                }else{
-                    cout <<"Ingresar puntaje a la Pelicula: "<<endl;
+                } else {
+                    cout << "Ingresar puntaje a la Pelicula: " << endl;
                     cin >> puntos;
                     ictrmP->ingresarPuntaje(puntos);
                 }
@@ -121,7 +135,8 @@ int main() {
                 break;
             case 6: //obtenerMascotas();
                 break;
-            case 7: system("exit");
+            case 7:
+                system("exit");
                 cout << "SALIENDO..." << endl;
             default:
                 cout << "OPCIÓN INCORRECTA" << endl;

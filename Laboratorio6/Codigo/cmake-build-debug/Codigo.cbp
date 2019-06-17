@@ -146,6 +146,12 @@
 		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Controladores/CtrIniciarSesion.h">
 			<Option target="Codigo"/>
 		</Unit>
+		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Controladores/CtrPuntuarPelicula.cpp">
+			<Option target="Codigo"/>
+		</Unit>
+		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Controladores/CtrPuntuarPelicula.h">
+			<Option target="Codigo"/>
+		</Unit>
 		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Dtypes/dtDireccion.cpp">
 			<Option target="Codigo"/>
 		</Unit>
@@ -162,6 +168,9 @@
 			<Option target="Codigo"/>
 		</Unit>
 		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Dtypes/dtHorario.h">
+			<Option target="Codigo"/>
+		</Unit>
+		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Inrterfaces/IctrPuntuarPelicula.h">
 			<Option target="Codigo"/>
 		</Unit>
 		<Unit filename="C:/Users/yokad/Documents/PAV-2019/ObligatorioPAV/Laboratorio6/Codigo/Manejadores/ManejadorCine.cpp">

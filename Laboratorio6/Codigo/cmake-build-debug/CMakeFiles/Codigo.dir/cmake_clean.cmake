@@ -17,6 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Codigo.dir/Manejadores/ManejadorCine.cpp.obj"
   "CMakeFiles/Codigo.dir/Manejadores/ManejadorPelicula.cpp.obj"
   "CMakeFiles/Codigo.dir/UI/ui.cpp.obj"
+  "CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj"
   "Codigo.pdb"
   "Codigo.exe"
   "Codigo.exe.manifest"

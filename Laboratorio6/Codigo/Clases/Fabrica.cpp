@@ -2,7 +2,7 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include "Fabrica.h"
+#include "Clases/Fabrica.h"
 #include "Controladores/CtrIniciarSesion.h"
 #include "Controladores/CtrAltaCine.h"
 #include "Controladores/CtrPuntuarPelicula.h"

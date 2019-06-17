@@ -9,11 +9,15 @@
 void CtrIniciarSesion::ingresarUsuario(string nickName){
     this -> nickName=nickName;
 }
+
 bool CtrIniciarSesion::ingresarContrasena(string contrasena){
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
     Usuario* u = mU -> buscarUsuario(this->nickName);
     string pass = u->getContrasena();
-    return pass == contrasena;
+    if (pass != contrasena) {
+        throw invalid_argument("ERROR: CONTRASENA INVALIDA\n");
+    }
+    return (pass != contrasena);
 }
 
 void CtrIniciarSesion::iniciarSesion (){
@@ -35,4 +39,12 @@ void CtrIniciarSesion::cargaPelicula() {
     Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
     //ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP -> agregarPelicula(pe);
+}
+
+bool CtrIniciarSesion::existeUsuario(string u) {
+    ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
+    bool existe=mU->existeUsuario(u);
+    if(!existe)
+        throw invalid_argument ("ERROR: NO EXISTE EL USUARIO INDICADO\n");
+    return existe;
 }

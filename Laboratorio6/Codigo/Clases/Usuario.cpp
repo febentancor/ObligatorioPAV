@@ -12,7 +12,7 @@ void Usuario::setNickname(string nickname){
     this->nickname=nickname;
 }
 string Usuario::getContrasena(){
-    return this->contrasena;
+return this->contrasena;
 }
 void Usuario::setContrasena(string contrasena){
     this->contrasena=contrasena;

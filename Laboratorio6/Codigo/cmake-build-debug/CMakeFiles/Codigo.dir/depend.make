@@ -4,6 +4,7 @@
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: .././Dtypes/dtDireccion.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: .././Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: .././Dtypes/dtHorario.h
+CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Cine.cpp
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Cine.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Funcion.h
@@ -12,13 +13,22 @@ CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Puntaje.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Sala.h
 CMakeFiles/Codigo.dir/Clases/Cine.cpp.obj: ../Clases/Usuario.h
 
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../././Clases/Pelicula.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../././Dtypes/dtDireccion.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Clases/Fabrica.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Controladores/CtrAltaCine.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Controladores/CtrIniciarSesion.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Controladores/CtrPuntuarPelicula.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Inrterfaces/IctrAltaCine.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Inrterfaces/IctrInicioSesion.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Inrterfaces/IctrPuntuarPelicula.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Manejadores/ManejadorPelicula.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: .././Manejadores/ManejadorUsuario.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Clases/Pelicula.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Clases/Puntaje.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Clases/Usuario.h
+CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Clases/Fabrica.cpp
-CMakeFiles/Codigo.dir/Clases/Fabrica.cpp.obj: ../Clases/Fabrica.h
 
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Clases/Funcion.h
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Clases/Pelicula.h
@@ -26,11 +36,13 @@ CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Clases/Puntaje.h
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Clases/Usuario.h
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: .././Dtypes/dtHorario.h
+CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Funcion.cpp.obj: ../Clases/Funcion.cpp
 
-CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: .././Dtypes/dtFecha.h
+CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: .././Clases/Pelicula.h
+CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: .././Clases/Sesion.h
+CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: ../Clases/Pelicula.cpp
-CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: ../Clases/Pelicula.h
 CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: ../Clases/Puntaje.h
 CMakeFiles/Codigo.dir/Clases/Pelicula.cpp.obj: ../Clases/Usuario.h
 
@@ -40,6 +52,7 @@ CMakeFiles/Codigo.dir/Clases/Puntaje.cpp.obj: ../Clases/Usuario.h
 
 CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: .././Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: .././Dtypes/dtHorario.h
+CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: ../Clases/Funcion.h
 CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: ../Clases/Pelicula.h
 CMakeFiles/Codigo.dir/Clases/Sala.cpp.obj: ../Clases/Puntaje.h
@@ -71,14 +84,26 @@ CMakeFiles/Codigo.dir/Controladores/CtrAltaCine.cpp.obj: ../Controladores/CtrAlt
 
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../././Clases/Pelicula.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../././Clases/Puntaje.h
-CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: .././Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: .././Inrterfaces/IctrInicioSesion.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: .././Manejadores/ManejadorPelicula.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: .././Manejadores/ManejadorUsuario.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../Clases/Sesion.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../Clases/Usuario.h
+CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../Controladores/CtrIniciarSesion.cpp
 CMakeFiles/Codigo.dir/Controladores/CtrIniciarSesion.cpp.obj: ../Controladores/CtrIniciarSesion.h
+
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../././Clases/Pelicula.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: .././Clases/Sesion.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: .././Inrterfaces/IctrPuntuarPelicula.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: .././Manejadores/ManejadorPelicula.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: .././Manejadores/ManejadorUsuario.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Clases/Pelicula.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Clases/Puntaje.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Clases/Usuario.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Dtypes/dtFecha.h
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Controladores/CtrPuntuarPelicula.cpp
+CMakeFiles/Codigo.dir/Controladores/CtrPuntuarPelicula.cpp.obj: ../Controladores/CtrPuntuarPelicula.h
 
 CMakeFiles/Codigo.dir/Dtypes/dtDireccion.cpp.obj: ../Dtypes/dtDireccion.cpp
 CMakeFiles/Codigo.dir/Dtypes/dtDireccion.cpp.obj: ../Dtypes/dtDireccion.h
@@ -115,12 +140,20 @@ CMakeFiles/Codigo.dir/Manejadores/ManejadorUsuario.cpp.obj: ../Manejadores/Manej
 CMakeFiles/Codigo.dir/UI/ui.cpp.obj: ../UI/ui.cpp
 CMakeFiles/Codigo.dir/UI/ui.cpp.obj: ../UI/ui.h
 
+CMakeFiles/Codigo.dir/main.cpp.obj: ../././Clases/Pelicula.h
+CMakeFiles/Codigo.dir/main.cpp.obj: .././Manejadores/ManejadorPelicula.h
+CMakeFiles/Codigo.dir/main.cpp.obj: .././Manejadores/ManejadorUsuario.h
+CMakeFiles/Codigo.dir/main.cpp.obj: ../Clases/Pelicula.h
+CMakeFiles/Codigo.dir/main.cpp.obj: ../Clases/Puntaje.h
+CMakeFiles/Codigo.dir/main.cpp.obj: ../Clases/Usuario.h
+CMakeFiles/Codigo.dir/main.cpp.obj: ../Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/main.cpp.obj: .././Clases/Fabrica.h
 CMakeFiles/Codigo.dir/main.cpp.obj: .././Dtypes/dtDireccion.h
 CMakeFiles/Codigo.dir/main.cpp.obj: .././Dtypes/dtFecha.h
 CMakeFiles/Codigo.dir/main.cpp.obj: .././Dtypes/dtHorario.h
 CMakeFiles/Codigo.dir/main.cpp.obj: ../Inrterfaces/IctrAltaCine.h
 CMakeFiles/Codigo.dir/main.cpp.obj: ../Inrterfaces/IctrInicioSesion.h
+CMakeFiles/Codigo.dir/main.cpp.obj: ../Inrterfaces/IctrPuntuarPelicula.h
 CMakeFiles/Codigo.dir/main.cpp.obj: ../UI/ui.h
 CMakeFiles/Codigo.dir/main.cpp.obj: ../main.cpp
 
