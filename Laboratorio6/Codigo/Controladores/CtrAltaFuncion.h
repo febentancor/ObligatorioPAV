@@ -15,7 +15,7 @@ class CtrAltaFuncion: public IctrAltaFuncion {
 public:
     CtrAltaFuncion();
     list<dtPelicula> listarPeliculas();
-    //list<dtCine> seleccionarPelicula(string);
+    list<dtCine> seleccionarPelicula(string);
     //list<dtSala> seleccionarCine(string);
     //void darAltaFuncion ();
 };

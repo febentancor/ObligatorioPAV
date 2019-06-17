@@ -5,7 +5,7 @@
 #include "dtCine.h"
 
 dtCine::dtCine() {}
-dtCine::dtCine(int idCine, string direccion) : idCine(idCine), direccion(direccion) {}
+dtCine::dtCine(int idCine, dtDireccion direccion) : idCine(idCine), direccion(direccion) {}
 
 int dtCine::getIdCine() {
     return idCine;
@@ -15,11 +15,11 @@ void dtCine::setIdCine(int idCine) {
     this->idCine = idCine;
 }
 
-string dtCine::getDireccion() {
+dtDireccion dtCine::getDireccion() {
     return direccion;
 }
 
-void dtCine::setDireccion(string direccion) {
+void dtCine::setDireccion(dtDireccion direccion) {
    this->direccion=direccion;
 }
 

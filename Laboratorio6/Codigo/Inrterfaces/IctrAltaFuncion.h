@@ -17,7 +17,7 @@ class IctrAltaFuncion {
 public:
 
     virtual list<dtPelicula> listarPeliculas()=0;
-    //virtual list<dtCine> seleccionarPelicula(string)=0;
+    virtual list<dtCine> seleccionarPelicula(string)=0;
     //virtual list<dtSala> seleccionarCine(string)=0;
     //virtual void darAltaFuncion ()=0;
 
