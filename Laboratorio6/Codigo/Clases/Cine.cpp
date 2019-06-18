@@ -39,3 +39,10 @@ int Cine::getIdAuto(){
 void Cine::agregarSala(Sala* sala){
     salas.insert(std::pair<int,Sala*>(sala->getId(),sala));
 }
+
+list<Sala*> Cine::getSalas(){
+    list<Sala*> lstSalas;
+    for (map<int,Sala*>::iterator it=this->salas.begin(); it!=salas.end(); ++it)
+        lstSalas.push_back(it->second);
+    return lstSalas;
+}

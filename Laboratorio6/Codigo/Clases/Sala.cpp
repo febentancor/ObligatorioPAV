@@ -27,3 +27,10 @@ int Sala::getIdAuto() {
     idAuto++;
     return idAuto;
 }
+
+list<Funcion*> Sala::getFuncion(){
+    list<Funcion*> lstFunciones;
+    for (map<int,Funcion*>::iterator it=this->funciones.begin(); it!=funciones.end(); ++it)
+        lstFunciones.push_back(it->second);
+    return lstFunciones;
+}

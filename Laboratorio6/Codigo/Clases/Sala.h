@@ -23,6 +23,7 @@ public:
     void setCapacidad(int);
     int getCapacidad();
     static int getIdAuto();
+    list<Funcion*> getFuncion();
     ~Sala();
 };
 

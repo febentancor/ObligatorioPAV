@@ -27,6 +27,7 @@ public:
     void setDireccion(dtDireccion direccion);
     static int getIdAuto();
     void agregarSala(Sala*);
+    list<Sala*> getSalas();
 
 };
 

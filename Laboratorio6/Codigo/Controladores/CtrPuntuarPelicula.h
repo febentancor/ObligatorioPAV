@@ -18,7 +18,6 @@ public:
 
 private:
     string titulo;
-    float puntaje;
 };
 
 

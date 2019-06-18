@@ -7,6 +7,8 @@
 #include "dtPelicula.h"
 #include "dtCine.h"
 #include "dtSala.h"
+#include "dtFuncion.h"
+#include "Cine.h"
 #include <list>
 #include "../Inrterfaces/IctrAltaFuncion.h"
 
@@ -17,7 +19,11 @@ public:
     list<dtPelicula> listarPeliculas();
     list<dtCine> seleccionarPelicula(string);
     list<dtSala> seleccionarCine(int);
+    list<dtFuncion> seleccionarSala(int);
     //void darAltaFuncion ();
+private:
+    int idCine;
+    Cine* cineFuncion;
 };
 
 

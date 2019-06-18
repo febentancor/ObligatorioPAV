@@ -54,6 +54,8 @@ int main() {
     list<dtPelicula> listdtPe;
     list<dtCine> listCi;
     string AFtitulo;
+    int AFidCine;
+    list<dtSala> listSa;
 
     menu();
     cin >> opcion;
@@ -121,22 +123,39 @@ int main() {
                 break;
             case 4:
                 listdtPe = ictrAF->listarPeliculas();
+                cout << "\n---PELICULAS---";
                 for (list<dtPelicula>::iterator it=listdtPe.begin(); it != listdtPe.end(); ++it){
-                    cout << "\n" << (*it).getTitulo();
-                    cout << "\n" << (*it).getPoster();
-                    cout << "\n" << (*it).getSipnosis();
-                    cout << "\n" << (*it).getPuntaje();
+
+                    cout << "\n Titulo: " << (*it).getTitulo();
+                    cout << "\n Poster: " << (*it).getPoster();
+                    cout << "\n Sipnosis: " << (*it).getSipnosis();
+                    cout << "\n Puntaje: " << (*it).getPuntaje();
                     cout << "\n";
                 }
-                cout << "Seleccionar la Pelicula: " << endl;
+                cout << "\n Seleccionar la Pelicula: " << endl;
                 cin >> AFtitulo;
-                //dir = dtDireccion(calle, numeroDir);
+
                 listCi = ictrAF->seleccionarPelicula(AFtitulo);
+                cout << "\n---CINES---";
                 for (list<dtCine>::iterator it=listCi.begin(); it != listCi.end(); ++it){
-                    cout << "\n" << (*it).getIdCine();
-                    //cout << "\n" << (*it).getDireccion();
+
+                    cout << "\n IdCine: " << (*it).getIdCine();
+                    cout << "\n Calle: " << (*it).getDireccion().getCalle();
+                    cout << "\n Numero: " << (*it).getDireccion().getNumero();
                     cout << "\n";
                 }
+                cout << "\n Seleccionar la Cine: " << endl;
+                cin >> AFidCine;
+
+                listSa = ictrAF->seleccionarCine(AFidCine);
+                cout << "\n---SALAS---";
+                for (list<dtSala>::iterator it=listSa.begin(); it != listSa.end(); ++it){
+
+                    cout << "\n IdSala: " << (*it).getIdSala();
+                    cout << "\n Capacidad: " << (*it).getCapacidad();
+                    cout << "\n";
+                }
+
                 break;
             case 5: //comentarpelicula();
                 listpl = ictrCP->ListarTituloPeliculas();

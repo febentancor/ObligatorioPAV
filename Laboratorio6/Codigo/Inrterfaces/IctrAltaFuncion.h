@@ -19,6 +19,7 @@ public:
     virtual list<dtPelicula> listarPeliculas()=0;
     virtual list<dtCine> seleccionarPelicula(string)=0;
     virtual list<dtSala> seleccionarCine(int)=0;
+    virtual list<dtFuncion> seleccionarSala(int)=0;
     //virtual void darAltaFuncion ()=0;
 
 };
