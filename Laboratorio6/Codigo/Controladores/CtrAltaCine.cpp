@@ -2,10 +2,9 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include <ManejadorCine.h>
-#include <CtrAltaCine.h>
-#include <ManejadorCine.h>
-#include <dtDireccion.h>
+#include "CtrAltaCine.h"
+#include "ManejadorCine.h"
+#include "dtDireccion.h"
 #include "Cine.h"
 #include "Sala.h"
 

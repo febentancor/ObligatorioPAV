@@ -3,7 +3,11 @@
 //
 
 #include "Cine.h"
+<<<<<<< HEAD
 #include <dtDireccion.h>
+=======
+#include "dtDireccion.h"
+>>>>>>> master
 
 Cine::Cine() {}
 int Cine::idAuto=-1;

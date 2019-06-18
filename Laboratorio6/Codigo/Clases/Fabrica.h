@@ -5,11 +5,13 @@
 #ifndef CODIGO_FABRICA_H
 #define CODIGO_FABRICA_H
 
+#include "IctrComentarPelicula.h"
+
 #include "IctrInicioSesion.h"
 #include "IctrAltaCine.h"
 #include "IctrPuntuarPelicula.h"
 #include "IctrAltaFuncion.h"
-#include "IctrComentarPelicula.h"
+
 class Fabrica{
     private:
         static Fabrica* instancia;
@@ -20,7 +22,10 @@ class Fabrica{
         IctrAltaCine* getIControlador2();
         IctrPuntuarPelicula* getIControlador3();
         IctrAltaFuncion* getIControlador4();
+
         IctrComentarPelicula* getIcontrolador5();
+
+
         ~Fabrica();
 };
 

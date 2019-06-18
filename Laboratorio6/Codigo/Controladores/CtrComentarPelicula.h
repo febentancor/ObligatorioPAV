@@ -4,6 +4,7 @@
 
 #ifndef CODIGO_CTRCOMENTARPELICULA_H
 #define CODIGO_CTRCOMENTARPELICULA_H
+#include "IctrComentarPelicula.h"
 
 #include <IctrComentarPelicula.h>
 

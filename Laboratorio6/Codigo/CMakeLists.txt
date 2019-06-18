@@ -1,9 +1,8 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.12)
 project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
 include_directories(Clases)
 include_directories(Controladores)
 include_directories(Dtypes)
@@ -26,24 +25,10 @@ add_executable(Codigo
         Clases/Puntaje.h
         Clases/Sala.cpp
         Clases/Sala.h
-        Clases/Sesion.cpp
-        Clases/Sesion.h
-        Clases/Usuario.cpp
-        Clases/Usuario.h
-        Controladores/CtrAltaCine.cpp
-        Controladores/CtrAltaCine.h
-        Controladores/CtrAltaFuncion.cpp
-        Controladores/CtrAltaFuncion.h
-        Controladores/CtrComentarPelicula.cpp
-        Controladores/CtrComentarPelicula.h
-        Controladores/CtrIniciarSesion.cpp
-        Controladores/CtrIniciarSesion.h
-        Controladores/CtrPuntuarPelicula.cpp
-        Controladores/CtrPuntuarPelicula.h
-        Dtypes/dtCine.cpp
-        Dtypes/dtCine.h
-        Dtypes/dtComentario.cpp
-        Dtypes/dtComentario.h
+        Clases/Debito.cpp
+        Clases/Debito.h
+        Clases/Credito.cpp
+        Clases/Credito.h
         Dtypes/dtDireccion.cpp
         Dtypes/dtDireccion.h
         Dtypes/dtFecha.cpp
@@ -52,23 +37,45 @@ add_executable(Codigo
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
+        Dtypes/dtComentario.h
+        Dtypes/dtComentario.cpp
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
         Dtypes/dtSala.cpp
         Dtypes/dtSala.h
-        Inrterfaces/IctrAltaCine.h
-        Inrterfaces/IctrAltaFuncion.h
-        Inrterfaces/IctrComentarPelicula.h
-        Inrterfaces/IctrInicioSesion.h
-        Inrterfaces/IctrPuntuarPelicula.h
+        Dtypes/dtCine.cpp
+        Dtypes/dtCine.h
+        Clases/Fabrica.cpp
+        Clases/Fabrica.h
+        Clases/Reserva.h
+        Clases/Reserva.cpp
+        main.cpp
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
+        Clases/Puntaje.cpp
+        Clases/Puntaje.h
+        Clases/Sesion.cpp
+        Clases/Sesion.h
+        Clases/Usuario.cpp
+        Clases/Usuario.h
+        Controladores/CtrAltaCine.h
+        Controladores/CtrAltaCine.cpp
+        Controladores/CtrIniciarSesion.h
+        Controladores/CtrIniciarSesion.cpp
+        Controladores/CtrAltaFuncion.cpp
+        Controladores/CtrAltaFuncion.h
+        Controladores/CtrComentarPelicula.h
+        Controladores/CtrComentarPelicula.cpp
+        Controladores/CtrReserva.cpp
+        Controladores/CtrReserva.h
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
-        Manejadores/ManejadorPelicula.h
-        Manejadores/ManejadorSala.cpp
-        Manejadores/ManejadorSala.h
-        Manejadores/ManejadorUsuario.cpp
-        Manejadores/ManejadorUsuario.h
-        UI/ui.cpp
-        UI/ui.h
-        main.cpp)
+        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h
+        Controladores/CtrPuntuarPelicula.cpp
+        Controladores/CtrPuntuarPelicula.h
+        Inrterfaces/IctrPuntuarPelicula.h
+        Inrterfaces/IctrAltaFuncion.h
+        Inrterfaces/IctrComentarPelicula.h)

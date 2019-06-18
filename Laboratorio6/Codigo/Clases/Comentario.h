@@ -7,7 +7,11 @@
 
 #include <map>
 #include <list>
+<<<<<<< HEAD
 #include "../Dtypes/dtComentario.h"
+=======
+#include "dtComentario.h"
+>>>>>>> master
 
 using namespace std;
 class Usuario;

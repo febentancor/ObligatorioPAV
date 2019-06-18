@@ -2,9 +2,9 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include <Pelicula.h>
+#include "Pelicula.h"
 #include <list>
-#include <Sesion.h>
+#include "Sesion.h"
 #include "Puntaje.h"
 
 Pelicula::Pelicula() {}
