@@ -6,7 +6,7 @@
 #define CODIGO_CINE_H
 
 #include "Sala.h"
-#include "Dtypes/dtDireccion.h"
+#include "dtDireccion.h"
 #include <map>
 
 class Cine {

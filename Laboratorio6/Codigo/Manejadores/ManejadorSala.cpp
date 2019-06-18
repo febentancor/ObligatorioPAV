@@ -3,7 +3,7 @@
 //
 
 #include "ManejadorSala.h"
-#include "./Clases/Sala.h"
+#include "Sala.h"
 #include <map>
 #include <list>
 #include <string>

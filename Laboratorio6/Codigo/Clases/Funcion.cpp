@@ -1,9 +1,9 @@
 //
 // Created by yokad on 6/4/2019.
 //
-#include "Dtypes/dtFecha.h"
-#include "Clases/Funcion.h"
-#include "Dtypes/dtHorario.h"
+#include "dtFecha.h"
+#include "Funcion.h"
+#include "dtHorario.h"
 Funcion::Funcion(){}
 Funcion::Funcion(int id, dtFecha dia, dtHorario horario) {
     this ->id = id;
@@ -31,3 +31,4 @@ dtHorario Funcion::getHora() {
 void Funcion::setHora(dtHorario horario)  {
     this->horario = horario;
 }
+Funcion::~Funcion() {}

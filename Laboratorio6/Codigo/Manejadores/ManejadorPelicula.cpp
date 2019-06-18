@@ -3,7 +3,7 @@
 //
 
 #include "ManejadorPelicula.h"
-#include "./Clases/Pelicula.h"
+#include "Pelicula.h"
 #include <map>
 #include <list>
 #include <string>

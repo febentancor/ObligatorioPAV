@@ -3,8 +3,8 @@
 //
 
 #include "CtrIniciarSesion.h"
-#include "Manejadores/ManejadorUsuario.h"
-#include "Manejadores/ManejadorPelicula.h"
+#include "ManejadorUsuario.h"
+#include "ManejadorPelicula.h"
 #include "Sesion.h"
 void CtrIniciarSesion::ingresarUsuario(string nickName){
     this -> nickName=nickName;

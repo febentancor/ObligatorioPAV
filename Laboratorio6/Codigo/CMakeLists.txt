@@ -3,7 +3,6 @@ project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(.)
 include_directories(Clases)
 include_directories(Controladores)
 include_directories(Dtypes)
@@ -26,24 +25,6 @@ add_executable(Codigo
         Clases/Puntaje.h
         Clases/Sala.cpp
         Clases/Sala.h
-        Clases/Sesion.cpp
-        Clases/Sesion.h
-        Clases/Usuario.cpp
-        Clases/Usuario.h
-        Controladores/CtrAltaCine.cpp
-        Controladores/CtrAltaCine.h
-        Controladores/CtrAltaFuncion.cpp
-        Controladores/CtrAltaFuncion.h
-        Controladores/CtrComentarPelicula.cpp
-        Controladores/CtrComentarPelicula.h
-        Controladores/CtrIniciarSesion.cpp
-        Controladores/CtrIniciarSesion.h
-        Controladores/CtrPuntuarPelicula.cpp
-        Controladores/CtrPuntuarPelicula.h
-        Dtypes/dtCine.cpp
-        Dtypes/dtCine.h
-        Dtypes/dtComentario.cpp
-        Dtypes/dtComentario.h
         Dtypes/dtDireccion.cpp
         Dtypes/dtDireccion.h
         Dtypes/dtFecha.cpp
@@ -52,23 +33,24 @@ add_executable(Codigo
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
-        Dtypes/dtPelicula.cpp
-        Dtypes/dtPelicula.h
-        Dtypes/dtSala.cpp
-        Dtypes/dtSala.h
-        Inrterfaces/IctrAltaCine.h
-        Inrterfaces/IctrAltaFuncion.h
-        Inrterfaces/IctrComentarPelicula.h
-        Inrterfaces/IctrInicioSesion.h
-        Inrterfaces/IctrPuntuarPelicula.h
+        Clases/Fabrica.cpp
+        Clases/Fabrica.h
+        main.cpp
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
+        Clases/Puntaje.cpp
+        Clases/Puntaje.h
+        Clases/Sesion.cpp
+        Clases/Sesion.h
+        Clases/Usuario.cpp
+        Clases/Usuario.h
+        Controladores/CtrAltaCine.h
+        Controladores/CtrAltaCine.cpp
+        Controladores/CtrIniciarSesion.h
+        Controladores/CtrIniciarSesion.cpp
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
-        Manejadores/ManejadorPelicula.h
-        Manejadores/ManejadorSala.cpp
-        Manejadores/ManejadorSala.h
-        Manejadores/ManejadorUsuario.cpp
-        Manejadores/ManejadorUsuario.h
-        UI/ui.cpp
-        UI/ui.h
-        main.cpp)
+        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h Controladores/CtrPuntuarPelicula.cpp Controladores/CtrPuntuarPelicula.h Inrterfaces/IctrPuntuarPelicula.h)

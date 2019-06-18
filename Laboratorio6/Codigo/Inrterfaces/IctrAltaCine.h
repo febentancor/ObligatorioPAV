@@ -6,7 +6,7 @@
 #define CODIGO_ICTRALTACINE_H
 
 #include <string>
-#include "./Dtypes/dtDireccion.h"
+#include "dtDireccion.h"
 
 using namespace std;
 

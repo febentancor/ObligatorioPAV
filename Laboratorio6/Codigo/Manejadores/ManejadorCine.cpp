@@ -3,7 +3,7 @@
 //
 
 #include "ManejadorCine.h"
-#include "./Clases/Cine.h"
+#include "Cine.h"
 #include <map>
 #include <list>
 #include <string>

@@ -5,7 +5,7 @@
 #ifndef CODIGO_MANEJADORSALA_H
 #define CODIGO_MANEJADORSALA_H
 
-#include "./Clases/Sala.h"
+#include "Sala.h"
 #include <map>
 #include <list>
 #include <string>

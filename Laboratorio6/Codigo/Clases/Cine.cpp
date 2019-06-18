@@ -3,7 +3,7 @@
 //
 
 #include "Cine.h"
-#include "Dtypes/dtDireccion.h"
+#include "dtDireccion.h"
 
 Cine::Cine() {}
 int Cine::idAuto=-1;

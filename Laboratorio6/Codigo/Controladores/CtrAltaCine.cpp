@@ -3,8 +3,8 @@
 //
 
 #include "CtrAltaCine.h"
-#include "Manejadores/ManejadorCine.h"
-#include "./Dtypes/dtDireccion.h"
+#include "ManejadorCine.h"
+#include "dtDireccion.h"
 #include "Cine.h"
 #include "Sala.h"
 

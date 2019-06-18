@@ -7,9 +7,14 @@
 
 
 #include "Pelicula.h"
+<<<<<<< Updated upstream
 #include "Dtypes/dtFecha.h"
 #include "Dtypes/dtHorario.h"
 
+=======
+#include "dtFecha.h"
+#include "dtHorario.h"
+>>>>>>> Stashed changes
 class Funcion {
 private:
     int id;
@@ -25,6 +30,7 @@ public:
     void setDia(dtFecha);
     dtHorario getHora();
     void setHora(dtHorario);
+    virtual ~Funcion();
 };
 
 
