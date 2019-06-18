@@ -32,3 +32,7 @@ list<dtCine> CtrAltaFuncion::seleccionarPelicula(string titulo){
     }
     return dtcines;
 };
+
+list<dtSala> CtrAltaFuncion::seleccionarCine(int idCine){
+            
+};

@@ -16,7 +16,7 @@ public:
     CtrAltaFuncion();
     list<dtPelicula> listarPeliculas();
     list<dtCine> seleccionarPelicula(string);
-    //list<dtSala> seleccionarCine(string);
+    list<dtSala> seleccionarCine(int);
     //void darAltaFuncion ();
 };
 
