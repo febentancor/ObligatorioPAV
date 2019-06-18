@@ -8,6 +8,7 @@
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
+#include "Inrterfaces/IctrComentarPelicula.h"
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
@@ -18,6 +19,7 @@ IctrInicioSesion* ictrIS;
 IctrAltaCine* ictrAC;
 IctrPuntuarPelicula* ictrmP;
 IctrAltaFuncion* ictrAF;
+IctrComentarPelicula* ictrCP;
 
 
 
@@ -30,6 +32,7 @@ int main() {
     ictrAC = fabrica->getIControlador2();//Contien el controlador de alta cine
     ictrmP = fabrica->getIControlador3();//Contiene controlador de puntuar Pelicula
     ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
+    ictrCP = fabrica->getIcontrolador5();//Contiene el controlador de comentar pelicula
     int opcion;
     bool existe = true;
     string usr;
@@ -124,7 +127,15 @@ int main() {
                 }
 
                 break;
-            case 5: //eliminarSocio();
+            case 5: //comentarpelicula();
+                listpl = ictrCP->ListarTituloPeliculas();
+                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                    cout << "\n" << *it;
+                    cout << "\n";
+                }
+                cout << "Seleccionar Pelicula: " << endl;
+                cin >> tituloPelicula;
+               // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
                 break;
             case 6: //obtenerMascotas();
                 break;

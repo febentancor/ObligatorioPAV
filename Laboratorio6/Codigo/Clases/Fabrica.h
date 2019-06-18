@@ -9,6 +9,7 @@
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
+#include "Inrterfaces/IctrComentarPelicula.h"
 class Fabrica{
     private:
         static Fabrica* instancia;
@@ -19,6 +20,7 @@ class Fabrica{
         IctrAltaCine* getIControlador2();
         IctrPuntuarPelicula* getIControlador3();
         IctrAltaFuncion* getIControlador4();
+        IctrComentarPelicula* getIcontrolador5();
         ~Fabrica();
 };
 
