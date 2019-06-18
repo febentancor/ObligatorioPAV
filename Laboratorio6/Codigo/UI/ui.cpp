@@ -17,7 +17,7 @@ void menu(){
     cout <<"2. Alta Cine"<<endl;
     cout <<"3. Puntuar Pelicula"<<endl;
     cout <<"4. Alta Funcion"<<endl;
-    cout <<"5. Eliminar Socio"<<endl;
+    cout <<"5. Comentar Pelicula"<<endl;
     cout <<"6. Obtener Mascotas de un Socio"<<endl;
     cout <<"7. Salir"<<endl;
     cout <<"_____________________________________________" <<endl;

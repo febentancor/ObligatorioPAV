@@ -7,6 +7,7 @@
 #include "Controladores/CtrAltaCine.h"
 #include "Controladores/CtrPuntuarPelicula.h"
 #include "Controladores/CtrAltaFuncion.h"
+#include "Controladores/CtrComentarPelicula.h"
 
 
 Fabrica* Fabrica::instancia = NULL;
@@ -33,5 +34,8 @@ IctrPuntuarPelicula* Fabrica::getIControlador3() {
 IctrAltaFuncion* Fabrica::getIControlador4(){
     return new CtrAltaFuncion();
 };
+IctrComentarPelicula* Fabrica::getIcontrolador5() {
+    return new CtrComentarPelicula();
+}
 
 Fabrica::~Fabrica(){}
