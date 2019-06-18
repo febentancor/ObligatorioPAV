@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.12)
 project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -33,6 +33,14 @@ add_executable(Codigo
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
+        Dtypes/dtComentario.h
+        Dtypes/dtComentario.cpp
+        Dtypes/dtPelicula.cpp
+        Dtypes/dtPelicula.h
+        Dtypes/dtSala.cpp
+        Dtypes/dtSala.h
+        Dtypes/dtCine.cpp
+        Dtypes/dtCine.h
         Clases/Fabrica.cpp
         Clases/Fabrica.h
         main.cpp
@@ -48,9 +56,18 @@ add_executable(Codigo
         Controladores/CtrAltaCine.cpp
         Controladores/CtrIniciarSesion.h
         Controladores/CtrIniciarSesion.cpp
+        Controladores/CtrAltaFuncion.cpp
+        Controladores/CtrAltaFuncion.h
+        Controladores/CtrComentarPelicula.h
+        Controladores/CtrComentarPelicula.cpp
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
-        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h Controladores/CtrPuntuarPelicula.cpp Controladores/CtrPuntuarPelicula.h Inrterfaces/IctrPuntuarPelicula.h)
+        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h
+        Controladores/CtrPuntuarPelicula.cpp
+        Controladores/CtrPuntuarPelicula.h
+        Inrterfaces/IctrPuntuarPelicula.h
+        Inrterfaces/IctrAltaFuncion.h
+        Inrterfaces/IctrComentarPelicula.h)

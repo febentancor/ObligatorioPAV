@@ -1,5 +1,6 @@
 #include "Usuario.h"
 #include "Comentario.h"
+#include "dtComentario.h"
 
 Comentario::Comentario() {};
 Comentario::Comentario(dtComentario comentario) {

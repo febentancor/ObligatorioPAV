@@ -3,7 +3,7 @@
 //
 
 #include "CtrComentarPelicula.h"
-#include "Manejadores/ManejadorPelicula.h"
+#include "ManejadorPelicula.h"
 #include <list>
 #include "Comentario.h"
 

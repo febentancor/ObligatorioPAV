@@ -4,7 +4,7 @@
 
 #ifndef CODIGO_CTRCOMENTARPELICULA_H
 #define CODIGO_CTRCOMENTARPELICULA_H
-#include "Inrterfaces/IctrComentarPelicula.h"
+#include "IctrComentarPelicula.h"
 
 using namespace std;
 

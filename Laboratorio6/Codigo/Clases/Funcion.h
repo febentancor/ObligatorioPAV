@@ -7,14 +7,14 @@
 
 
 #include "Pelicula.h"
-<<<<<<< Updated upstream
-#include "Dtypes/dtFecha.h"
-#include "Dtypes/dtHorario.h"
-
-=======
+//<<<<<<< Updated upstream
 #include "dtFecha.h"
 #include "dtHorario.h"
->>>>>>> Stashed changes
+
+//=======
+#include "dtFecha.h"
+#include "dtHorario.h"
+//>>>>>>> Stashed changes
 class Funcion {
 private:
     int id;

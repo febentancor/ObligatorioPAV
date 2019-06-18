@@ -2,21 +2,15 @@
 // Created by yokad on 6/6/2019.
 //
 
-<<<<<<< Updated upstream
-#include "Clases/Fabrica.h"
-#include "Controladores/CtrIniciarSesion.h"
-#include "Controladores/CtrAltaCine.h"
-#include "Controladores/CtrPuntuarPelicula.h"
-#include "Controladores/CtrAltaFuncion.h"
-#include "Controladores/CtrComentarPelicula.h"
 
-=======
 #include "Fabrica.h"
 #include "CtrIniciarSesion.h"
 #include "CtrAltaCine.h"
 #include "CtrPuntuarPelicula.h"
 #include "CtrAltaFuncion.h"
->>>>>>> Stashed changes
+#include "CtrComentarPelicula.h"
+
+
 
 Fabrica* Fabrica::instancia = NULL;
 
@@ -39,7 +33,7 @@ IctrAltaCine* Fabrica::getIControlador2() {
 IctrPuntuarPelicula* Fabrica::getIControlador3() {
     return new CtrPuntuarPelicula();
 }
-<<<<<<< Updated upstream
+
 IctrAltaFuncion* Fabrica::getIControlador4(){
     return new CtrAltaFuncion();
 };
@@ -47,12 +41,5 @@ IctrComentarPelicula* Fabrica::getIcontrolador5() {
     return new CtrComentarPelicula();
 }
 
-=======
 
-IctrAltaFuncion* Fabrica::getIControlador4(){
-    return new CtrAltaFuncion();
-}
-
-
->>>>>>> Stashed changes
 Fabrica::~Fabrica(){}
