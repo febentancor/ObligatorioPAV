@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_CINE_H
-#define LABORATORIO6_CINE_H
+#ifndef CODIGO_CINE_H
+#define CODIGO_CINE_H
 
 #include "Sala.h"
 #include "Dtypes/dtDireccion.h"
@@ -31,4 +31,4 @@ public:
 
 
 
-#endif //LABORATORIO6_CINE_H
+#endif //CODIGO_CINE_H

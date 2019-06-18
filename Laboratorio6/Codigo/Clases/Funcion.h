@@ -2,13 +2,14 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_FUNCION_H
-#define LABORATORIO6_FUNCION_H
+#ifndef CODIGO_FUNCION_H
+#define CODIGO_FUNCION_H
 
 
 #include "Pelicula.h"
 #include "Dtypes/dtFecha.h"
 #include "Dtypes/dtHorario.h"
+
 class Funcion {
 private:
     int id;
@@ -27,4 +28,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_FUNCION_H
+#endif //CODIGO_FUNCION_H

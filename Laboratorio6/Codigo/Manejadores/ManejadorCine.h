@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_MANEJADORCINE_H
-#define LABORATORIO6_MANEJADORCINE_H
+#ifndef CODIGO_MANEJADORCINE_H
+#define CODIGO_MANEJADORCINE_H
 
 #include "./Clases/Cine.h"
 #include <map>
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_MANEJADORCINE_H
+#endif //CODIGO_MANEJADORCINE_H

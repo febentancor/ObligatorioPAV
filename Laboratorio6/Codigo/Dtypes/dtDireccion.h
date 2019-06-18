@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_DTDIRECCION_H
-#define LABORATORIO6_DTDIRECCION_H
+#ifndef CODIGO_DTDIRECCION_H
+#define CODIGO_DTDIRECCION_H
 
 #include <string>
 
@@ -29,4 +29,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_DTDIRECCION_H
+#endif //CODIGO_DTDIRECCION_H

@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_ICTRALTACINE_H
-#define LABORATORIO6_ICTRALTACINE_H
+#ifndef CODIGO_ICTRALTACINE_H
+#define CODIGO_ICTRALTACINE_H
 
 #include <string>
 #include "./Dtypes/dtDireccion.h"
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_ICTRALTACINE_H
+#endif //CODIGO_ICTRALTACINE_H

@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_MANEJADORPELICULA_H
-#define LABORATORIO6_MANEJADORPELICULA_H
+#ifndef CODIGO_MANEJADORPELICULA_H
+#define CODIGO_MANEJADORPELICULA_H
 
 #include <map>
 #include <list>
@@ -28,4 +28,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_MANEJADORPELICULA_H
+#endif //CODIGO_MANEJADORPELICULA_H

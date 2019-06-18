@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_SALA_H
-#define LABORATORIO6_SALA_H
+#ifndef CODIGO_SALA_H
+#define CODIGO_SALA_H
 
 #include "Funcion.h"
 #include <map>
@@ -28,4 +28,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_SALA_H
+#endif //CODIGO_SALA_H

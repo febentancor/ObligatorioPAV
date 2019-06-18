@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_PELICULA_H
-#define LABORATORIO6_PELICULA_H
+#ifndef CODIGO_PELICULA_H
+#define CODIGO_PELICULA_H
 
 #include <map>
 #include <list>
@@ -37,4 +37,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_PELICULA_H
+#endif //CODIGO_PELICULA_H

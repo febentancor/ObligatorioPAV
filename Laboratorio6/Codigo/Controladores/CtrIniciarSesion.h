@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_CTRINICIARSESION_H
-#define LABORATORIO6_CTRINICIARSESION_H
+#ifndef CODIGO_CTRINICIARSESION_H
+#define CODIGO_CTRINICIARSESION_H
 
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Manejadores/ManejadorUsuario.h"
@@ -22,4 +22,4 @@ private:
 };
 
 
-#endif //LABORATORIO6_CTRINICIARSESION_H
+#endif //CODIGO_CTRINICIARSESION_H

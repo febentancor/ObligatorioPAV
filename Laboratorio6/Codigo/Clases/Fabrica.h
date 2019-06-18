@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_FABRICA_H
-#define LABORATORIO6_FABRICA_H
+#ifndef CODIGO_FABRICA_H
+#define CODIGO_FABRICA_H
 
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
@@ -25,4 +25,4 @@ class Fabrica{
 };
 
 
-#endif //LABORATORIO6_FABRICA_H
+#endif //CODIGO_FABRICA_H

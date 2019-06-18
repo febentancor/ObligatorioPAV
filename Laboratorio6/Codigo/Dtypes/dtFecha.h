@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_DTFECHA_H
-#define LABORATORIO6_DTFECHA_H
+#ifndef CODIGO_DTFECHA_H
+#define CODIGO_DTFECHA_H
 
 
 class dtFecha {
@@ -31,4 +31,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_DTFECHA_H
+#endif //CODIGO_DTFECHA_H

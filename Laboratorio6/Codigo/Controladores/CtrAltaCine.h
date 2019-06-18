@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_CTRALTACINE_H
-#define LABORATORIO6_CTRALTACINE_H
+#ifndef CODIGO_CTRALTACINE_H
+#define CODIGO_CTRALTACINE_H
 
 #include "Inrterfaces/IctrAltaCine.h"
 #include "./Dtypes/dtDireccion.h"
@@ -23,4 +23,4 @@ private:
     dtDireccion dir;
     int capacidad;
 };
-#endif //LABORATORIO6_CTRALTACINE_H
+#endif //CODIGO_CTRALTACINE_H

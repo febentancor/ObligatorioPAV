@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#ifndef LABORATORIO6_ICTRINICIOSESION_H
-#define LABORATORIO6_ICTRINICIOSESION_H
+#ifndef CODIGO_ICTRINICIOSESION_H
+#define CODIGO_ICTRINICIOSESION_H
 
 #include <Manejadores/ManejadorUsuario.h>
 #include <string>
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_ICTRINICIOSESION_H
+#endif //CODIGO_ICTRINICIOSESION_H

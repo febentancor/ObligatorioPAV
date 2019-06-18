@@ -2,8 +2,8 @@
 // Created by yokad on 6/4/2019.
 //
 
-#ifndef LABORATORIO6_DTHORARIO_H
-#define LABORATORIO6_DTHORARIO_H
+#ifndef CODIGO_DTHORARIO_H
+#define CODIGO_DTHORARIO_H
 
 #include <string>
 using namespace std;
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //LABORATORIO6_DTHORARIO_H
+#endif //CODIGO_DTHORARIO_H
