@@ -25,6 +25,10 @@ add_executable(Codigo
         Clases/Puntaje.h
         Clases/Sala.cpp
         Clases/Sala.h
+        Clases/Debito.cpp
+        Clases/Debito.h
+        Clases/Credito.cpp
+        Clases/Credito.h
         Dtypes/dtDireccion.cpp
         Dtypes/dtDireccion.h
         Dtypes/dtFecha.cpp
@@ -43,6 +47,8 @@ add_executable(Codigo
         Dtypes/dtCine.h
         Clases/Fabrica.cpp
         Clases/Fabrica.h
+        Clases/Reserva.h
+        Clases/Reserva.cpp
         main.cpp
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
@@ -60,6 +66,8 @@ add_executable(Codigo
         Controladores/CtrAltaFuncion.h
         Controladores/CtrComentarPelicula.h
         Controladores/CtrComentarPelicula.cpp
+        Controladores/CtrReserva.cpp
+        Controladores/CtrReserva.h
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp
