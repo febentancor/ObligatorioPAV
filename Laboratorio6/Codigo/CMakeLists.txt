@@ -66,8 +66,8 @@ add_executable(Codigo
         Controladores/CtrAltaFuncion.h
         Controladores/CtrComentarPelicula.h
         Controladores/CtrComentarPelicula.cpp
-        Controladores/CtrReserva.cpp
-        Controladores/CtrReserva.h
+        Controladores/CtrHacerReserva.cpp
+        Controladores/CtrHacerReserva.h
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
         Manejadores/ManejadorCine.cpp
