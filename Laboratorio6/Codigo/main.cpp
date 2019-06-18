@@ -52,6 +52,9 @@ int main() {
     float verPuntaje;
     //Las variables de alta funcion
     list<dtPelicula> listdtPe;
+    list<dtCine> listCi;
+    string AFtitulo;
+
     menu();
     cin >> opcion;
     while (opcion != 7) {
@@ -125,7 +128,15 @@ int main() {
                     cout << "\n" << (*it).getPuntaje();
                     cout << "\n";
                 }
-
+                cout << "Seleccionar la Pelicula: " << endl;
+                cin >> AFtitulo;
+                //dir = dtDireccion(calle, numeroDir);
+                listCi = ictrAF->seleccionarPelicula(AFtitulo);
+                for (list<dtCine>::iterator it=listCi.begin(); it != listCi.end(); ++it){
+                    cout << "\n" << (*it).getIdCine();
+                    //cout << "\n" << (*it).getDireccion();
+                    cout << "\n";
+                }
                 break;
             case 5: //comentarpelicula();
                 listpl = ictrCP->ListarTituloPeliculas();

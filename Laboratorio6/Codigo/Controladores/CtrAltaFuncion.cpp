@@ -5,8 +5,9 @@
 #include "CtrAltaFuncion.h"
 #include "Sesion.h"
 #include "dtPelicula.h"
+#include "dtCine.h"
 #include <list>
-
+#include "ManejadorCine.h"
 
 CtrAltaFuncion::CtrAltaFuncion() {}
 
@@ -19,4 +20,15 @@ list<dtPelicula> CtrAltaFuncion:: listarPeliculas(){
         dtpeliculas.push_back(dt);
     }
     return dtpeliculas;
+};
+
+list<dtCine> CtrAltaFuncion::seleccionarPelicula(string titulo){
+    ManejadorCine* mC = ManejadorCine::getInstancia();
+    list<Cine*> cin = mC->getCines();
+    list<dtCine> dtcines;
+    for(list<Cine*>::iterator it= cin.begin(); it!=cin.end(); ++it){
+        dtCine dt = dtCine((*it)->getId(),(*it)->getDireccion());
+        dtcines.push_back(dt);
+    }
+    return dtcines;
 };

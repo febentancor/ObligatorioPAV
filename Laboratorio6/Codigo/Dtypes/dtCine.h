@@ -5,23 +5,24 @@
 #ifndef CODIGO_DTCINE_H
 #define CODIGO_DTCINE_H
 #include <string>
+#include "dtDireccion.h"
 using namespace std;
 
 class dtCine {
 private:
     int idCine;
-    string direccion;
+    dtDireccion direccion;
 public:
     virtual ~dtCine();
 
     dtCine();
-    dtCine(int idCine, string direccion);
+    dtCine(int idCine, dtDireccion direccion);
 
     int getIdCine();
     void setIdCine(int idCine);
 
-    string getDireccion();
-    void setDireccion(string direccion);
+    dtDireccion getDireccion();
+    void setDireccion(dtDireccion direccion);
 };
 
 
