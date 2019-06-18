@@ -1,9 +1,11 @@
 //
 // Created by yokad on 6/4/2019.
 //
-#include "Dtypes/dtFecha.h"
-#include "Clases/Funcion.h"
-#include "Dtypes/dtHorario.h"
+#include <dtFecha.h>
+#include <Funcion.h>
+#include <dtHorario.h>
+#include "Funcion.h"
+
 Funcion::Funcion(){}
 Funcion::Funcion(int id, dtFecha dia, dtHorario horario) {
     this ->id = id;

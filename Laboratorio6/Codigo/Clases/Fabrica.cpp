@@ -2,12 +2,17 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include "Clases/Fabrica.h"
-#include "Controladores/CtrIniciarSesion.h"
-#include "Controladores/CtrAltaCine.h"
-#include "Controladores/CtrPuntuarPelicula.h"
-#include "Controladores/CtrAltaFuncion.h"
-#include "Controladores/CtrComentarPelicula.h"
+#include <IctrInicioSesion.h>
+#include <IctrAltaCine.h>
+#include <IctrPuntuarPelicula.h>
+#include <IctrComentarPelicula.h>
+#include <CtrIniciarSesion.h>
+#include <CtrAltaCine.h>
+#include <CtrPuntuarPelicula.h>
+#include <IctrAltaFuncion.h>
+#include <CtrAltaFuncion.h>
+#include <CtrComentarPelicula.h>
+#include "../Clases/Fabrica.h"
 
 
 Fabrica* Fabrica::instancia = NULL;

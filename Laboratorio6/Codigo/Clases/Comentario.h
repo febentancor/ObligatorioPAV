@@ -7,7 +7,7 @@
 
 #include <map>
 #include <list>
-#include "Dtypes/dtComentario.h"
+#include "../Dtypes/dtComentario.h"
 
 using namespace std;
 class Usuario;

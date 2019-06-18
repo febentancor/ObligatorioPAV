@@ -5,11 +5,11 @@
 #ifndef CODIGO_FABRICA_H
 #define CODIGO_FABRICA_H
 
-#include "Inrterfaces/IctrInicioSesion.h"
-#include "Inrterfaces/IctrAltaCine.h"
-#include "Inrterfaces/IctrPuntuarPelicula.h"
-#include "Inrterfaces/IctrAltaFuncion.h"
-#include "Inrterfaces/IctrComentarPelicula.h"
+#include "IctrInicioSesion.h"
+#include "IctrAltaCine.h"
+#include "IctrPuntuarPelicula.h"
+#include "IctrAltaFuncion.h"
+#include "IctrComentarPelicula.h"
 class Fabrica{
     private:
         static Fabrica* instancia;

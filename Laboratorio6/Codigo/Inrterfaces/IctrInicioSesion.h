@@ -5,7 +5,7 @@
 #ifndef CODIGO_ICTRINICIOSESION_H
 #define CODIGO_ICTRINICIOSESION_H
 
-#include <Manejadores/ManejadorUsuario.h>
+#include <../Manejadores/ManejadorUsuario.h>
 #include <string>
 
 using namespace std;

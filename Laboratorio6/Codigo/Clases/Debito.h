@@ -19,6 +19,7 @@ public:
     Debito(string);
     string getBanco();
     void setBanco(string);
+    ~Debito();
 
 };
 

@@ -23,7 +23,6 @@ public:
     void setCapacidad(int);
     int getCapacidad();
     static int getIdAuto();
-
     ~Sala();
 };
 

@@ -19,3 +19,4 @@ string Debito::getBanco() {
 void Debito::setBanco(string banco) {
     this ->banco=banco;
 }
+Debito::~Debito(){}

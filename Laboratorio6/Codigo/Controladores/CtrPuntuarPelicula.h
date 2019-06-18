@@ -4,7 +4,7 @@
 
 #ifndef CODIGO_CTRPUNTUARPELICULA_H
 #define CODIGO_CTRPUNTUARPELICULA_H
-#include <Inrterfaces/IctrPuntuarPelicula.h>
+#include <IctrPuntuarPelicula.h>
 #include <string>
 using namespace std;
 

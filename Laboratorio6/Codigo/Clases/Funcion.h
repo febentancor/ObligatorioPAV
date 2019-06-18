@@ -6,9 +6,10 @@
 #define CODIGO_FUNCION_H
 
 
+#include <dtHorario.h>
 #include "Pelicula.h"
-#include "Dtypes/dtFecha.h"
-#include "Dtypes/dtHorario.h"
+#include <dtFecha.h>
+
 
 class Funcion {
 private:

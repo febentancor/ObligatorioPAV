@@ -24,3 +24,4 @@ float Credito::getPorcentajeDto() {
 void Credito::setPorcentajeDto(float porcentajeDto)  {
     this->porcentajeDto=porcentajeDto;
 };
+Credito::~Credito(){}

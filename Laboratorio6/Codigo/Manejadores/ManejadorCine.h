@@ -5,10 +5,11 @@
 #ifndef CODIGO_MANEJADORCINE_H
 #define CODIGO_MANEJADORCINE_H
 
-#include "./Clases/Cine.h"
 #include <map>
 #include <list>
 #include <string>
+#include <Cine.h>
+
 using  namespace std;
 
 class ManejadorCine {

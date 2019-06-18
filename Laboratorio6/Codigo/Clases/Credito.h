@@ -6,7 +6,7 @@
 #define CODIGO_CREDITO_H
 
 #include <iostream>
-#include "Reserva.h"
+#include "../Clases/Reserva.h"
 #include "string"
 
 
@@ -24,6 +24,8 @@ class Credito : public Reserva{
         void setFinanciera(string);
         float getPorcentajeDto();
         void setPorcentajeDto(float);
+        ~Credito();
+
 };
 
 

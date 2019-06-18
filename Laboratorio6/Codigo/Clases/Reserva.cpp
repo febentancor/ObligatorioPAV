@@ -2,7 +2,7 @@
 // Created by yokad on 6/17/2019.
 //
 
-#include "Clases/Reserva.h"
+#include "Reserva.h"
 
 Reserva::Reserva() {}
     Reserva::Reserva(float costo, int cantEntradas) {

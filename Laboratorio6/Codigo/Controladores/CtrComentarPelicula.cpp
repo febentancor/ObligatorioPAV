@@ -3,8 +3,9 @@
 //
 
 #include "CtrComentarPelicula.h"
-#include "Manejadores/ManejadorPelicula.h"
 #include <list>
+#include <ManejadorPelicula.h>
+#include <Pelicula.h>
 #include "Comentario.h"
 
 list<string> CtrComentarPelicula::ListarTituloPeliculas(){

@@ -5,8 +5,8 @@
 #ifndef CODIGO_CTRINICIARSESION_H
 #define CODIGO_CTRINICIARSESION_H
 
-#include "Inrterfaces/IctrInicioSesion.h"
-#include "Manejadores/ManejadorUsuario.h"
+#include <IctrInicioSesion.h>
+#include <ManejadorUsuario.h>
 class CtrIniciarSesion: public IctrInicioSesion{
 public:
     //CtrIniciarSesion();
