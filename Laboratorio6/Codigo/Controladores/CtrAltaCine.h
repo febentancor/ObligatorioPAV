@@ -7,6 +7,7 @@
 
 #include "IctrAltaCine.h"
 #include "dtDireccion.h"
+#include "Sala.h"
 #include <string.h>
 
 using namespace std;
@@ -22,5 +23,6 @@ public:
 private:
     dtDireccion dir;
     int capacidad;
+    list<Sala*> salaCine;
 };
 #endif //CODIGO_CTRALTACINE_H

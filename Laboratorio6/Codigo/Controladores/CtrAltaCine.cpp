@@ -15,6 +15,8 @@ void CtrAltaCine::ingresarDireccion(dtDireccion dtd){
 
 void CtrAltaCine::ingresarCapacidad(int capSala){
     this -> capacidad=capSala;
+    Sala* saAcine = new Sala(capSala);
+    salaCine.push_back(saAcine);
 }
 
 
@@ -23,7 +25,9 @@ void CtrAltaCine::darAltaCine (){
     dtDireccion d = this->dir;
 
     Cine* c = new Cine(d);
-    c ->agregarSala(s);
+    for(list<Sala*>::iterator it= salaCine.begin(); it!=salaCine.end(); ++it) {
+        c ->agregarSala((*it));
+    }
     ManejadorCine* mC = ManejadorCine::getInstancia();
     mC -> agregarCine(c);
 }

@@ -34,7 +34,8 @@ int main() {
     ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
     ictrCP = fabrica->getIcontrolador5();//Contiene el controlador de comentar pelicula
     int opcion;
-    bool existe = true;
+    bool masSala = true;
+    string resAcine;
     string usr;
     string calle;
     int numeroDir;
@@ -100,9 +101,21 @@ int main() {
                 cin >> numeroDir;
                 dir = dtDireccion(calle, numeroDir);
                 ictrAC->ingresarDireccion(dir);
-                cout << "Ingreses capacidad: " << endl;
+
+                cout << "Ingreses capacidad de la sala: " << endl;
                 cin >> capacidadSalas;
                 ictrAC->ingresarCapacidad(capacidadSalas);
+                while(masSala){
+                    cout << "Desea ingresar otra sala y/n: " << endl;
+                    cin >> resAcine;
+                    if(resAcine == "y" || resAcine == "Y"){
+                        cout << "Ingreses capacidad de la sala: " << endl;
+                        cin >> capacidadSalas;
+                        ictrAC->ingresarCapacidad(capacidadSalas);
+                    }else{
+                        masSala=false;
+                    }
+                }
                 ictrAC->darAltaCine();
                 break;
             case 3:
