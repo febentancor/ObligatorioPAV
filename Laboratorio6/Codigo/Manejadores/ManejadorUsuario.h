@@ -19,6 +19,8 @@ public:
     void agregarUsuario(Usuario*);
     bool existeUsuario(string);
     void eliminarUsuario(string);
+    bool esAdmin(string);
     virtual ~ManejadorUsuario();
+
 };
 #endif //CODIGO_MANEJADORUSUARIO_H

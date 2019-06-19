@@ -19,6 +19,7 @@ public:
     virtual  void cargaDatos()=0;
     virtual void cargaPelicula()=0;
     virtual bool existeUsuario(string)=0;
+    virtual bool esAdmin(string)=0;
 };
 
 

@@ -33,11 +33,22 @@ bool CtrIniciarSesion::existeUsuario(string u) {
     return existe;
 }
 
+bool CtrIniciarSesion::esAdmin(string usuario) {
+    ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
+    bool esAdmin = mU->esAdmin(usuario);
+    if(!esAdmin)
+        throw invalid_argument ("ERROR: NO ERES ADMINISTRADOR");
+    return esAdmin;
+
+}
 
 void CtrIniciarSesion::cargaDatos(){
     Usuario* u = new Usuario("Gonzalo","123","jsjsjsj", false);
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
     mU -> agregarUsuario(u);
+    Usuario* v = new Usuario("Admin","333","jsjsjsj", true);
+    ManejadorUsuario* mV = ManejadorUsuario::getInstancia();
+    mV -> agregarUsuario(v);
 };
 
 void CtrIniciarSesion::cargaPelicula() {

@@ -16,6 +16,7 @@ public:
     void cargaDatos();
     void cargaPelicula();
     bool existeUsuario(string);
+    bool esAdmin(string);
 
 private:
     string nickName;
