@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class IctrHacerReserva{
+class IctrCrearReserva{
 
 public:
     virtual list<dtFuncion> listarFunciones()=0;

@@ -41,8 +41,8 @@ add_executable(Codigo
         Controladores/CtrAltaFuncion.h
         Controladores/CtrComentarPelicula.cpp
         Controladores/CtrComentarPelicula.h
-        Controladores/CtrHacerReserva.cpp
-        Controladores/CtrHacerReserva.h
+        Controladores/CtrCrearReserva.cpp
+        Controladores/CtrCrearReserva.h
         Controladores/CtrIniciarSesion.cpp
         Controladores/CtrIniciarSesion.h
         Controladores/CtrPuntuarPelicula.cpp
@@ -66,7 +66,7 @@ add_executable(Codigo
         Inrterfaces/IctrAltaCine.h
         Inrterfaces/IctrAltaFuncion.h
         Inrterfaces/IctrComentarPelicula.h
-        Inrterfaces/IctrHacerReserva.h
+        Inrterfaces/IctrCrearReserva.h
         Inrterfaces/IctrInicioSesion.h
         Inrterfaces/IctrPuntuarPelicula.h
         Manejadores/ManejadorCine.cpp

@@ -2,7 +2,7 @@
 // Created by yokad on 6/17/2019.
 //
 
-#include "CtrHacerReserva.h"
+#include "CtrCrearReserva.h"
 #include "Sesion.h"
 #include "dtPelicula.h"
 #include "dtCine.h"
@@ -15,9 +15,9 @@
 
 #include <list>
 
-//CtrHacerReserva::CtrHacerReserva() {}
+//CtrCrearReserva::CtrCrearReserva() {}
 
-//list<dtFuncion> CtrHacerReserva::listarFunciones() {
+//list<dtFuncion> CtrCrearReserva::listarFunciones() {
 //    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
 //    list<Funcion*> funciones = mF->getFuncion();
 //    list<dtFuncion> dtfuncion;

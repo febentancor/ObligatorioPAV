@@ -8,11 +8,11 @@
 #include "dtCine.h"
 #include "dtSala.h"
 #include <list>
-#include "IctrHacerReserva.h"
+#include "IctrCrearReserva.h"
 
-class CtrHacerReserva : public IctrHacerReserva{
+class CtrCrearReserva : public IctrCrearReserva{
 public:
-    //CtrHacerReserva();
+    //CtrCrearReserva();
     //list<dtFuncion>listarFunciones();
     //list<dtPelicula> listarPeliculas();
     //list<dtCine> seleccionarPelicula(string);
