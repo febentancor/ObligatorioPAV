@@ -1,9 +1,10 @@
 #include "Usuario.h"
 Usuario::Usuario(){}
-Usuario::Usuario(string nickname,string contrasena,string urlFoto){
+Usuario::Usuario(string nickname,string contrasena,string urlFoto, bool esAdmin){
     this->nickname=nickname;
     this->contrasena=contrasena;
     this->urlFoto=urlFoto;
+    this->esAdmin=esAdmin;
 }
 string Usuario::getNickname(){
     return this->nickname;
@@ -22,5 +23,12 @@ string Usuario::getUrlfoto(){
 }
 void Usuario::setUrlfoto(string urlFoto){
     this->urlFoto=urlFoto;
+}
+
+bool Usuario::getEsAdmin() {
+    return this->esAdmin;
+}
+void Usuario::setEsAdmin(bool ok) {
+    this->esAdmin=ok;
 }
 Usuario::~Usuario(){}

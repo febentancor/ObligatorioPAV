@@ -25,8 +25,17 @@ void CtrIniciarSesion::iniciarSesion (){
     s->setNickname(this->nickName);
 }
 
+bool CtrIniciarSesion::existeUsuario(string u) {
+    ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
+    bool existe=mU->existeUsuario(u);
+    if(!existe)
+        throw invalid_argument ("ERROR: NO EXISTE EL USUARIO INDICADO\n");
+    return existe;
+}
+
+
 void CtrIniciarSesion::cargaDatos(){
-    Usuario* u = new Usuario("Gonzalo","123","jsjsjsj");
+    Usuario* u = new Usuario("Gonzalo","123","jsjsjsj", false);
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
     mU -> agregarUsuario(u);
 };
@@ -39,12 +48,4 @@ void CtrIniciarSesion::cargaPelicula() {
     Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
     //ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP -> agregarPelicula(pe);
-}
-
-bool CtrIniciarSesion::existeUsuario(string u) {
-    ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
-    bool existe=mU->existeUsuario(u);
-    if(!existe)
-        throw invalid_argument ("ERROR: NO EXISTE EL USUARIO INDICADO\n");
-    return existe;
 }

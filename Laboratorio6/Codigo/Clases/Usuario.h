@@ -10,15 +10,18 @@ class Usuario{
         string nickname;
         string contrasena;
         string urlFoto;
+        bool esAdmin;
     public:
     Usuario();
-    Usuario(string,string,string);
+    Usuario(string,string,string, bool);
     string getNickname();
     void setNickname(string nickname);
     string getContrasena();
     void setContrasena(string contrasena);
     string getUrlfoto();
     void setUrlfoto(string urlfoto);
+    void setEsAdmin(bool ok);
+    bool getEsAdmin();
 
     ~Usuario();
 
