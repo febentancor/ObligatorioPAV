@@ -4,16 +4,19 @@
 
 #include "CtrAltaCine.h"
 #include "ManejadorCine.h"
+#include "Sala.h"
 #include "dtDireccion.h"
 #include "Cine.h"
-#include "Sala.h"
+#include "ManejadorSala.h"
 
 void CtrAltaCine::ingresarDireccion(dtDireccion dtd){
     this -> dir=dtd;
 }
-bool CtrAltaCine::ingresarCapacidad(int capSala){
+
+void CtrAltaCine::ingresarCapacidad(int capSala){
     this -> capacidad=capSala;
 }
+
 
 void CtrAltaCine::darAltaCine (){
     Sala* s = new Sala(this->capacidad);
@@ -24,4 +27,5 @@ void CtrAltaCine::darAltaCine (){
     ManejadorCine* mC = ManejadorCine::getInstancia();
     mC -> agregarCine(c);
 }
+
 

@@ -144,62 +144,77 @@ int main() {
                 }
                 cout << "\n Seleccionar la Pelicula: " << endl;
                 cin >> AFtitulo;
-
-                listCi = ictrAF->seleccionarPelicula(AFtitulo);
-                cout << "\n---CINES---";
-                for (list<dtCine>::iterator it=listCi.begin(); it != listCi.end(); ++it){
-
-                    cout << "\n IdCine: " << (*it).getIdCine();
-                    cout << "\n Calle: " << (*it).getDireccion().getCalle();
-                    cout << "\n Numero: " << (*it).getDireccion().getNumero();
-                    cout << "\n";
-                }
-                cout << "\n Seleccionar la Cine: " << endl;
-                cin >> AFidCine;
-
-                listSa = ictrAF->seleccionarCine(AFidCine);
-                cout << "\n---SALAS---";
-                for (list<dtSala>::iterator it=listSa.begin(); it != listSa.end(); ++it){
-
-                    cout << "\n IdSala: " << (*it).getIdSala();
-                    cout << "\n Capacidad: " << (*it).getCapacidad();
-                    cout << "\n";
-                }
-
-                cout << "\n Seleccionar la Sala: " << endl;
-                cin >> AFidSala;
-
-                listFu = ictrAF->seleccionarSala(AFidSala);
-                cout << "\n---FUNCIONES DE LA SALA---";
-                for (list<dtFuncion>::iterator it=listFu.begin(); it != listFu.end(); ++it){
-
-                    cout << "\n Dia: " << (*it).getDia().getDia();
-                    cout << "\n Año: " << (*it).getDia().getAnio();
-                    cout << "\n Mes: " << (*it).getDia().getMes();
-                    cout << "\n Horario de comienzo: " << (*it).getHora().getHoraCominezo();
-                    cout << "\n Horario de fin: " << (*it).getHora().getHoraFin();
-                    cout << "\n";
-                }
-                cout << "\n Ingresar Dia: " << endl;
-                cin >> dia;
-                cout << "\n Ingresar Mes: " << endl;
-                cin >> mes;
-                cout << "\n Ingresar Anio: " << endl;
-                cin >> anio;
-                fechaF = dtFecha(dia,mes,anio);
-                cout << "\n Ingresar Horario de comienzo: " << endl;
-                cin >> horaCamienzoF;
-                cout << "\n Ingresar Horario de fin: " << endl;
-                cin >> horaFinF;
-                HorarioF = dtHorario(horaCamienzoF,horaFinF);
                 try {
-                    if(!ictrAF->ingresarHorario(fechaF, HorarioF)){
-                        ictrAF->darAltaFuncion();
+                    if (ictrAF->existeTitulo(AFtitulo))
+                        listCi = ictrAF->seleccionarPelicula(AFtitulo);
+                    cout << "\n---CINES---";
+                    for (list<dtCine>::iterator it = listCi.begin(); it != listCi.end(); ++it) {
+                        cout << "\n IdCine: " << (*it).getIdCine();
+                        cout << "\n Calle: " << (*it).getDireccion().getCalle();
+                        cout << "\n Numero: " << (*it).getDireccion().getNumero();
+                        cout << "\n";
                     }
+
+                    cout << "\n Seleccionar el Cine: " << endl;
+                    cin >> AFidCine;
+                    try {
+                        if (ictrAF->existeCine(AFidCine))
+                            listSa = ictrAF->seleccionarCine(AFidCine);
+
+                        cout << "\n---SALAS---";
+                        for (list<dtSala>::iterator it = listSa.begin(); it != listSa.end(); ++it) {
+
+                            cout << "\n IdSala: " << (*it).getIdSala();
+                            cout << "\n Capacidad: " << (*it).getCapacidad();
+                            cout << "\n";
+                        }
+
+                        cout << "\n Seleccionar la Sala: " << endl;
+                        cin >> AFidSala;
+                        try {
+                            if (ictrAF->existeSala(AFidSala))
+                                listFu = ictrAF->seleccionarSala(AFidSala);
+                            cout << "\n---FUNCIONES DE LA SALA---";
+                            for (list<dtFuncion>::iterator it = listFu.begin(); it != listFu.end(); ++it) {
+
+                                cout << "\n Dia: " << (*it).getDia().getDia();
+                                cout << "\n Año: " << (*it).getDia().getAnio();
+                                cout << "\n Mes: " << (*it).getDia().getMes();
+                                cout << "\n Horario de comienzo: " << (*it).getHora().getHoraCominezo();
+                                cout << "\n Horario de fin: " << (*it).getHora().getHoraFin();
+                                cout << "\n";
+                            }
+                            cout << "\n Ingresar Dia: " << endl;
+                            cin >> dia;
+                            cout << "\n Ingresar Mes: " << endl;
+                            cin >> mes;
+                            cout << "\n Ingresar Anio: " << endl;
+                            cin >> anio;
+                            fechaF = dtFecha(dia, mes, anio);
+                            cout << "\n Ingresar Horario de comienzo: " << endl;
+                            cin >> horaCamienzoF;
+                            cout << "\n Ingresar Horario de fin: " << endl;
+                            cin >> horaFinF;
+                            HorarioF = dtHorario(horaCamienzoF, horaFinF);
+                            try {
+                                if (!ictrAF->ingresarHorario(fechaF, HorarioF)) {
+                                    ictrAF->darAltaFuncion();
+                                }
+                            }
+                            catch (invalid_argument &e) {
+                                cout << e.what() << endl;
+                            }
+
+                        }catch(invalid_argument &e){
+                            cout<<e.what()<< endl;
+                        }
+                    } catch (invalid_argument &e) {
+                        cout << e.what() << endl;
+                    }
+                }catch (invalid_argument &e){
+                    cout<< e.what()<<endl;
                 }
-                catch (invalid_argument &e) {
-                    cout << e.what() << endl;
-                }
+
 
                 break;
             case 5: //comentarpelicula();
@@ -210,7 +225,7 @@ int main() {
                 }
                 cout << "Seleccionar Pelicula: " << endl;
                 cin >> tituloPelicula;
-               // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
+                // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
                 break;
             case 6: //obtenerMascotas();
                 break;

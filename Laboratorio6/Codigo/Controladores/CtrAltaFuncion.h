@@ -10,7 +10,7 @@
 #include "dtFuncion.h"
 #include "Cine.h"
 #include <list>
-#include "../Inrterfaces/IctrAltaFuncion.h"
+#include "IctrAltaFuncion.h"
 
 class CtrAltaFuncion: public IctrAltaFuncion {
 
@@ -22,6 +22,9 @@ public:
     list<dtFuncion> seleccionarSala(int);
     bool ingresarHorario(dtFecha, dtHorario);
     void darAltaFuncion ();
+    bool existeTitulo(string);
+    bool existeCine(int);
+    bool existeSala(int);
 private:
     string tituloFuncion;
     int idCine;

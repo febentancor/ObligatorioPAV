@@ -15,9 +15,9 @@ using namespace std;
 class CtrAltaCine: public IctrAltaCine{
 public:
     //CtrAltaCine();
-     void ingresarDireccion(dtDireccion);
-     bool ingresarCapacidad(int);
-     void darAltaCine ();
+    void ingresarDireccion(dtDireccion);
+    void ingresarCapacidad(int);
+    void darAltaCine ();
 
 private:
     dtDireccion dir;

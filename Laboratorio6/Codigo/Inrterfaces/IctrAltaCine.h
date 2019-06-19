@@ -14,9 +14,8 @@ using namespace std;
 class IctrAltaCine {
 public:
     virtual void ingresarDireccion(dtDireccion)=0;
-    virtual bool ingresarCapacidad(int)=0;
+    virtual void ingresarCapacidad(int)=0;
     virtual void darAltaCine ()=0;
-
 };
 
 

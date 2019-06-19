@@ -9,6 +9,7 @@
 #include <list>
 #include "ManejadorCine.h"
 #include "ManejadorFunciones.h"
+#include "ManejadorSala.h"
 
 CtrAltaFuncion::CtrAltaFuncion() {}
 
@@ -35,6 +36,30 @@ list<dtCine> CtrAltaFuncion::seleccionarPelicula(string titulo){
     return dtcines;
 };
 
+bool CtrAltaFuncion::existeTitulo(string tit){
+    ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
+    bool existe=mP->existePelicula(tit);
+    if(!existe)
+        throw invalid_argument ("ERROR el titulo seleccionado no existe\n");
+    return existe;
+}
+
+bool CtrAltaFuncion::existeCine(int id) {
+    ManejadorCine* mC= ManejadorCine::getInstancia();
+    bool existe=mC->existeCine(id);
+    if(!existe)
+        throw invalid_argument("ERROR el cine no existe \n");
+    return  existe;
+}
+
+bool CtrAltaFuncion::existeSala(int id) {
+    ManejadorSala* mS= ManejadorSala::getInstancia();
+    bool existe=mS->existeSala(id);
+    if(!existe)
+        throw invalid_argument("ERROR la sala no existe \n");
+    return  existe;
+}
+
 list<dtSala> CtrAltaFuncion::seleccionarCine(int idCine){
     this->idCine=idCine;
     ManejadorCine* mC = ManejadorCine::getInstancia();
@@ -52,6 +77,7 @@ list<dtSala> CtrAltaFuncion::seleccionarCine(int idCine){
     }
     return dtsalas;
 };
+
 
 list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
     list<dtFuncion> dtfunciones;
