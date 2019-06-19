@@ -79,4 +79,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h)
+        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h)

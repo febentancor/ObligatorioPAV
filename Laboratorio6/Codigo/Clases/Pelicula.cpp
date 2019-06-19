@@ -87,5 +87,11 @@ float Pelicula::puntajePelicula(){
 void Pelicula::ingresarCine(Cine* ci, int id){
     cines.insert(std::pair<int,Cine*>(id,ci));
 }
+list<Cine*> Pelicula::obternerCines() {
+    list<Cine *> lstCines;
+    for (map<int, Cine *>::iterator it = cines.begin(); it != cines.end(); ++it)
+        lstCines.push_back(it->second);
+    return lstCines;
+}
 Pelicula::~Pelicula(){}
 

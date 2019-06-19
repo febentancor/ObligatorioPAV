@@ -35,6 +35,7 @@ public:
     void ingresarPuntaje(Puntaje*);
     float puntajePelicula();
     void ingresarCine(Cine*,int);
+    list<Cine*> obternerCines();
 };
 
 
