@@ -15,6 +15,10 @@ add_executable(Codigo
         Clases/Cine.h
         Clases/Comentario.cpp
         Clases/Comentario.h
+        Clases/Credito.cpp
+        Clases/Credito.h
+        Clases/Debito.cpp
+        Clases/Debito.h
         Clases/Fabrica.cpp
         Clases/Fabrica.h
         Clases/Funcion.cpp
@@ -23,12 +27,30 @@ add_executable(Codigo
         Clases/Pelicula.h
         Clases/Puntaje.cpp
         Clases/Puntaje.h
+        Clases/Reserva.cpp
+        Clases/Reserva.h
         Clases/Sala.cpp
         Clases/Sala.h
-        Clases/Debito.cpp
-        Clases/Debito.h
-        Clases/Credito.cpp
-        Clases/Credito.h
+        Clases/Sesion.cpp
+        Clases/Sesion.h
+        Clases/Usuario.cpp
+        Clases/Usuario.h
+        Controladores/CtrAltaCine.cpp
+        Controladores/CtrAltaCine.h
+        Controladores/CtrAltaFuncion.cpp
+        Controladores/CtrAltaFuncion.h
+        Controladores/CtrComentarPelicula.cpp
+        Controladores/CtrComentarPelicula.h
+        Controladores/CtrHacerReserva.cpp
+        Controladores/CtrHacerReserva.h
+        Controladores/CtrIniciarSesion.cpp
+        Controladores/CtrIniciarSesion.h
+        Controladores/CtrPuntuarPelicula.cpp
+        Controladores/CtrPuntuarPelicula.h
+        Dtypes/dtCine.cpp
+        Dtypes/dtCine.h
+        Dtypes/dtComentario.cpp
+        Dtypes/dtComentario.h
         Dtypes/dtDireccion.cpp
         Dtypes/dtDireccion.h
         Dtypes/dtFecha.cpp
@@ -37,45 +59,24 @@ add_executable(Codigo
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
         Dtypes/dtHorario.h
-        Dtypes/dtComentario.h
-        Dtypes/dtComentario.cpp
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
         Dtypes/dtSala.cpp
         Dtypes/dtSala.h
-        Dtypes/dtCine.cpp
-        Dtypes/dtCine.h
-        Clases/Fabrica.cpp
-        Clases/Fabrica.h
-        Clases/Reserva.h
-        Clases/Reserva.cpp
-        main.cpp
-        Manejadores/ManejadorUsuario.cpp
-        Manejadores/ManejadorUsuario.h
-        Clases/Puntaje.cpp
-        Clases/Puntaje.h
-        Clases/Sesion.cpp
-        Clases/Sesion.h
-        Clases/Usuario.cpp
-        Clases/Usuario.h
-        Controladores/CtrAltaCine.h
-        Controladores/CtrAltaCine.cpp
-        Controladores/CtrIniciarSesion.h
-        Controladores/CtrIniciarSesion.cpp
-        Controladores/CtrAltaFuncion.cpp
-        Controladores/CtrAltaFuncion.h
-        Controladores/CtrComentarPelicula.h
-        Controladores/CtrComentarPelicula.cpp
-        Controladores/CtrHacerReserva.cpp
-        Controladores/CtrHacerReserva.h
-        Manejadores/ManejadorUsuario.cpp
-        Manejadores/ManejadorUsuario.h
+        Inrterfaces/IctrAltaCine.h
+        Inrterfaces/IctrAltaFuncion.h
+        Inrterfaces/IctrComentarPelicula.h
+        Inrterfaces/IctrHacerReserva.h
+        Inrterfaces/IctrInicioSesion.h
+        Inrterfaces/IctrPuntuarPelicula.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
-        Manejadores/ManejadorPelicula.h UI/ui.cpp UI/ui.h
-        Controladores/CtrPuntuarPelicula.cpp
-        Controladores/CtrPuntuarPelicula.h
-        Inrterfaces/IctrPuntuarPelicula.h
-        Inrterfaces/IctrAltaFuncion.h
-        Inrterfaces/IctrComentarPelicula.h)
+        Manejadores/ManejadorPelicula.h
+        Manejadores/ManejadorSala.cpp
+        Manejadores/ManejadorSala.h
+        Manejadores/ManejadorUsuario.cpp
+        Manejadores/ManejadorUsuario.h
+        UI/ui.cpp
+        UI/ui.h
+        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h)

@@ -14,6 +14,7 @@ using namespace std;
 class IctrHacerReserva{
 
 public:
+    virtual list<dtFuncion> listarFunciones()=0;
     virtual list<dtPelicula> listarPeliculas()=0;
     virtual list<dtCine> seleccionarPelicula(string)=0;
     virtual list<dtSala> seleccionarCine(int)=0;
