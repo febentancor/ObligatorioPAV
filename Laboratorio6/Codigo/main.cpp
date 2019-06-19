@@ -95,7 +95,10 @@ int main() {
                 break;
 
             case 2:
-                cout << "Ingreses calle: " << endl;
+                try{
+                    ictrIS->esAdmin(usr);
+
+                    cout << "Ingreses calle: " << endl;
                 cin >> calle;
                 cout << "Ingreses numero: " << endl;
                 cin >> numeroDir;
@@ -117,20 +120,8 @@ int main() {
                     }
                 }
                 ictrAC->darAltaCine();
-                try {
-                    ictrIS->esAdmin(usr);
-                    cout << "Ingreses calle: " << endl;
-                    cin >> calle;
-                    cout << "Ingreses numero: " << endl;
-                    cin >> numeroDir;
-                    dir = dtDireccion(calle, numeroDir);
-                    ictrAC->ingresarDireccion(dir);
-                    cout << "Ingreses capacidad: " << endl;
-                    cin >> capacidadSalas;
-                    ictrAC->ingresarCapacidad(capacidadSalas);
-                    ictrAC->darAltaCine();
                 } catch (invalid_argument &e){
-                    cout<<e.what()<<endl;
+                    cout<< e.what()<<endl;
                 }
                 break;
             case 3:
