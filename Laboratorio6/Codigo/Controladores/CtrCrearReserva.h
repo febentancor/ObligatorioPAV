@@ -4,20 +4,25 @@
 
 #ifndef CODIGO_CTRHACERRESERVA_H
 #define CODIGO_CTRHACERRESERVA_H
+
+#include "dtInfoPelicula.h"
 #include "dtPelicula.h"
 #include "dtCine.h"
 #include "dtSala.h"
 #include <list>
 #include "IctrCrearReserva.h"
+#include "Pelicula.h"
 
 class CtrCrearReserva : public IctrCrearReserva{
 public:
-    //CtrCrearReserva();
-    //list<dtFuncion>listarFunciones();
-    //list<dtPelicula> listarPeliculas();
-    //list<dtCine> seleccionarPelicula(string);
-    //list<dtSala> seleccionarCine(int);
-
+    CtrCrearReserva();
+    list<string> listarPeliculas();
+    list<dtInfoPelicula> seleccionarPelicula(string);
+    list<dtCine> listarCine();
+    list<dtFuncion> seleccionarCine(int);
+private:
+    string tituloCfuncion;
+    Pelicula* peliculaCfuncion;
 };
 
 
