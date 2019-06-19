@@ -20,10 +20,17 @@ public:
     list<dtCine> seleccionarPelicula(string);
     list<dtSala> seleccionarCine(int);
     list<dtFuncion> seleccionarSala(int);
-    //void darAltaFuncion ();
+    bool ingresarHorario(dtFecha, dtHorario);
+    void darAltaFuncion ();
 private:
+    string tituloFuncion;
     int idCine;
     Cine* cineFuncion;
+    Sala* salaFuncion;
+    dtFecha fechaFuncion;
+    dtHorario horarioFuncion;
+    Pelicula * setPelicula(string);
+
 };
 
 

@@ -24,6 +24,7 @@ public:
     int getCapacidad();
     static int getIdAuto();
     list<Funcion*> getFuncion();
+    void ingresarFuncion(int,Funcion*);
     ~Sala();
 };
 

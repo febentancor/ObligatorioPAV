@@ -8,29 +8,26 @@
 
 #include <dtHorario.h>
 #include "Pelicula.h"
-//<<<<<<< Updated upstream
 #include "dtFecha.h"
 #include "dtHorario.h"
 
-//=======
-#include "dtFecha.h"
-#include "dtHorario.h"
-//>>>>>>> Stashed changes
 class Funcion {
 private:
     int id;
     dtFecha dia;
     dtHorario horario;
     Pelicula *pelicula;
+    static int idAutoF;
 public:
     Funcion();
-    Funcion(int, dtFecha, dtHorario);
+    Funcion(dtFecha, dtHorario);
     int getId();
     void setId(int);
     dtFecha getDia();
     void setDia(dtFecha);
     dtHorario getHora();
     void setHora(dtHorario);
+    static int getIdAuto();
     virtual ~Funcion();
 };
 

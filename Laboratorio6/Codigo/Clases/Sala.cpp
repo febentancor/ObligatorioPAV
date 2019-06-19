@@ -34,3 +34,6 @@ list<Funcion*> Sala::getFuncion(){
         lstFunciones.push_back(it->second);
     return lstFunciones;
 }
+void Sala::ingresarFuncion(int id,Funcion* fu){
+    funciones.insert(std::pair<int,Funcion*>(id,fu));
+}

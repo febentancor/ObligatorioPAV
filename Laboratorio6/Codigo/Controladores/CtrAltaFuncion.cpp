@@ -8,6 +8,7 @@
 #include "dtCine.h"
 #include <list>
 #include "ManejadorCine.h"
+#include "ManejadorFunciones.h"
 
 CtrAltaFuncion::CtrAltaFuncion() {}
 
@@ -23,6 +24,7 @@ list<dtPelicula> CtrAltaFuncion:: listarPeliculas(){
 };
 
 list<dtCine> CtrAltaFuncion::seleccionarPelicula(string titulo){
+    this->tituloFuncion=titulo;
     ManejadorCine* mC = ManejadorCine::getInstancia();
     list<Cine*> cin = mC->getCines();
     list<dtCine> dtcines;
@@ -56,6 +58,7 @@ list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
     list<Sala*> sal = (cineFuncion->getSalas());
     for (list<Sala*>::iterator it1= sal.begin(); it1!=sal.end(); ++it1){
         if((*it1)->getId() == idSala) {
+            this->salaFuncion=(*it1);
             list<Funcion *> fun = ((*it1)->getFuncion());
             for (list<Funcion *>::iterator it2 = fun.begin(); it2 != fun.end(); ++it2) {
                 dtFuncion dt = dtFuncion((*it2)->getDia(), (*it2)->getHora());
@@ -76,4 +79,48 @@ list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
 //        }
 //    }
     return dtfunciones;
+};
+
+bool CtrAltaFuncion::ingresarHorario(dtFecha Fecha, dtHorario Horario){
+    Sala* s = salaFuncion;
+    bool igual=false;
+    list<Funcion *> fun = (s->getFuncion());
+    for (list<Funcion *>::iterator it2 = fun.begin(); it2 != fun.end(); ++it2) {
+        int Dia = (*it2)->getDia().getDia();
+        int Mes = (*it2)->getDia().getMes();
+        int Anio = (*it2)->getDia().getAnio();
+        if(Dia == Fecha.getDia() && Mes == Fecha.getMes() && Anio == Fecha.getDia()){
+            igual=true;
+        }
+    }
+    if(!igual){
+        this->fechaFuncion=Fecha;
+        this->horarioFuncion=Horario;
+    }else{
+        throw invalid_argument("ERROR: LA SALA YA CONTIENE UN FUNCION PARA ESE DIA\n");
+    }
+    return igual;
+};
+
+Pelicula * CtrAltaFuncion::setPelicula(string Tit){
+    Tit=tituloFuncion;
+    ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
+    list<Pelicula*> pelis = mP->getPeliculas();
+    Pelicula* p;
+    for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
+        if((*it)->getTitulo() == Tit){
+            p=(*it);
+        }
+    }
+    return p;
+}
+
+void CtrAltaFuncion::darAltaFuncion (){
+    Pelicula* p = setPelicula(tituloFuncion);
+    p->ingresarCine(cineFuncion,idCine);
+
+    Funcion* f = new Funcion(fechaFuncion,horarioFuncion);
+    salaFuncion->ingresarFuncion(f->getId(),f);
+    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
+    mF->agregarFuncion(f);
 };

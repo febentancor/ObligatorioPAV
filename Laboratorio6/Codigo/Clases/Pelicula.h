@@ -34,6 +34,7 @@ public:
     bool tengoPuntaje();
     void ingresarPuntaje(Puntaje*);
     float puntajePelicula();
+    void ingresarCine(Cine*,int);
 };
 
 

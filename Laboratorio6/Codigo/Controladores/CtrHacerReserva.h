@@ -12,11 +12,11 @@
 
 class CtrHacerReserva : public IctrHacerReserva{
 public:
-    CtrHacerReserva();
-    list<dtFuncion>listarFunciones();
-    list<dtPelicula> listarPeliculas();
-    list<dtCine> seleccionarPelicula(string);
-    list<dtSala> seleccionarCine(int);
+    //CtrHacerReserva();
+    //list<dtFuncion>listarFunciones();
+    //list<dtPelicula> listarPeliculas();
+    //list<dtCine> seleccionarPelicula(string);
+    //list<dtSala> seleccionarCine(int);
 
 };
 

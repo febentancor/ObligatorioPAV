@@ -20,7 +20,8 @@ public:
     virtual list<dtCine> seleccionarPelicula(string)=0;
     virtual list<dtSala> seleccionarCine(int)=0;
     virtual list<dtFuncion> seleccionarSala(int)=0;
-    //virtual void darAltaFuncion ()=0;
+    virtual bool ingresarHorario(dtFecha,dtHorario)=0;
+    virtual void darAltaFuncion ()=0;
 
 };
 

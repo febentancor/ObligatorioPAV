@@ -6,6 +6,12 @@
 
 
 dtHorario::dtHorario() {}
+
+dtHorario::dtHorario(string HoraCominezo, string HoraFin) {
+    this->horaCominezo=HoraCominezo;
+    this-> horaFin=HoraFin;
+}
+
 string dtHorario::getHoraCominezo() {
     return horaCominezo;
 }
@@ -21,5 +27,6 @@ string dtHorario::getHoraFin() {
 void dtHorario::setHoraFin(string horaFin) {
     dtHorario::horaFin = horaFin;
 }
+dtHorario::~dtHorario(){}
 
 

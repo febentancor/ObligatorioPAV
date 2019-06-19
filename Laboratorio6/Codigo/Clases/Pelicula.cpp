@@ -84,5 +84,8 @@ float Pelicula::puntajePelicula(){
     return valor;
 }
 
+void Pelicula::ingresarCine(Cine* ci, int id){
+    cines.insert(std::pair<int,Cine*>(id,ci));
+}
 Pelicula::~Pelicula(){}
 

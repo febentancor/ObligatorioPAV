@@ -15,13 +15,14 @@
 
 #include <list>
 
-CtrHacerReserva::CtrHacerReserva() {}
+//CtrHacerReserva::CtrHacerReserva() {}
 
-list<dtFuncion> CtrHacerReserva::listarFunciones() {
-    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
-    list<Funcion*> funciones mF->getFuncion();
-    list<dtFuncion> dtfuncion;
-    for(list<Funcion*>::iterator it= funciones.begin(); it!funciones.end(); it++){
-//ACA ME QUEDE    }
+//list<dtFuncion> CtrHacerReserva::listarFunciones() {
+//    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
+//    list<Funcion*> funciones = mF->getFuncion();
+//    list<dtFuncion> dtfuncion;
+//    for(list<Funcion*>::iterator it= funciones.begin(); it!=funciones.end(); it++){
+//ACA ME QUEDE
+//    }
 
-}
+//}

@@ -5,8 +5,9 @@
 #include "Funcion.h"
 #include "dtHorario.h"
 Funcion::Funcion(){}
-Funcion::Funcion(int id, dtFecha dia, dtHorario horario) {
-    this ->id = id;
+int Funcion::idAutoF=-1;
+Funcion::Funcion(dtFecha dia, dtHorario horario) {
+    this -> id = Funcion::getIdAuto();
     this ->dia = dia;
     this -> horario = horario;
 };
@@ -30,5 +31,9 @@ dtHorario Funcion::getHora() {
 }
 void Funcion::setHora(dtHorario horario)  {
     this->horario = horario;
+}
+int Funcion::getIdAuto() {
+    idAutoF++;
+    return idAutoF;
 }
 Funcion::~Funcion() {}

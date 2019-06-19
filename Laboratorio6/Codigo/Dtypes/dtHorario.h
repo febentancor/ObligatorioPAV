@@ -16,12 +16,12 @@ public:
     dtHorario();
     dtHorario(string, string);
     string getHoraCominezo() ;
-
     void setHoraCominezo(string horaCominezo);
 
     string getHoraFin();
-
     void setHoraFin(string horaFin);
+    ~dtHorario();
+
 
 };
 

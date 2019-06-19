@@ -56,6 +56,16 @@ int main() {
     string AFtitulo;
     int AFidCine;
     list<dtSala> listSa;
+    int AFidSala;
+    list<dtFuncion> listFu;
+    int dia;
+    int mes;
+    int anio;
+    dtFecha fechaF;
+    string horaCamienzoF;
+    string horaFinF;
+    dtHorario HorarioF;
+    bool igualF;
 
     menu();
     cin >> opcion;
@@ -154,6 +164,41 @@ int main() {
                     cout << "\n IdSala: " << (*it).getIdSala();
                     cout << "\n Capacidad: " << (*it).getCapacidad();
                     cout << "\n";
+                }
+
+                cout << "\n Seleccionar la Sala: " << endl;
+                cin >> AFidSala;
+
+                listFu = ictrAF->seleccionarSala(AFidSala);
+                cout << "\n---FUNCIONES DE LA SALA---";
+                for (list<dtFuncion>::iterator it=listFu.begin(); it != listFu.end(); ++it){
+
+                    cout << "\n Dia: " << (*it).getDia().getDia();
+                    cout << "\n Año: " << (*it).getDia().getAnio();
+                    cout << "\n Mes: " << (*it).getDia().getMes();
+                    cout << "\n Horario de comienzo: " << (*it).getHora().getHoraCominezo();
+                    cout << "\n Horario de fin: " << (*it).getHora().getHoraFin();
+                    cout << "\n";
+                }
+                cout << "\n Ingresar Dia: " << endl;
+                cin >> dia;
+                cout << "\n Ingresar Mes: " << endl;
+                cin >> mes;
+                cout << "\n Ingresar Anio: " << endl;
+                cin >> anio;
+                fechaF = dtFecha(dia,mes,anio);
+                cout << "\n Ingresar Horario de comienzo: " << endl;
+                cin >> horaCamienzoF;
+                cout << "\n Ingresar Horario de fin: " << endl;
+                cin >> horaFinF;
+                HorarioF = dtHorario(horaCamienzoF,horaFinF);
+                try {
+                    if(!ictrAF->ingresarHorario(fechaF, HorarioF)){
+                        ictrAF->darAltaFuncion();
+                    }
+                }
+                catch (invalid_argument &e) {
+                    cout << e.what() << endl;
                 }
 
                 break;
