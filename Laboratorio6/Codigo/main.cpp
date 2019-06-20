@@ -73,6 +73,7 @@ int main() {
     while (opcion != 7) {
         switch (opcion) {
             case 1:
+                cout << "+++++++++++INCIAR SESION+++++++++++++"<<endl;
                 cout << "Ingreses Usuario: " << endl;
                 cin >> usr;
                 try {
@@ -95,6 +96,8 @@ int main() {
                 break;
 
             case 2:
+                cout << "+++++++++++ALTA CINE+++++++++++++"<<endl;
+
                 try{
                     ictrIS->esAdmin(usr);
 
@@ -125,6 +128,7 @@ int main() {
                 }
                 break;
             case 3:
+                cout << "+++++++++++PUNTUAR PELICULA+++++++++++++"<<endl;
                 listpl = ictrmP->listarTituloPelicula();
                 for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
                     cout << "\n" << *it;
@@ -151,6 +155,7 @@ int main() {
                 }
                 break;
             case 4:
+                cout << "+++++++++++ALTA FUNCION+++++++++++++"<<endl;
                 try {
                     ictrIS->esAdmin(usr);
                     listdtPe = ictrAF->listarPeliculas();
@@ -240,7 +245,8 @@ int main() {
                 }
                     break;
                     case 5: //comentarpelicula();
-                        listpl = ictrCP->ListarTituloPeliculas();
+                        cout << "+++++++++++COMENTAR PELICULA+++++++++++++"<<endl;
+                listpl = ictrCP->ListarTituloPeliculas();
                     for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
                         cout << "\n" << *it;
                         cout << "\n";

@@ -57,6 +57,6 @@ void CtrIniciarSesion::cargaPelicula() {
     mP -> agregarPelicula(p);
 
     Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
-    //ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
-    mP -> agregarPelicula(pe);
+    ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
+    mP1 -> agregarPelicula(pe);
 }
