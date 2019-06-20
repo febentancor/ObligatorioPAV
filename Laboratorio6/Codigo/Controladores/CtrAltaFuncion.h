@@ -36,9 +36,6 @@ private:
     dtFecha fechaFuncion;
     dtHorario horarioFuncion;
     Pelicula * setPelicula(string);
-    bool existeTitulo(string);
-    bool existeCine(int);
-    bool existeSala(int);
 
 };
 
