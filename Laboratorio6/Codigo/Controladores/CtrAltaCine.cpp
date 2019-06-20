@@ -7,7 +7,6 @@
 #include "Sala.h"
 #include "dtDireccion.h"
 #include "Cine.h"
-#include "ManejadorSala.h"
 
 CtrAltaCine::CtrAltaCine(){}
 
