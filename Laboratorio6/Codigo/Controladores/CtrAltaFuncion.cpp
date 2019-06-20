@@ -95,18 +95,6 @@ list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
             }
         }
     }
-//    for(list<Cine*>::iterator it= cin.begin(); it!=cin.end(); ++it){
-//        list<Sala*> sal = ((*it)->getSalas());
-//        for (list<Sala*>::iterator it1= sal.begin(); it1!=sal.end(); ++it1){
-//            if((*it1)->getId() == idSala){
-//                list<Funcion*> fun = ((*it1)->getFuncion());
-//                for (list<Funcion*>::iterator it2= fun.begin(); it2!=fun.end(); ++it2) {
-//                    dtFuncion dt = dtFuncion((*it2)->getDia(),(*it2)->getHora());
-//                    dtfunciones.push_back(dt);
-//                }
-//            }
-//        }
-//    }
     return dtfunciones;
 };
 
@@ -144,11 +132,14 @@ Pelicula * CtrAltaFuncion::setPelicula(string Tit){
     return p;
 }
 
+void CtrAltaFuncion::ingresarPrecio(int preFuncion){
+    this->PrecioFuncion=preFuncion;
+}
 void CtrAltaFuncion::darAltaFuncion (){
     Pelicula* p = setPelicula(tituloFuncion);
     p->ingresarCine(cineFuncion,idCine);
 
-    Funcion* f = new Funcion(fechaFuncion,horarioFuncion);
+    Funcion* f = new Funcion(fechaFuncion,horarioFuncion,PrecioFuncion);
     salaFuncion->ingresarFuncion(f->getId(),f);
     ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
     mF->agregarFuncion(f);

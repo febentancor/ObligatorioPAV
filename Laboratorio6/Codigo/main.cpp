@@ -13,6 +13,8 @@
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
+#define sangtander 10
+#define banco republica 20
 
 using namespace std;
 Fabrica* fabrica;
@@ -38,6 +40,7 @@ int main() {
     ictrVP = fabrica->getIcontrolador7();//Contiene el controlador de ver informacion de la pelicula
 
     int opcion;
+    bool existe = true;
     bool masSala = true;
     string resAcine;
     string usr;
@@ -70,6 +73,7 @@ int main() {
     string horaCamienzoF;
     string horaFinF;
     dtHorario HorarioF;
+    int precioAF;
     //Variables de verInfoPeliculas
     list<string> listVIP;
     string VPtitulo;
@@ -234,6 +238,9 @@ int main() {
                                 HorarioF = dtHorario(horaCamienzoF, horaFinF);
                                 try {
                                     if (!ictrAF->ingresarHorario(fechaF, HorarioF)) {
+                                        cout << "\n Ingresar el precio de la funcion: " << endl;
+                                        cin >> precioAF;
+                                        ictrAF->ingresarPrecio(precioAF);
                                         ictrAF->darAltaFuncion();
                                     }
                                 }
@@ -265,7 +272,8 @@ int main() {
                     cin >> tituloPelicula;
                     // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
                     break;
-                    case 6: //ALTA FUNCION
+                    case 6: // Crear reserva
+
                         break;
                     case 7:
                         cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++"<<endl;

@@ -21,19 +21,21 @@ public:
     list<dtSala> seleccionarCine(int);
     list<dtFuncion> seleccionarSala(int);
     bool ingresarHorario(dtFecha, dtHorario);
+    void ingresarPrecio(int);
     void darAltaFuncion ();
+    bool existeTitulo(string);
+    bool existeCine(int);
+    bool existeSala(int);
 
 private:
     string tituloFuncion;
     int idCine;
+    int PrecioFuncion;
     Cine* cineFuncion;
     Sala* salaFuncion;
     dtFecha fechaFuncion;
     dtHorario horarioFuncion;
     Pelicula * setPelicula(string);
-    bool existeTitulo(string);
-    bool existeCine(int);
-    bool existeSala(int);
 
 };
 

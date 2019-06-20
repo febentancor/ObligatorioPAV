@@ -73,8 +73,6 @@ add_executable(Codigo
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
         Manejadores/ManejadorPelicula.h
-        Manejadores/ManejadorSala.cpp
-        Manejadores/ManejadorSala.h
         Manejadores/ManejadorUsuario.cpp
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp

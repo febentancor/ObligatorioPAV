@@ -9,7 +9,7 @@
 #include <list>
 #include "Puntaje.h"
 #include "dtFecha.h"
-
+#include "Comentario.h"
 class Cine;
 using namespace std;
 
@@ -20,6 +20,7 @@ private:
     string poster;
     map<int, Cine*>cines;
     list<Puntaje*>puntajes;
+    map<int, Comentario*>comentarios;
 public:
     Pelicula();
     Pelicula (string, string, string);
@@ -36,6 +37,8 @@ public:
     float puntajePelicula();
     void ingresarCine(Cine*,int);
     list<Cine*> obternerCines();
+    map<int, Comentario*> getComentariosPeliculas();
+    void ingresarComentario(Comentario*);
 };
 
 

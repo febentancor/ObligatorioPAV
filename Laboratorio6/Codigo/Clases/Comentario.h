@@ -1,7 +1,3 @@
-//
-// Created by Facundo on 2019-06-13.
-//
-
 #ifndef CODIGO_COMENTARIO_H
 #define CODIGO_COMENTARIO_H
 
@@ -18,19 +14,20 @@ class Comentario {
 private:
     int id;
     static int idauto;
-    dtComentario comentario;
+    string comentario;
     Usuario* usuarios;
-
+    map<int, Comentario*>comentariosComentados;
 public:
     Comentario();
-    Comentario(dtComentario comentario);
-    list<Usuario*> getUsuariosComentario();
+    Comentario(string comentario);
+    Usuario* getUsuariosComentario();
     void agregarUsuarioComentario(Usuario*);
-    dtComentario getComentarios();
+    string getComentarios();
     void setUsuario(Usuario*);
-    void setdtcomentario(dtComentario);
     static int getIdAuto();
     string getNick();
+    int getId();
+    map <int, dtComentario*> getComentariosComentados();
 
     ~Comentario();
 };
