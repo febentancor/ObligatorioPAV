@@ -1,18 +1,21 @@
-//
-// Created by Facundo on 2019-06-13.
-//
-
 #include "dtComentario.h"
+#include <map>
 
 dtComentario::dtComentario() {}
-dtComentario::dtComentario(int id, string comentario) {}
+
+dtComentario::dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> comentariosComentados) {
+    this->id = id;
+    this->comentario = comentario;
+    this->usuarios = usuario;
+    this->dtcomentariosComentados = comentariosComentados;
+}
 
 int dtComentario::getComentarioId() {
     return id;
 }
 
- void dtComentario::setComentarioId(int id) {
-     this->id = id;
+void dtComentario::setComentarioId(int id) {
+    this->id = id;
 }
 
 string dtComentario::getComentario() {

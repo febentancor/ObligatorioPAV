@@ -40,6 +40,7 @@ int main() {
     ictrVP = fabrica->getIcontrolador7();//Contiene el controlador de ver informacion de la pelicula
 
     int opcion;
+    bool existe = true;
     bool masSala = true;
     string resAcine;
     string usr;
