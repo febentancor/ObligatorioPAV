@@ -23,11 +23,14 @@ public:
     list<dtFuncion> seleccionarCine(int);
     void seleccionarFuncion(int);
     void ingresarCantidadAsientos(int);
+    void ingresarNombreDeBanco(string);
+
 private:
     Pelicula* peliculaCfuncion;
     Cine* cineReserva;
     Funcion* funcionReserva;
     int CantAsisentos;
+    string nomBanco;
 };
 
 

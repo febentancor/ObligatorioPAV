@@ -6,10 +6,11 @@
 #include "dtHorario.h"
 Funcion::Funcion(){}
 int Funcion::idAutoF=-1;
-Funcion::Funcion(dtFecha dia, dtHorario horario) {
+Funcion::Funcion(dtFecha dia, dtHorario horario, int precioFuncion) {
     this -> id = Funcion::getIdAuto();
     this ->dia = dia;
     this -> horario = horario;
+    this->precioFuncion = precioFuncion;
 };
 
 int Funcion::getId() {

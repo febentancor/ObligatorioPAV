@@ -86,3 +86,6 @@ void CtrCrearReserva::seleccionarFuncion(int idFuncion){
 void CtrCrearReserva::ingresarCantidadAsientos(int CantAs){
     this->CantAsisentos=CantAs;
 }
+void CtrCrearReserva::ingresarNombreDeBanco(string nomBan){
+    this->nomBanco=nomBan;
+}

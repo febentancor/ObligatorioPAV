@@ -21,10 +21,11 @@ public:
     virtual list<dtSala> seleccionarCine(int)=0;
     virtual list<dtFuncion> seleccionarSala(int)=0;
     virtual bool ingresarHorario(dtFecha,dtHorario)=0;
+    virtual void ingresarPrecio(int)=0;
+    virtual void darAltaFuncion ()=0;
     virtual bool existeTitulo(string)=0;
     virtual bool existeCine(int)=0;
-    virtual void darAltaFuncion ()=0;
-    virtual bool existeSala(int)=0; //ojo esto lo agregue para verificar si existe la sala no se si va
+    virtual bool existeSala(int)=0;
 
 };
 
