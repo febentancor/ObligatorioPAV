@@ -62,3 +62,4 @@ void CtrIniciarSesion::cargaPelicula() {
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP1 -> agregarPelicula(pe);
 }
+
