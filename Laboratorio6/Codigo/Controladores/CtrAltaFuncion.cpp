@@ -9,7 +9,6 @@
 #include <list>
 #include "ManejadorCine.h"
 #include "ManejadorFunciones.h"
-#include "ManejadorSala.h"
 
 CtrAltaFuncion::CtrAltaFuncion() {}
 
@@ -52,13 +51,6 @@ bool CtrAltaFuncion::existeCine(int id) {
     return  existe;
 }
 
-bool CtrAltaFuncion::existeSala(int id) {
-    ManejadorSala* mS= ManejadorSala::getInstancia();
-    bool existe=mS->existeSala(id);
-    if(!existe)
-        throw invalid_argument("ERROR la sala no existe \n");
-    return  existe;
-}
 
 list<dtSala> CtrAltaFuncion::seleccionarCine(int idCine){
     this->idCine=idCine;
@@ -78,7 +70,18 @@ list<dtSala> CtrAltaFuncion::seleccionarCine(int idCine){
     return dtsalas;
 };
 
-
+bool CtrAltaFuncion::existeSala(int id) {
+    bool existe = false;
+    list<Sala *> s = cineFuncion->getSalas();
+    for (list<Sala *>::iterator it1 = s.begin(); it1 != s.end(); ++it1) {
+        if ((*it1)->getId() == id) {
+            existe = true;
+        }
+    }
+    if (!existe)
+        throw invalid_argument("ERROR la sala no existe \n");
+    return existe;
+}
 list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
     list<dtFuncion> dtfunciones;
     list<Sala*> sal = (cineFuncion->getSalas());
