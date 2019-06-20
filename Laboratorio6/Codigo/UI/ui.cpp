@@ -18,8 +18,9 @@ void menu(){
     cout <<"\t3. Puntuar Pelicula"<<endl;
     cout <<"\t4. Alta Funcion"<<endl;
     cout <<"\t5. Comentar Pelicula"<<endl;
-    cout <<"\t6. Obtener Mascotas de un Socio"<<endl;
-    cout <<"\t7. Salir"<<endl;
+    cout <<"\t6. Crear Reserva"<<endl;
+    cout <<"\t7. Ver informacion Pelicula"<<endl;
+    cout <<"\t8. Salir"<<endl;
     cout <<"\t______________________________________________" <<endl;
     cout <<"\t\t\t\t\t OPCION: ";
 }

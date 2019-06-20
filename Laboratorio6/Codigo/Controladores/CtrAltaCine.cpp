@@ -9,6 +9,8 @@
 #include "Cine.h"
 #include "ManejadorSala.h"
 
+CtrAltaCine::CtrAltaCine(){}
+
 void CtrAltaCine::ingresarDireccion(dtDireccion dtd){
     this -> dir=dtd;
 }

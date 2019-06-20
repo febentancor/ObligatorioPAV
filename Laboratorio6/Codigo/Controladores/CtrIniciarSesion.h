@@ -9,7 +9,7 @@
 #include "ManejadorUsuario.h"
 class CtrIniciarSesion: public IctrInicioSesion{
 public:
-    //CtrIniciarSesion();
+    CtrIniciarSesion();
     void ingresarUsuario(string);
     bool ingresarContrasena(string);
     void iniciarSesion ();

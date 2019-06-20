@@ -10,7 +10,7 @@ using namespace std;
 
 class CtrPuntuarPelicula: public IctrPuntuarPelicula {
 public:
-    //CtrPuntuarPelicula();
+    CtrPuntuarPelicula();
     list<string> listarTituloPelicula();
    bool seleccionarPelicula(string);
    float verPuntaje ();

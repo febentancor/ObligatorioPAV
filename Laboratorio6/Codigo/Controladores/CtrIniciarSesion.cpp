@@ -6,6 +6,8 @@
 #include "ManejadorUsuario.h"
 #include "ManejadorPelicula.h"
 #include "Sesion.h"
+
+CtrIniciarSesion::CtrIniciarSesion(){}
 void CtrIniciarSesion::ingresarUsuario(string nickName){
     this -> nickName=nickName;
 }

@@ -9,6 +9,7 @@
 #include <list>
 #include "Puntaje.h"
 
+CtrPuntuarPelicula::CtrPuntuarPelicula(){}
 
 list<string> CtrPuntuarPelicula::listarTituloPelicula(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();

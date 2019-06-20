@@ -9,6 +9,7 @@
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
 #include "Inrterfaces/IctrComentarPelicula.h"
+#include "IctrVerinfoPelicula.h"
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
@@ -20,6 +21,7 @@ IctrAltaCine* ictrAC;
 IctrPuntuarPelicula* ictrmP;
 IctrAltaFuncion* ictrAF;
 IctrComentarPelicula* ictrCP;
+IctrVerinfoPelicula* ictrVP;
 
 
 
@@ -33,6 +35,8 @@ int main() {
     ictrmP = fabrica->getIControlador3();//Contiene controlador de puntuar Pelicula
     ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
     ictrCP = fabrica->getIcontrolador5();//Contiene el controlador de comentar pelicula
+    ictrVP = fabrica->getIcontrolador7();//Contiene el controlador de ver informacion de la pelicula
+
     int opcion;
     bool masSala = true;
     string resAcine;
@@ -66,11 +70,17 @@ int main() {
     string horaCamienzoF;
     string horaFinF;
     dtHorario HorarioF;
-    bool igualF;
+    //Variables de verInfoPeliculas
+    list<string> listVIP;
+    string VPtitulo;
+    list<dtInfoPelicula> dtlistVIP;
+    list<dtCine> dtlistCiV;
+    list<dtFuncion> dtlistFuV;
+    int VCid;
 
     menu();
     cin >> opcion;
-    while (opcion != 7) {
+    while (opcion != 8) {
         switch (opcion) {
             case 1:
                 cout << "+++++++++++INCIAR SESION+++++++++++++"<<endl;
@@ -255,9 +265,48 @@ int main() {
                     cin >> tituloPelicula;
                     // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
                     break;
-                    case 6: //obtenerMascotas();
+                    case 6: //ALTA FUNCION
                         break;
                     case 7:
+                        cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++"<<endl;
+                        listVIP = ictrVP->listarPeliculas();
+                        for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
+                            cout << "\n" << *it;
+                            cout << "\n";
+                         }
+                        cout << "\n Seleccionar la Pelicula: " << endl;
+                        cin >> VPtitulo;
+                        dtlistVIP = ictrVP->seleccionarPelicula(VPtitulo);
+                        cout << "\n ---Informacion de la pelicula--- " << endl;
+                        for (list<dtInfoPelicula>::iterator it1 = dtlistVIP.begin(); it1 != dtlistVIP.end(); ++it1) {
+                            cout << "\n Poster: " << (*it1).getPoster();
+                            cout << "\n Sinopsis: " << (*it1).getSinopsis();
+                            cout << "\n";
+                        }
+
+                        dtlistCiV = ictrVP->listarCine();
+                        cout << "\n ---Informacion del los Cines--- " << endl;
+                        for (list<dtCine>::iterator it2 = dtlistCiV.begin(); it2 != dtlistCiV.end(); ++it2) {
+                            cout << "\n Id Cine: " << (*it2).getIdCine();
+                            cout << "\n Calle: " << (*it2).getDireccion().getCalle();
+                            cout << "\n Numero: " << (*it2).getDireccion().getNumero();
+                            cout << "\n";
+                        }
+                        cout << "\n Seleccionar la Cine: " << endl;
+                        cin >> VCid;
+
+                        dtlistFuV = ictrVP->seleccionarCine(VCid);
+                        cout << "\n ---Informacion del las Funciones--- " << endl;
+                        for (list<dtFuncion>::iterator it3 = dtlistFuV.begin(); it3 != dtlistFuV.end(); ++it3) {
+                            cout << "\n Dia: " << (*it3).getDia().getDia();
+                            cout << "\n Mes: " << (*it3).getDia().getMes();
+                            cout << "\n Anio: " << (*it3).getDia().getAnio();
+                            cout << "\n Hora de comienzo: " << (*it3).getHora().getHoraCominezo();
+                            cout << "\n Hora de fin: " << (*it3).getHora().getHoraFin();
+                            cout << "\n";
+                        }
+                        break;
+                    case 8:
                         system("exit");
                     cout << "SALIENDO..." << endl;
                     default:
