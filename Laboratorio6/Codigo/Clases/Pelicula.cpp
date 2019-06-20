@@ -93,5 +93,11 @@ list<Cine*> Pelicula::obternerCines() {
         lstCines.push_back(it->second);
     return lstCines;
 }
+
 Pelicula::~Pelicula(){}
+map <int, Comentario*> Pelicula::getComentariosPeliculas(){
+
+    return this->comentarios;
+}
+
 
