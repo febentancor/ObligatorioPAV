@@ -12,17 +12,22 @@
 #include <list>
 #include "IctrCrearReserva.h"
 #include "Pelicula.h"
+#include "Funcion.h"
 
 class CtrCrearReserva : public IctrCrearReserva{
 public:
     CtrCrearReserva();
     list<string> listarPeliculas();
-    list<dtInfoPelicula> seleccionarPelicula(string);
+    list<dtInfoPelicula> seleccionarPeliculaC(string);
     list<dtCine> listarCine();
     list<dtFuncion> seleccionarCine(int);
+    void seleccionarFuncion(int);
+    void ingresarCantidadAsientos(int);
 private:
-    string tituloCfuncion;
     Pelicula* peliculaCfuncion;
+    Cine* cineReserva;
+    Funcion* funcionReserva;
+    int CantAsisentos;
 };
 
 

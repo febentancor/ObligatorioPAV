@@ -276,7 +276,7 @@ int main() {
                          }
                         cout << "\n Seleccionar la Pelicula: " << endl;
                         cin >> VPtitulo;
-                        dtlistVIP = ictrVP->seleccionarPelicula(VPtitulo);
+                        dtlistVIP = ictrVP->seleccionarPeliculaV(VPtitulo);
                         cout << "\n ---Informacion de la pelicula--- " << endl;
                         for (list<dtInfoPelicula>::iterator it1 = dtlistVIP.begin(); it1 != dtlistVIP.end(); ++it1) {
                             cout << "\n Poster: " << (*it1).getPoster();

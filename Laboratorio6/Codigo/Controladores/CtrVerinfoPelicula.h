@@ -13,7 +13,7 @@ class CtrVerinfoPelicula: public IctrVerinfoPelicula{
 public:
     CtrVerinfoPelicula();
     list<string> listarPeliculas();
-    list<dtInfoPelicula> seleccionarPelicula(string);
+    list<dtInfoPelicula> seleccionarPeliculaV(string);
     list<dtCine> listarCine();
     list<dtFuncion> seleccionarCine(int);
 private:

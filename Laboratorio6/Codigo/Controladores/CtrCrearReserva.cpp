@@ -28,8 +28,7 @@ list<string> CtrCrearReserva::listarPeliculas(){
     return titulos;
 }
 
-list<dtInfoPelicula> CtrCrearReserva::seleccionarPelicula(string titulo){
-    this->tituloCfuncion=titulo;
+list<dtInfoPelicula> CtrCrearReserva::seleccionarPeliculaC(string titulo){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     list<Pelicula*> pelis = mP->getPeliculas();
     list<dtInfoPelicula> dtpelis;
@@ -58,6 +57,7 @@ list<dtFuncion> CtrCrearReserva::seleccionarCine(int idCine){
     list<dtFuncion> dtfun;
     for(list<Cine*>::iterator it=c.begin();it!=c.end(); ++it){
         if((*it)->getId() == idCine){
+            this->cineReserva=(*it);
             list<Sala*> s = (*it)->getSalas();
             for(list<Sala*>::iterator it1=s.begin();it1!=s.end(); ++it1){
                 list<Funcion*> f = (*it1)->getFuncion();
@@ -69,4 +69,20 @@ list<dtFuncion> CtrCrearReserva::seleccionarCine(int idCine){
         }
     }
     return dtfun;
+}
+
+void CtrCrearReserva::seleccionarFuncion(int idFuncion){
+    list<Sala*> s = cineReserva->getSalas();
+    for(list<Sala*>::iterator it1=s.begin();it1!=s.end(); ++it1){
+        list<Funcion*> f = (*it1)->getFuncion();
+        for(list<Funcion*>::iterator it2=f.begin();it2!=f.end(); ++it2) {
+            if((*it2)->getId() == idFuncion){
+                this->funcionReserva=(*it2);
+            }
+        }
+    }
+}
+
+void CtrCrearReserva::ingresarCantidadAsientos(int CantAs){
+    this->CantAsisentos=CantAs;
 }

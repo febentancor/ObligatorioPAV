@@ -6,7 +6,7 @@
 Sala::Sala() {}
 int Sala::idAuto=-1;
 Sala::Sala(int capacidad) {
-    this -> id = Sala::getIdAuto();
+    this -> id = Sala::getIdAutoS();
     this ->capacidad = capacidad;
 };
 
@@ -23,7 +23,7 @@ void Sala::setCapacidad(int capacidad) {
     this ->capacidad=capacidad;
 }
 
-int Sala::getIdAuto() {
+int Sala::getIdAutoS() {
     idAuto++;
     return idAuto;
 }

@@ -27,7 +27,7 @@ list<string> CtrVerinfoPelicula::listarPeliculas(){
     return titulos;
 }
 
-list<dtInfoPelicula> CtrVerinfoPelicula::seleccionarPelicula(string titulo){
+list<dtInfoPelicula> CtrVerinfoPelicula::seleccionarPeliculaV(string titulo){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     list<Pelicula*> pelis = mP->getPeliculas();
     list<dtInfoPelicula> dtpelis;

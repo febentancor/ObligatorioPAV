@@ -17,10 +17,12 @@ class IctrCrearReserva{
 
 public:
     virtual list<string> listarPeliculas()=0;
-    virtual list<dtInfoPelicula> seleccionarPelicula(string)=0;
+    virtual list<dtInfoPelicula> seleccionarPeliculaC(string)=0;
     virtual list<dtCine> listarCine()=0;
     virtual list<dtFuncion> seleccionarCine(int)=0;
-    //virtual list<dtSala> seleccionarCine(int)=0;
+    virtual void seleccionarFuncion(int)=0;
+    virtual void ingresarCantidadAsientos(int)=0;
+
 
 };
 

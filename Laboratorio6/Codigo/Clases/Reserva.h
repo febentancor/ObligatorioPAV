@@ -5,24 +5,27 @@
 #ifndef CODIGO_RESERVA_H
 #define CODIGO_RESERVA_H
 
-#include "Funcion.h"
 
 using namespace std;
 
 
 class Reserva {
 private:
+    int id;
     float costo;
     int cantEntradas;
-   Funcion *funciones;
-
+    static int idAutoR;
 public:
     Reserva();
     Reserva(float,int );
+    int getId();
+    void setId(int);
     float getCosto();
     void setCosto(float);
     int getCantEntradas();
     void setCantEntradas(int);
+    static int getIdAutoR();
+    ~Reserva();
 
 };
 

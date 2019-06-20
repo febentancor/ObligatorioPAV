@@ -22,7 +22,7 @@ public:
     int getId();
     void setCapacidad(int);
     int getCapacidad();
-    static int getIdAuto();
+    static int getIdAutoS();
     list<Funcion*> getFuncion();
     void ingresarFuncion(int,Funcion*);
     ~Sala();

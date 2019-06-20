@@ -10,6 +10,7 @@
 #include "Pelicula.h"
 #include "dtFecha.h"
 #include "dtHorario.h"
+#include "Reserva.h"
 
 class Funcion {
 private:
@@ -18,6 +19,7 @@ private:
     dtHorario horario;
     Pelicula *pelicula;
     static int idAutoF;
+    map<int,Reserva*>reservas;
 public:
     Funcion();
     Funcion(dtFecha, dtHorario);

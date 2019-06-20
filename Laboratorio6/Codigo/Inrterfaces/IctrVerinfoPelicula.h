@@ -17,7 +17,7 @@ class IctrVerinfoPelicula{
 
 public:
     virtual list<string> listarPeliculas()=0;
-    virtual list<dtInfoPelicula> seleccionarPelicula(string)=0;
+    virtual list<dtInfoPelicula> seleccionarPeliculaV(string)=0;
     virtual list<dtCine> listarCine()=0;
     virtual list<dtFuncion> seleccionarCine(int)=0;
 };

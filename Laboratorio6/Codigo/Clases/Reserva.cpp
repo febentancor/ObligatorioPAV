@@ -5,7 +5,9 @@
 #include "Reserva.h"
 
 Reserva::Reserva() {}
+int Reserva::idAutoR=-1;
     Reserva::Reserva(float costo, int cantEntradas) {
+        this -> id = Reserva::getIdAutoR();
         this->costo = costo;
         this->cantEntradas=cantEntradas;
     };
@@ -25,3 +27,14 @@ Reserva::Reserva() {}
     void Reserva::setCantEntradas(int cantEntradas){
         this->cantEntradas=cantEntradas;
     };
+int Reserva::getId() {
+    return  this->id;
+}
+void Reserva::setId(int id) {
+    this ->id=id;
+}
+int Reserva::getIdAutoR() {
+    idAutoR++;
+    return idAutoR;
+}
+Reserva::~Reserva() {}
