@@ -23,7 +23,10 @@ public:
     list<dtFuncion> seleccionarCine(int);
     void seleccionarFuncion(int);
     void ingresarCantidadAsientos(int);
+    void ingresarTipoPago(int);
     void ingresarNombreDeBanco(string);
+    float ingresarFinanciera(int);
+    float verPrecioTotal();
 
 private:
     Pelicula* peliculaCfuncion;
@@ -31,6 +34,8 @@ private:
     Funcion* funcionReserva;
     int CantAsisentos;
     string nomBanco;
+    int tipoPago;
+    int descuento;
 };
 
 

@@ -86,6 +86,26 @@ void CtrCrearReserva::seleccionarFuncion(int idFuncion){
 void CtrCrearReserva::ingresarCantidadAsientos(int CantAs){
     this->CantAsisentos=CantAs;
 }
+void CtrCrearReserva::ingresarTipoPago(int tiPago){
+    this->tipoPago=tiPago;
+}
 void CtrCrearReserva::ingresarNombreDeBanco(string nomBan){
     this->nomBanco=nomBan;
+}
+float CtrCrearReserva::ingresarFinanciera(int descuento){
+    this->descuento=descuento;
+}
+float CtrCrearReserva::verPrecioTotal(){
+    float precio = 0;
+    float des;
+    int precioFuncion=funcionReserva->getPrecioFuncion();
+    if(tipoPago==1){
+        precio = precioFuncion * CantAsisentos;
+    }
+    else{
+        precio = precioFuncion * CantAsisentos;
+        des = (precio * 100)/descuento;
+        precio = precio - des;
+    }
+    return precio;
 }

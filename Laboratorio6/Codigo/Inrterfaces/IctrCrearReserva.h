@@ -22,7 +22,10 @@ public:
     virtual list<dtFuncion> seleccionarCine(int)=0;
     virtual void seleccionarFuncion(int)=0;
     virtual void ingresarCantidadAsientos(int)=0;
+    virtual void ingresarTipoPago(int)=0;
     virtual void ingresarNombreDeBanco(string)=0;
+    virtual float ingresarFinanciera(int)=0;
+    virtual float verPrecioTotal()=0;
 
 
 
