@@ -11,16 +11,16 @@ using namespace std;
 
 void menu(){
     //system("clear");
-    cout <<"_____________________________________________" <<endl;
-    cout <<"____________G R U P O    C I  S N E__________"<< endl;
-    cout <<"1. Iniciar Sesion"<<endl;
-    cout <<"2. Alta Cine"<<endl;
-    cout <<"3. Puntuar Pelicula"<<endl;
-    cout <<"4. Alta Funcion"<<endl;
-    cout <<"5. Comentar Pelicula"<<endl;
-    cout <<"6. Obtener Mascotas de un Socio"<<endl;
-    cout <<"7. Salir"<<endl;
-    cout <<"_____________________________________________" <<endl;
-    cout <<"OPCION: ";
+    cout <<"\t_______________________________________________" <<endl;
+    cout <<"\t____________G R U P O    C I  S  N  E__________"<< endl;
+    cout <<"\t1. Iniciar Sesion"<<endl;
+    cout <<"\t2. Alta Cine"<<endl;
+    cout <<"\t3. Puntuar Pelicula"<<endl;
+    cout <<"\t4. Alta Funcion"<<endl;
+    cout <<"\t5. Comentar Pelicula"<<endl;
+    cout <<"\t6. Obtener Mascotas de un Socio"<<endl;
+    cout <<"\t7. Salir"<<endl;
+    cout <<"\t______________________________________________" <<endl;
+    cout <<"\t\t\t\t\t OPCION: ";
 }
 
