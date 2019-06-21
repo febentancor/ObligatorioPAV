@@ -58,6 +58,8 @@ add_executable(Codigo
         Dtypes/dtFuncion.cpp
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
+        Dtypes/dtTarjetas.cpp
+        Dtypes/dtTarjetas.h
         Dtypes/dtHorario.h
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
