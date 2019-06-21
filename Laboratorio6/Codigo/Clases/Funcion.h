@@ -15,10 +15,10 @@
 class Funcion {
 private:
     int id;
+    static int idAutoF;
     dtFecha dia;
     dtHorario horario;
     Pelicula *pelicula;
-    static int idAutoF;
     int precioFuncion;
     map<int,Reserva*>reservas;
 
@@ -27,6 +27,7 @@ public:
     Funcion(dtFecha, dtHorario, int);
     int getPrecioFuncion();
     void setPrecioFuncion(int);
+    static int getIdAutoF();
     int getId();
     void setId(int);
     dtFecha getDia();
@@ -35,7 +36,6 @@ public:
     void setHora(dtHorario);
     string getTituloPelicula();
     void setPelicula(Pelicula*);
-    static int getIdAuto();
     void ingresarReserva(Reserva*,int);
     virtual ~Funcion();
 };

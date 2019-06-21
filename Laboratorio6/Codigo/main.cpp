@@ -329,6 +329,7 @@ int main() {
 
                 cout << "\n ---Informacion del las Funciones--- " << endl;
                 for (list<dtFuncion>::iterator it3 = dtListCRF.begin(); it3 != dtListCRF.end(); ++it3) {
+                    cout << "\n IdFuncion: "<<(*it3).getIdFuncion();
                     cout << "\n Dia: " << (*it3).getDia().getDia();
                     cout << "\n Mes: " << (*it3).getDia().getMes();
                     cout << "\n Anio: " << (*it3).getDia().getAnio();
