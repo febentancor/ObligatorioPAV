@@ -141,6 +141,7 @@ void CtrAltaFuncion::darAltaFuncion (){
 
     Funcion* f = new Funcion(fechaFuncion,horarioFuncion,PrecioFuncion);
     salaFuncion->ingresarFuncion(f->getId(),f);
+    f->setPelicula(p);
     ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
     mF->agregarFuncion(f);
 };

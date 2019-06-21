@@ -5,6 +5,7 @@
 #include "CtrIniciarSesion.h"
 #include "ManejadorUsuario.h"
 #include "ManejadorPelicula.h"
+#include "dtTarjetas.h"
 #include "Sesion.h"
 
 CtrIniciarSesion::CtrIniciarSesion(){}

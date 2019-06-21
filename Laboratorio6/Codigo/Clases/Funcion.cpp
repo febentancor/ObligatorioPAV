@@ -7,8 +7,9 @@
 
 Funcion::Funcion(){}
 int Funcion::idAutoF=-1;
+
 Funcion::Funcion(dtFecha dia, dtHorario horario, int precioFuncion) {
-    this -> id = Funcion::getIdAuto();
+    this -> id = Funcion::getIdAutoF();
     this ->dia = dia;
     this -> horario = horario;
     this->precioFuncion = precioFuncion;
@@ -26,6 +27,10 @@ int Funcion::getId() {
 void Funcion::setId(int id) {
     this ->id=id;
 }
+int Funcion::getIdAutoF() {
+    idAutoF++;
+    return idAutoF;
+}
 
 dtFecha Funcion::getDia() {
     return this->dia;
@@ -40,8 +45,17 @@ dtHorario Funcion::getHora() {
 void Funcion::setHora(dtHorario horario)  {
     this->horario = horario;
 }
-int Funcion::getIdAuto() {
-    idAutoF++;
-    return idAutoF;
+
+string Funcion::getTituloPelicula(){
+
+    return this->pelicula->getTitulo();
+
+}
+void Funcion::setPelicula(Pelicula * p) {
+    this->pelicula = p;
+
+}
+void Funcion::ingresarReserva(Reserva * fu, int id) {
+    reservas.insert(std::pair<int,Reserva*>(id,fu));
 }
 Funcion::~Funcion() {}

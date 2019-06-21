@@ -47,6 +47,8 @@ add_executable(Codigo
         Controladores/CtrIniciarSesion.h
         Controladores/CtrPuntuarPelicula.cpp
         Controladores/CtrPuntuarPelicula.h
+        Controladores/CtrVerComentarioYPuntaje.h
+        Controladores/CtrVerComentarioYPuntaje.cpp
         Dtypes/dtCine.cpp
         Dtypes/dtCine.h
         Dtypes/dtComentario.cpp
@@ -58,17 +60,24 @@ add_executable(Codigo
         Dtypes/dtFuncion.cpp
         Dtypes/dtFuncion.h
         Dtypes/dtHorario.cpp
+        Dtypes/dtTarjetas.cpp
+        Dtypes/dtTarjetas.h
         Dtypes/dtHorario.h
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
         Dtypes/dtSala.cpp
         Dtypes/dtSala.h
+        Dtypes/dtPeliculaCompleto.h
+        Dtypes/dtPeliculaCompleto.cpp
+        Dtypes/dtPuntaje.h
+        Dtypes/dtPuntaje.cpp
         Inrterfaces/IctrAltaCine.h
         Inrterfaces/IctrAltaFuncion.h
         Inrterfaces/IctrComentarPelicula.h
         Inrterfaces/IctrCrearReserva.h
         Inrterfaces/IctrInicioSesion.h
         Inrterfaces/IctrPuntuarPelicula.h
+        Inrterfaces/IctrVerComentarioYPuntaje.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
         Manejadores/ManejadorPelicula.cpp
@@ -77,4 +86,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h)
+        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h Controladores/CtrEliminarPelicula.cpp Controladores/CtrEliminarPelicula.h Inrterfaces/IctrEliminarPelicula.h Manejadores/ManejadorCrearReserva.cpp Manejadores/ManejadorCrearReserva.h)

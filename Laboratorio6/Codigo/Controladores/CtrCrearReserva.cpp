@@ -10,9 +10,13 @@
 #include "dtHorario.h"
 #include "dtFecha.h"
 #include "dtFuncion.h"
+#include "dtTarjetas.h"
 #include "ManejadorFunciones.h"
 #include "ManejadorCine.h"
 #include "ManejadorPelicula.h"
+#include "ManejadorCrearReserva.h"
+#include "Debito.h"
+#include "Credito.h"
 
 #include <list>
 
@@ -42,7 +46,7 @@ list<dtInfoPelicula> CtrCrearReserva::seleccionarPeliculaC(string titulo){
     return dtpelis;
 }
 
-list<dtCine> CtrCrearReserva::listarCine(){
+list<dtCine> CtrCrearReserva::listarCineC(){
     list<Cine*> c = peliculaCfuncion->obternerCines();
     list<dtCine> dtcin;
     for(list<Cine*>::iterator it=c.begin();it!=c.end(); ++it){
@@ -52,7 +56,7 @@ list<dtCine> CtrCrearReserva::listarCine(){
     return dtcin;
 };
 
-list<dtFuncion> CtrCrearReserva::seleccionarCine(int idCine){
+list<dtFuncion> CtrCrearReserva::seleccionarCineC(int idCine){
     list<Cine*> c = peliculaCfuncion->obternerCines();
     list<dtFuncion> dtfun;
     for(list<Cine*>::iterator it=c.begin();it!=c.end(); ++it){
@@ -92,7 +96,7 @@ void CtrCrearReserva::ingresarTipoPago(int tiPago){
 void CtrCrearReserva::ingresarNombreDeBanco(string nomBan){
     this->nomBanco=nomBan;
 }
-float CtrCrearReserva::ingresarFinanciera(int descuento){
+void CtrCrearReserva::ingresarFinanciera(int descuento){
     this->descuento=descuento;
 }
 float CtrCrearReserva::verPrecioTotal(){
@@ -107,5 +111,38 @@ float CtrCrearReserva::verPrecioTotal(){
         des = (precio * 100)/descuento;
         precio = precio - des;
     }
+    this->precioTotal=precio;
     return precio;
 }
+
+void CtrCrearReserva::cargaFinancieras() {
+    dtTarjetas* dt= new dtTarjetas;
+    dt->ingresarFinanciera(10,"Santander");
+    dt->ingresarFinanciera(25, "BROU");
+    this->tipoDescuento=dt;
+}
+
+int CtrCrearReserva::obtDescuento(string x){
+    int r= tipoDescuento->obtenerDescuento(x);
+    return r;
+}
+
+bool CtrCrearReserva::existeBanco(string x) {
+    dtTarjetas* dt= new dtTarjetas;
+    bool y;
+    y= dt->existeBanco(x);
+    return  y;
+}
+void CtrCrearReserva::confirmar(){
+    Reserva* r = new Reserva(precioTotal,CantAsisentos);
+    ManejadorCrearReserva* mCR = ManejadorCrearReserva::getInstancia();
+    mCR->agregarReserva(r);
+
+    funcionReserva->ingresarReserva(r,r->getId());
+    if(tipoPago==1){
+         Debito* d = new Debito(nomBanco);
+    }else{
+        Credito* c = new Credito(nomBanco,descuento);
+    }
+}
+

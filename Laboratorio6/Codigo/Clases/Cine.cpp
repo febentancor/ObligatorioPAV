@@ -12,9 +12,7 @@ int Cine::idAuto=-1;
 Cine::Cine(dtDireccion direccion){
     this -> id =Cine::getIdAuto();
     this -> direccion =direccion;
-
 }
-
 
 int Cine::getId() {
     return id;
@@ -31,6 +29,7 @@ dtDireccion Cine::getDireccion() {
 void Cine::setDireccion(dtDireccion direccion) {
     this-> direccion = direccion;
 }
+
 int Cine::getIdAuto(){
     idAuto++;
     return idAuto;

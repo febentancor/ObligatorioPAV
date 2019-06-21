@@ -7,11 +7,13 @@
 #include "dtFecha.h"
 
 dtFuncion::dtFuncion() {}
+int dtFuncion::idAutoF=-1;
+
 dtFuncion::dtFuncion(dtFecha dia, dtHorario horario) {
     this ->dia = dia;
     this -> horario = horario;
+    this->idFuncion= dtFuncion::getIdAutoF();
 };
-
 
 dtFecha dtFuncion::getDia() {
     return this->dia;
@@ -25,5 +27,18 @@ dtHorario dtFuncion::getHora() {
 }
 void dtFuncion::setHora(dtHorario horario)  {
     this->horario = horario;
+}
+
+int dtFuncion::getIdFuncion() {
+    return this->idFuncion;
+}
+
+void dtFuncion::setIdFuncion(int idFuncion) {
+    this->idFuncion=idFuncion;
+}
+
+int dtFuncion::getIdAutoF() {
+    idAutoF++;
+    return idAutoF;
 }
 dtFuncion::~dtFuncion() {}

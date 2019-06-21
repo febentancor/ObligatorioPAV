@@ -45,3 +45,4 @@ int Comentario::getIdAutoC() {
     idAuto++;
     return idAuto;
 }
+Comentario::~Comentario(){}

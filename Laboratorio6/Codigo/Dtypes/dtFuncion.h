@@ -10,6 +10,8 @@
 
 class dtFuncion {
 private:
+    int idFuncion;
+    static int idAutoF;
     dtFecha dia;
     dtHorario horario;
 public:
@@ -22,6 +24,10 @@ public:
 
     dtHorario getHora();
     void setHora(dtHorario);
+
+    int getIdFuncion();
+    void setIdFuncion(int idFuncion);
+    static int getIdAutoF();
 
 };
 

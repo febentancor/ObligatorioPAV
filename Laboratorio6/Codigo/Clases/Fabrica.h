@@ -12,6 +12,8 @@
 #include "IctrPuntuarPelicula.h"
 #include "IctrAltaFuncion.h"
 #include "IctrVerinfoPelicula.h"
+#include "IctrCrearReserva.h"
+#include "IctrVerComentarioYPuntaje.h"
 
 class Fabrica{
     private:
@@ -25,6 +27,8 @@ class Fabrica{
         IctrAltaFuncion* getIControlador4();
         IctrComentarPelicula* getIcontrolador5();
         IctrVerinfoPelicula* getIcontrolador7();
+        IctrCrearReserva* getIncontrolador8();
+        IctrVerComentarioYPuntaje* getIncontrolador9();
 
 
         ~Fabrica();

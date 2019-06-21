@@ -10,6 +10,8 @@
 #include "CtrAltaFuncion.h"
 #include "CtrComentarPelicula.h"
 #include "CtrVerinfoPelicula.h"
+#include "CtrCrearReserva.h"
+#include "CtrVerComentarioYPuntaje.h"
 
 
 
@@ -45,5 +47,10 @@ IctrVerinfoPelicula* Fabrica::getIcontrolador7() {
     return new CtrVerinfoPelicula();
 }
 
-
+IctrCrearReserva* Fabrica::getIncontrolador8() {
+    return new CtrCrearReserva();
+}
+IctrVerComentarioYPuntaje* Fabrica::getIncontrolador9() {
+    return new CtrVerComentarioYPuntaje();
+}
 Fabrica::~Fabrica(){}
