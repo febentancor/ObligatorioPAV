@@ -13,6 +13,8 @@
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
+#define sangtander 10
+#define banco republica 20
 
 using namespace std;
 Fabrica* fabrica;
@@ -22,7 +24,6 @@ IctrPuntuarPelicula* ictrmP;
 IctrAltaFuncion* ictrAF;
 IctrComentarPelicula* ictrCP;
 IctrVerinfoPelicula* ictrVP;
-IctrEliminarPelicula* ictrEP;
 
 
 
@@ -37,9 +38,9 @@ int main() {
     ictrAF = fabrica->getIControlador4();//Contiene el controlador de alta funcion
     ictrCP = fabrica->getIcontrolador5();//Contiene el controlador de comentar pelicula
     ictrVP = fabrica->getIcontrolador7();//Contiene el controlador de ver informacion de la pelicula
-    ictrEP = fabrica->getIcontrolador9();
 
     int opcion;
+    bool existe = true;
     bool masSala = true;
     string resAcine;
     string usr;
@@ -72,6 +73,7 @@ int main() {
     string horaCamienzoF;
     string horaFinF;
     dtHorario HorarioF;
+    int precioAF;
     //Variables de verInfoPeliculas
     list<string> listVIP;
     string VPtitulo;
@@ -79,14 +81,13 @@ int main() {
     list<dtCine> dtlistCiV;
     list<dtFuncion> dtlistFuV;
     int VCid;
-    string EPtitulo;
 
     menu();
     cin >> opcion;
-    while (opcion != 8) {
+    while (opcion != 99) {
         switch (opcion) {
             case 1:
-                cout << "+++++++++++INCIAR SESION+++++++++++++"<<endl;
+                cout << "+++++++++++INCIAR SESION+++++++++++++" << endl;
                 cout << "Ingreses Usuario: " << endl;
                 cin >> usr;
                 try {
@@ -109,9 +110,9 @@ int main() {
                 break;
 
             case 2:
-                cout << "+++++++++++ALTA CINE+++++++++++++"<<endl;
+                cout << "+++++++++++ALTA CINE+++++++++++++" << endl;
 
-                try{
+                try {
                     ictrIS->esAdmin(usr);
 
                     cout << "Ingreses calle: " << endl;
@@ -124,48 +125,49 @@ int main() {
                     cout << "Ingreses capacidad de la sala: " << endl;
                     cin >> capacidadSalas;
                     ictrAC->ingresarCapacidad(capacidadSalas);
-                    while(masSala){
+                    while (masSala) {
                         cout << "Desea ingresar otra sala y/n: " << endl;
                         cin >> resAcine;
-                        if(resAcine == "y" || resAcine == "Y"){
+                        if (resAcine == "y" || resAcine == "Y") {
                             cout << "Ingreses capacidad de la sala: " << endl;
                             cin >> capacidadSalas;
                             ictrAC->ingresarCapacidad(capacidadSalas);
-                        }else{
-                            masSala=false;
+                        } else {
+                            masSala = false;
                         }
                     }
                     ictrAC->darAltaCine();
-                } catch (invalid_argument &e){
-                    cout<< e.what()<<endl;
+                } catch (invalid_argument &e) {
+                    cout << e.what() << endl;
                 }
                 break;
             case 3:
-                cout << "+++++++++++PUNTUAR PELICULA+++++++++++++"<<endl;
-                listpl = ictrmP->listarTituloPelicula();
-                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                    cout << "\n" << *it;
-                    cout << "\n";
-                }
-                cout << "Seleccionar Pelicula: " << endl;
-                cin >> tituloPelicula;
-                tiene = ictrmP->seleccionarPelicula(tituloPelicula);
-                if (tiene) {
-                    verPuntaje = ictrmP->verPuntaje();
-                    cout << "El puntaje que tiene ingresado es:" << verPuntaje;
-                    cout << "\n";
-                    cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
-                    cin >> nuevoPuntaje;
-                    if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
-                        cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
-                        cin >> puntos;
-                        ictrmP->ingresarPuntaje(puntos);
-                    }
-                } else {
-                    cout << "Ingresar puntaje a la Pelicula: " << endl;
-                    cin >> puntos;
-                    ictrmP->ingresarPuntaje(puntos);
-                }
+                cout << "+++++++++++PUNTUAR PELICULA+++++++++++++" << endl;
+                        listpl = ictrmP->listarTituloPelicula();
+                        for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                            cout << "\n" << *it;
+                            cout << "\n";
+                        }
+                        cout << "Seleccionar Pelicula: " << endl;
+                        cin >> tituloPelicula;
+                        tiene = ictrmP->seleccionarPelicula(tituloPelicula);
+                        if (tiene) {
+                            verPuntaje = ictrmP->verPuntaje();
+                            cout << "El puntaje que tiene ingresado es:" << verPuntaje;
+                            cout << "\n";
+                            cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
+                            cin >> nuevoPuntaje;
+                            if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
+                                cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
+                                cin >> puntos;
+                                ictrmP->ingresarPuntaje(puntos);
+                            }
+                        } else {
+                            cout << "Ingresar puntaje a la Pelicula: " << endl;
+                            cin >> puntos;
+                            ictrmP->ingresarPuntaje(puntos);
+                        }
+
                 break;
             case 4:
                 cout << "+++++++++++ALTA FUNCION+++++++++++++"<<endl;
@@ -237,6 +239,9 @@ int main() {
                                 HorarioF = dtHorario(horaCamienzoF, horaFinF);
                                 try {
                                     if (!ictrAF->ingresarHorario(fechaF, HorarioF)) {
+                                        cout << "\n Ingresar el precio de la funcion: " << endl;
+                                        cin >> precioAF;
+                                        ictrAF->ingresarPrecio(precioAF);
                                         ictrAF->darAltaFuncion();
                                     }
                                 }
@@ -257,56 +262,36 @@ int main() {
                     cout<< e.what()<<endl;
                 }
                 break;
-
             case 5: //comentarpelicula();
                 cout << "+++++++++++COMENTAR PELICULA+++++++++++++"<<endl;
                 listpl = ictrCP->ListarTituloPeliculas();
-                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                    cout << "\n" << *it;
-                    cout << "\n";
-                }
-                cout << "Seleccionar Pelicula: " << endl;
-                cin >> tituloPelicula;
-                // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
-                break;
+                    for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                        cout << "\n" << *it;
+                        cout << "\n";
+                    }
+                    cout << "Seleccionar Pelicula: " << endl;
+                    cin >> tituloPelicula;
+                    // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
+                    break;
+                    case 6: // Crear reserva
 
-            case 6: //ELIMINAR PELICULA
-                cout << "+++++++++++ELIMINAR PELICULA+++++++++++++"<<endl;
-
-                listVIP = ictrEP->listarPelicula();
-
-                for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
-                    cout << "\n" << *it;
-                    cout << "\n";
-                }
-
-                cout << "\n Seleccionar la Pelicula: " << endl;
-                cin >> EPtitulo;
-
-                if(ictrEP->existePelicula(EPtitulo))
-                    ictrEP->eliminarPelicula(EPtitulo);
-
-                else
-                    cout << "\nLa pelicula seleccionada no existe"
-
-                break;
-
-            case 7:
-                cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++"<<endl;
-                listVIP = ictrVP->listarPeliculas();
-                for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
-                    cout << "\n" << *it;
-                    cout << "\n";
-                }
-                cout << "\n Seleccionar la Pelicula: " << endl;
-                cin >> VPtitulo;
-                dtlistVIP = ictrVP->seleccionarPeliculaV(VPtitulo);
-                cout << "\n ---Informacion de la pelicula--- " << endl;
-                for (list<dtInfoPelicula>::iterator it1 = dtlistVIP.begin(); it1 != dtlistVIP.end(); ++it1) {
-                    cout << "\n Poster: " << (*it1).getPoster();
-                    cout << "\n Sinopsis: " << (*it1).getSinopsis();
-                    cout << "\n";
-                }
+                        break;
+                    case 7:
+                        cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++"<<endl;
+                        listVIP = ictrVP->listarPeliculas();
+                        for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
+                            cout << "\n" << *it;
+                            cout << "\n";
+                         }
+                        cout << "\n Seleccionar la Pelicula: " << endl;
+                        cin >> VPtitulo;
+                        dtlistVIP = ictrVP->seleccionarPeliculaV(VPtitulo);
+                        cout << "\n ---Informacion de la pelicula--- " << endl;
+                        for (list<dtInfoPelicula>::iterator it1 = dtlistVIP.begin(); it1 != dtlistVIP.end(); ++it1) {
+                            cout << "\n Poster: " << (*it1).getPoster();
+                            cout << "\n Sinopsis: " << (*it1).getSinopsis();
+                            cout << "\n";
+                        }
 
                 dtlistCiV = ictrVP->listarCine();
                 cout << "\n ---Informacion del los Cines--- " << endl;

@@ -39,24 +39,24 @@ void Pelicula::setPoster(string poster) {
     this ->poster=poster;
 }
 bool Pelicula::tengoPuntaje() {
-    Sesion* s= Sesion::getInstancia();
-    string nick = s->getNickname();
-    bool tiene=false;
-    list<Puntaje *>::iterator it = this->puntajes.begin();
-    while (!tiene && it!=this->puntajes.end()){
-        if((*it)->getNick()==nick) {
-            tiene = true;
-        }
-    }
-    return tiene;
+   Sesion* s= Sesion::getInstancia();
+   string nick = s->getNickname();
+   bool tiene=false;
+   list<Puntaje *>::iterator it = this->puntajes.begin();
+   while (!tiene && it!=this->puntajes.end()){
+       if((*it)->getNick()==nick) {
+           tiene = true;
+       }
+   }
+   return tiene;
 }
 float Pelicula::puntajePromedio() {
     int sumaPuntaje = 0;
     int cant = 0;
     bool tiene=tengoPuntaje();
     for (list<Puntaje *>::iterator it = this->puntajes.begin(); it != puntajes.end(); ++it) {
-        cant++;
-        sumaPuntaje = sumaPuntaje + (*it)->getPuntos();
+         cant++;
+         sumaPuntaje = sumaPuntaje + (*it)->getPuntos();
     }
     if(cant>0) {
         return sumaPuntaje / cant;
@@ -93,15 +93,11 @@ list<Cine*> Pelicula::obternerCines() {
         lstCines.push_back(it->second);
     return lstCines;
 }
-Pelicula::~Pelicula(){
 
-    //delete de cada comentario
-    for(map<int, Comentario*>::iterator it = comentarios.begin() ; it != comentarios.end(); ++it)
-        delete (*it).second;
+Pelicula::~Pelicula(){}
+map <int, Comentario*> Pelicula::getComentariosPeliculas(){
 
-    //delete de cada puntaje
-    for(list<Puntaje*>::iterator it = puntajes.begin() ; it != puntajes.end(); ++it)
-        delete (*it);
-
+    return this->comentarios;
 }
+
 

@@ -19,17 +19,20 @@ private:
     dtHorario horario;
     Pelicula *pelicula;
     static int idAutoF;
+    int precioFuncion;
     map<int,Reserva*>reservas;
+
 public:
     Funcion();
-    Funcion(dtFecha, dtHorario);
+    Funcion(dtFecha, dtHorario, int);
+    int getPrecioFuncion();
+    void setPrecioFuncion(int);
     int getId();
     void setId(int);
     dtFecha getDia();
     void setDia(dtFecha);
     dtHorario getHora();
     void setHora(dtHorario);
-    string getTituloPelicula();
     static int getIdAuto();
     virtual ~Funcion();
 };

@@ -77,4 +77,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h Inrterfaces/IctrEliminarPelicula.h Controladores/CtrEliminarPelicula.cpp Controladores/CtrEliminarPelicula.h)
+        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h)

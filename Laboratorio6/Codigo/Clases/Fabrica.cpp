@@ -10,7 +10,6 @@
 #include "CtrAltaFuncion.h"
 #include "CtrComentarPelicula.h"
 #include "CtrVerinfoPelicula.h"
-#include "CtrEliminarPelicula.h"
 
 
 
@@ -45,8 +44,6 @@ IctrComentarPelicula* Fabrica::getIcontrolador5() {
 IctrVerinfoPelicula* Fabrica::getIcontrolador7() {
     return new CtrVerinfoPelicula();
 }
-IctrEliminarPelicula* Fabrica::getIControlador9() {
-    return new CtrEliminarPelicula();
-}
+
 
 Fabrica::~Fabrica(){}
