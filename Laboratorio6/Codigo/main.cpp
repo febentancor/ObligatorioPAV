@@ -318,38 +318,6 @@ int main() {
                             cout << "No existe la pelicula o fue ingresada incorrectamente" << endl;
                         }
                         break;
-                    case 6: // Crear reserva
-
-                        break;
-                    case 7:
-                        cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++"<<endl;
-                        listVIP = ictrVP->listarPeliculas();
-                        for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
-                            cout << "\n" << *it;
-                            cout << "\n";
-                         }
-                        cout << "\n Seleccionar la Pelicula: " << endl;
-                        cin >> VPtitulo;
-                        dtlistVIP = ictrVP->seleccionarPeliculaV(VPtitulo);
-                        cout << "\n ---Informacion de la pelicula--- " << endl;
-                        for (list<dtInfoPelicula>::iterator it1 = dtlistVIP.begin(); it1 != dtlistVIP.end(); ++it1) {
-                            cout << "\n Poster: " << (*it1).getPoster();
-                            cout << "\n Sinopsis: " << (*it1).getSinopsis();
-                            cout << "\n";
-                        }
-
-                break;
-            case 5: //comentarpelicula();
-                cout << "+++++++++++COMENTAR PELICULA+++++++++++++"<<endl;
-                listpl = ictrCP->ListarTituloPeliculas();
-                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                    cout << "\n" << *it;
-                    cout << "\n";
-                }
-                cout << "Seleccionar Pelicula: " << endl;
-                cin >> tituloPelicula;
-                // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
-                break;
             case 6:
                 cout<<"++++++++++++CREAR RESERVA++++++++++++++++++++++++++++++++"<<endl;
                 listCRLP=ictrCR->listarPeliculas();
