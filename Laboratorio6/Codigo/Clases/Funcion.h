@@ -34,7 +34,9 @@ public:
     dtHorario getHora();
     void setHora(dtHorario);
     string getTituloPelicula();
+    void setPelicula(Pelicula*);
     static int getIdAuto();
+    void ingresarReserva(Reserva*,int);
     virtual ~Funcion();
 };
 

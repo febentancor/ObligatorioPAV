@@ -4,12 +4,15 @@
 #include "Dtypes/dtHorario.h"
 #include "Clases/Fabrica.h"
 #include "Dtypes/dtPelicula.h"
+#include "Dtypes/dtPeliculaCompleto.h"
+#include "Dtypes/dtPuntaje.h"
 #include "dtTarjetas.h"
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
 #include "Inrterfaces/IctrComentarPelicula.h"
+#include "IctrVerComentarioYPuntaje.h"
 #include "IctrVerinfoPelicula.h"
 #include "IctrCrearReserva.h"
 #include "string.h"
@@ -26,7 +29,7 @@ IctrAltaFuncion* ictrAF;
 IctrComentarPelicula* ictrCP;
 IctrVerinfoPelicula* ictrVP;
 IctrCrearReserva* ictrCR;
-
+IctrVerComentarioYPuntaje* ictrVCP;
 
 
 
@@ -40,7 +43,7 @@ int main() {
     ictrCP = fabrica->getIcontrolador5();//Contiene el controlador de comentar pelicula
     ictrVP = fabrica->getIcontrolador7();//Contiene el controlador de ver informacion de la pelicula
     ictrCR = fabrica->getIncontrolador8();//Continene el controlador de crear reserva
-
+    ictrVCP = fabrica->getIncontrolador9();//Contiene el controlador de ver comentarios y puntajes de pelicula
 
     int opcion;
     bool existe = true;
@@ -98,6 +101,11 @@ int main() {
     string CRTitulo;
     string financiera;
     int desc;
+
+    //Variables de ver comentario y puntaje
+    list<string> listCPP;
+    string VCPtitulo;
+    list<dtPeliculaCompleto> dtlistPC;
 
     menu();
     cin >> opcion;
@@ -346,14 +354,16 @@ int main() {
                 }else{
                     cout<<"Ingrese Financiera"<<endl;
                     cin>>financiera;
-                    desc=ictrCR->obtDescuento(financiera);
-                    cout<<" Descuentooooooo :::: "<<desc;
                 }
-
-
-
-
-
+                cout<<"Precio total: "<<ictrCR->verPrecioTotal();
+                cout << "\n";
+                cout<<"Desea Confirmar la reserva (y/n)"<<endl;
+                cin>>NombreBanco;
+                if(NombreBanco == "y" || NombreBanco == "Y"){
+                    ictrCR->confirmar();
+                }else{
+                    cout<<"La reserva fue canselada"<<endl;
+                }
 
                 break;
             case 7:
@@ -397,6 +407,37 @@ int main() {
 
                 break;
             case 8:
+
+                cout << "+++++++++++VER COMENTARIOS Y PUNTAJES DE PELICULA+++++++++++++"<<endl;
+                listCPP = ictrVCP->listarPeliculas();
+                for (list<string>::iterator it = listCPP.begin(); it != listCPP.end(); ++it) {
+                    cout << "\n" << *it;
+                    cout << "\n";
+                }
+
+                cout << "\n Seleccionar la Pelicula: " << endl;
+                cin >> VCPtitulo;
+                dtlistPC = ictrVCP->seleccionarPeliculaV(VCPtitulo);
+
+                cout << "\n ---Puntaje y comentarios de la pelicula--- " << endl;
+                for (list<dtPeliculaCompleto>::iterator it1 = dtlistPC.begin(); it1 != dtlistPC.end(); ++it1) {
+                    cout << "\n Titulo: " << (*it1).getTitulo();
+                    cout << "\n Puntaje Promedio: " << (*it1).getPunaje();
+                    cout << "\n";
+
+                    //LISTO LOS PUNTAJES
+                    cout << "\n Puntajes: " << endl;
+                    list<dtPuntaje*> lista = (*it1).getListaPuntajes();
+                    for (list<dtPuntaje*>::iterator it2 = lista.begin(); it2 != lista.end(); ++it2) {
+                        cout << "\n Nickname: " << (*it2)->getNickname();
+                        cout << "\n Puntaje: " << (*it2)->getPuntos();
+                        cout << "\n";
+                    }
+
+                }
+
+                break;
+            case 9:
                 system("exit");
                 cout << "SALIENDO..." << endl;
             default:

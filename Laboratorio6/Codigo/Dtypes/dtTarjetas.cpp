@@ -40,10 +40,11 @@ bool dtTarjetas::existeBanco(string banco) {
 }
 int dtTarjetas::obtenerDescuento(string banco) {
     if(existeBanco(banco)){
-        return descuento;
+        map<string,int>::iterator it = this->tarjetas.find(banco);
+        return it->second;
+    }else{
+        return 0;
     }
-    //map<string,int>::iterator it = this->tarjetas.find(banco);
-   // return it->second;
 }
 
 

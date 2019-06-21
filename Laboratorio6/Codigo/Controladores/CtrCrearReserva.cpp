@@ -14,6 +14,9 @@
 #include "ManejadorFunciones.h"
 #include "ManejadorCine.h"
 #include "ManejadorPelicula.h"
+#include "ManejadorCrearReserva.h"
+#include "Debito.h"
+#include "Credito.h"
 
 #include <list>
 
@@ -108,19 +111,18 @@ float CtrCrearReserva::verPrecioTotal(){
         des = (precio * 100)/descuento;
         precio = precio - des;
     }
+    this->precioTotal=precio;
     return precio;
 }
 
 void CtrCrearReserva::cargaFinancieras() {
     dtTarjetas* dt= new dtTarjetas;
-    //dtTarjetas* dt2= new dtTarjetas;
-   // dt->ingresarFinanciera(10,"Santander");
-    dt->ingresarFinanciera(25, "a");
+    dt->ingresarFinanciera(10,"Santander");
+    dt->ingresarFinanciera(25, "BROU");
     this->tipoDescuento=dt;
 }
 
 int CtrCrearReserva::obtDescuento(string x){
-
     int r= tipoDescuento->obtenerDescuento(x);
     return r;
 }
@@ -131,3 +133,16 @@ bool CtrCrearReserva::existeBanco(string x) {
     y= dt->existeBanco(x);
     return  y;
 }
+void CtrCrearReserva::confirmar(){
+    Reserva* r = new Reserva(precioTotal,CantAsisentos);
+    ManejadorCrearReserva* mCR = ManejadorCrearReserva::getInstancia();
+    mCR->agregarReserva(r);
+
+    funcionReserva->ingresarReserva(r,r->getId());
+    if(tipoPago==1){
+         Debito* d = new Debito(nomBanco);
+    }else{
+        Credito* c = new Credito(nomBanco,descuento);
+    }
+}
+

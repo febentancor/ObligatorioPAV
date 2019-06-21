@@ -29,6 +29,7 @@ public:
     virtual int obtDescuento(string)=0;
     virtual bool existeBanco(string)=0;
     virtual void cargaFinancieras()=0;
+    virtual void confirmar()=0;
 
 
 

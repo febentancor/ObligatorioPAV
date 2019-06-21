@@ -46,9 +46,14 @@ string Funcion::getTituloPelicula(){
     return this->pelicula->getTitulo();
 
 }
-
+void Funcion::setPelicula(Pelicula * p) {
+    this->pelicula = p;
+}
 int Funcion::getIdAuto() {
     idAutoF++;
     return idAutoF;
+}
+void Funcion::ingresarReserva(Reserva * fu, int id) {
+    reservas.insert(std::pair<int,Reserva*>(id,fu));
 }
 Funcion::~Funcion() {}

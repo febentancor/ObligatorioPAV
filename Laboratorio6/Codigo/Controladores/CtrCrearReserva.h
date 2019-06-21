@@ -27,6 +27,7 @@ public:
     void ingresarTipoPago(int);
     void ingresarNombreDeBanco(string);
     void ingresarFinanciera(int);
+    void confirmar();
     float verPrecioTotal();
     int obtDescuento(string);
     bool existeBanco(string);
@@ -41,6 +42,7 @@ private:
     string nomBanco;
     int tipoPago;
     int descuento;
+    float precioTotal;
     dtTarjetas* tipoDescuento;
 };
 
