@@ -34,3 +34,5 @@ map <int, dtComentario*> Comentario::getComentariosComentados(){
     dtc1.insert(std::pair<int,dtComentario*>(this->id,dtc));
     return dtc1;
 }
+
+Comentario::~Comentario(){}

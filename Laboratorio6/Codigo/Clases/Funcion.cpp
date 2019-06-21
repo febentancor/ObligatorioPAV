@@ -40,6 +40,13 @@ dtHorario Funcion::getHora() {
 void Funcion::setHora(dtHorario horario)  {
     this->horario = horario;
 }
+
+string Funcion::getTituloPelicula(){
+
+    return this->pelicula->getTitulo();
+
+}
+
 int Funcion::getIdAuto() {
     idAutoF++;
     return idAutoF;

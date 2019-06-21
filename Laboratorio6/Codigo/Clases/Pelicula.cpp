@@ -94,7 +94,18 @@ list<Cine*> Pelicula::obternerCines() {
     return lstCines;
 }
 
-Pelicula::~Pelicula(){}
+Pelicula::~Pelicula(){
+
+    //delete de cada comentario
+    for(map<int, Comentario*>::iterator it = comentarios.begin() ; it != comentarios.end(); ++it)
+        delete (*it).second;
+
+    //delete de cada puntaje
+    for(list<Puntaje*>::iterator it = puntajes.begin() ; it != puntajes.end(); ++it)
+        delete (*it);
+
+}
+
 map <int, Comentario*> Pelicula::getComentariosPeliculas(){
 
     return this->comentarios;
