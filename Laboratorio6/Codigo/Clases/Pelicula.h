@@ -10,6 +10,7 @@
 #include "Puntaje.h"
 #include "dtFecha.h"
 #include "Comentario.h"
+
 class Cine;
 using namespace std;
 
@@ -37,8 +38,6 @@ public:
     float puntajePelicula();
     void ingresarCine(Cine*,int);
     list<Cine*> obternerCines();
-    map<int, Comentario*> getComentariosPeliculas();
-    void ingresarComentario(Comentario*);
 };
 
 
