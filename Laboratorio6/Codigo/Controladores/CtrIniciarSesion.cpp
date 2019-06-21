@@ -63,10 +63,3 @@ void CtrIniciarSesion::cargaPelicula() {
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP1 -> agregarPelicula(pe);
 }
-
-void CtrIniciarSesion::cargaFinancieras() {
-   dtTarjetas* dt= new dtTarjetas;
-    dtTarjetas* dt2= new dtTarjetas;
-    dt->ingresarFinanciera(10,"Santander");
-    dt2->ingresarFinanciera(25, "BROU");
-}

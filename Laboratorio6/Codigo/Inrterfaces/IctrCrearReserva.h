@@ -24,10 +24,11 @@ public:
     virtual void ingresarCantidadAsientos(int)=0;
     virtual void ingresarTipoPago(int)=0;
     virtual void ingresarNombreDeBanco(string)=0;
-    virtual float ingresarFinanciera(int)=0;
+    virtual void ingresarFinanciera(int)=0;
     virtual float verPrecioTotal()=0;
     virtual int obtDescuento(string)=0;
     virtual bool existeBanco(string)=0;
+    virtual void cargaFinancieras()=0;
 
 
 

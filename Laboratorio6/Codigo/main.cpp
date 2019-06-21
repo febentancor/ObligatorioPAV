@@ -54,7 +54,7 @@ int main() {
     int capacidadSalas;
     ictrIS->cargaDatos();
     ictrIS->cargaPelicula();
-    ictrIS->cargaFinancieras();
+    ictrCR->cargaFinancieras();
     // Se variables para ingresar puntaje
     list<string> listpl;
     string tituloPelicula;
@@ -346,12 +346,8 @@ int main() {
                 }else{
                     cout<<"Ingrese Financiera"<<endl;
                     cin>>financiera;
-                    existe=ictrCR->existeBanco(financiera);
-                    if(existe){
-                        cout<<"existe"<<endl;
-                    }
                     desc=ictrCR->obtDescuento(financiera);
-                    cout<<" "<<desc;
+                    cout<<" Descuentooooooo :::: "<<desc;
                 }
 
 

@@ -93,7 +93,7 @@ void CtrCrearReserva::ingresarTipoPago(int tiPago){
 void CtrCrearReserva::ingresarNombreDeBanco(string nomBan){
     this->nomBanco=nomBan;
 }
-float CtrCrearReserva::ingresarFinanciera(int descuento){
+void CtrCrearReserva::ingresarFinanciera(int descuento){
     this->descuento=descuento;
 }
 float CtrCrearReserva::verPrecioTotal(){
@@ -111,10 +111,17 @@ float CtrCrearReserva::verPrecioTotal(){
     return precio;
 }
 
+void CtrCrearReserva::cargaFinancieras() {
+    dtTarjetas* dt= new dtTarjetas;
+    //dtTarjetas* dt2= new dtTarjetas;
+   // dt->ingresarFinanciera(10,"Santander");
+    dt->ingresarFinanciera(25, "a");
+    this->tipoDescuento=dt;
+}
+
 int CtrCrearReserva::obtDescuento(string x){
 
-    dtTarjetas* dt= new dtTarjetas;
-    int r= dt->obtenerDescuento(x);
+    int r= tipoDescuento->obtenerDescuento(x);
     return r;
 }
 

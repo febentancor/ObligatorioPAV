@@ -17,7 +17,6 @@ public:
     void cargaPelicula();
     bool existeUsuario(string);
     bool esAdmin(string);
-    void cargaFinancieras();
 private:
     string nickName;
 };

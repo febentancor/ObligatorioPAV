@@ -20,8 +20,10 @@ ManejadorFunciones* ManejadorFunciones::getInstancia() {
 
 list<Funcion*> ManejadorFunciones::getFuncion(){
     list<Funcion*> lstFuncion;
-    for(map<int, Funcion*>::iterator it= this->funciones.begin(); it!=funciones.end(); it++)
+    for(map<int, Funcion*>::iterator it= this->funciones.begin(); it!=funciones.end(); it++) {
         lstFuncion.push_back(it->second);
+    }
+    return  lstFuncion;
 }
 
 Funcion* ManejadorFunciones::buscarFuncion(int f) {

@@ -9,6 +9,7 @@
 #include "dtPelicula.h"
 #include "dtCine.h"
 #include "dtSala.h"
+#include "dtTarjetas.h"
 #include <list>
 #include "IctrCrearReserva.h"
 #include "Pelicula.h"
@@ -25,10 +26,12 @@ public:
     void ingresarCantidadAsientos(int);
     void ingresarTipoPago(int);
     void ingresarNombreDeBanco(string);
-    float ingresarFinanciera(int);
+    void ingresarFinanciera(int);
     float verPrecioTotal();
     int obtDescuento(string);
     bool existeBanco(string);
+    void cargaFinancieras();
+
 
 private:
     Pelicula* peliculaCfuncion;
@@ -38,6 +41,7 @@ private:
     string nomBanco;
     int tipoPago;
     int descuento;
+    dtTarjetas* tipoDescuento;
 };
 
 
