@@ -19,14 +19,16 @@ public:
     CtrCrearReserva();
     list<string> listarPeliculas();
     list<dtInfoPelicula> seleccionarPeliculaC(string);
-    list<dtCine> listarCine();
-    list<dtFuncion> seleccionarCine(int);
+    list<dtCine> listarCineC();
+    list<dtFuncion> seleccionarCineC(int);
     void seleccionarFuncion(int);
     void ingresarCantidadAsientos(int);
     void ingresarTipoPago(int);
     void ingresarNombreDeBanco(string);
     float ingresarFinanciera(int);
     float verPrecioTotal();
+    int obtDescuento(string);
+    bool existeBanco(string);
 
 private:
     Pelicula* peliculaCfuncion;

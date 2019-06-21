@@ -10,6 +10,7 @@
 #include "dtHorario.h"
 #include "dtFecha.h"
 #include "dtFuncion.h"
+#include "dtTarjetas.h"
 #include "ManejadorFunciones.h"
 #include "ManejadorCine.h"
 #include "ManejadorPelicula.h"
@@ -42,7 +43,7 @@ list<dtInfoPelicula> CtrCrearReserva::seleccionarPeliculaC(string titulo){
     return dtpelis;
 }
 
-list<dtCine> CtrCrearReserva::listarCine(){
+list<dtCine> CtrCrearReserva::listarCineC(){
     list<Cine*> c = peliculaCfuncion->obternerCines();
     list<dtCine> dtcin;
     for(list<Cine*>::iterator it=c.begin();it!=c.end(); ++it){
@@ -52,7 +53,7 @@ list<dtCine> CtrCrearReserva::listarCine(){
     return dtcin;
 };
 
-list<dtFuncion> CtrCrearReserva::seleccionarCine(int idCine){
+list<dtFuncion> CtrCrearReserva::seleccionarCineC(int idCine){
     list<Cine*> c = peliculaCfuncion->obternerCines();
     list<dtFuncion> dtfun;
     for(list<Cine*>::iterator it=c.begin();it!=c.end(); ++it){
@@ -108,4 +109,18 @@ float CtrCrearReserva::verPrecioTotal(){
         precio = precio - des;
     }
     return precio;
+}
+
+int CtrCrearReserva::obtDescuento(string x){
+
+    dtTarjetas* dt= new dtTarjetas;
+    int r= dt->obtenerDescuento(x);
+    return r;
+}
+
+bool CtrCrearReserva::existeBanco(string x) {
+    dtTarjetas* dt= new dtTarjetas;
+    bool y;
+    y= dt->existeBanco(x);
+    return  y;
 }
