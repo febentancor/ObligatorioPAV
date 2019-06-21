@@ -3,11 +3,11 @@
 
 dtComentario::dtComentario() {}
 
-dtComentario::dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> comentariosComentados) {
+dtComentario::dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> dtcomentariosComentados) {
     this->id = id;
     this->comentario = comentario;
     this->usuarios = usuario;
-    this->dtcomentariosComentados = comentariosComentados;
+    this->dtcomentariosComentados = dtcomentariosComentados;
 }
 
 int dtComentario::getComentarioId() {

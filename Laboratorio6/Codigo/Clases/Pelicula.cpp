@@ -7,6 +7,7 @@
 #include "Sesion.h"
 #include "Puntaje.h"
 
+
 Pelicula::Pelicula() {}
 Pelicula::Pelicula(string titulo, string sipnosis, string poster) {
 
@@ -93,11 +94,13 @@ list<Cine*> Pelicula::obternerCines() {
         lstCines.push_back(it->second);
     return lstCines;
 }
-
-Pelicula::~Pelicula(){}
+void Pelicula::agregarComentario(Comentario* comentario){
+    comentarios.insert(std::pair<int,Comentario*>(comentario->getId(),comentario));
+}
 map <int, Comentario*> Pelicula::getComentariosPeliculas(){
-
     return this->comentarios;
 }
+
+Pelicula::~Pelicula(){}
 
 

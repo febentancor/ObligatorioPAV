@@ -61,4 +61,14 @@ void CtrIniciarSesion::cargaPelicula() {
     Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP1 -> agregarPelicula(pe);
+
+    Sesion* s = Sesion::getInstancia();
+    string t = s->getNickname();
+    ManejadorUsuario* mU1 = ManejadorUsuario::getInstancia();
+    Usuario* mU2 = mU1->buscarUsuario(t);
+    map<int, Comentario*>com;
+    Comentario* C1 = new Comentario("la pelicula es una mierda",mU2,com);
+    Pelicula* p1 = mP1->buscarPelicula("PELICULA1");
+    p1->agregarComentario(C1);
 }
+

@@ -39,6 +39,7 @@ public:
     list<Cine*> obternerCines();
     map<int, Comentario*> getComentariosPeliculas();
     void ingresarComentario(Comentario*);
+    void agregarComentario(Comentario*);
 };
 
 

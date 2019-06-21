@@ -5,11 +5,14 @@
 #define CODIGO_ICTRCOMENTARPELICULA_H
 #include <string>
 #include <list>
+#include "dtComentario.h"
 using namespace std;
 class IctrComentarPelicula {
 public:
     virtual list<string> ListarTituloPeliculas()=0;
-
+    virtual  bool existePelicula(string)=0;
+    virtual list<dtComentario*> seleccionarPelicula(string)=0;
+    virtual  bool existeComentario(string)=0;
 
 };
 #endif //CODIGO_ICTRCOMENTARPELICULA_H

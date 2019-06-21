@@ -51,10 +51,11 @@ int main() {
     int capacidadSalas;
     ictrIS->cargaDatos();
     ictrIS->cargaPelicula();
+
     // Se variables para ingresar puntaje
     list<string> listpl;
     string tituloPelicula;
-    bool tiene;
+    bool tiene, existePelicula, tieneComentario, existeComent; //utilizadas en funcion 3. y 5.
     float puntos;
     string nuevoPuntaje;
     float verPuntaje;
@@ -263,15 +264,31 @@ int main() {
                     break;
                     case 5: //comentarpelicula();
                         cout << "+++++++++++COMENTAR PELICULA+++++++++++++"<<endl;
-                listpl = ictrCP->ListarTituloPeliculas();
-                    for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                        cout << "\n" << *it;
-                        cout << "\n";
-                    }
-                    cout << "Seleccionar Pelicula: " << endl;
-                    cin >> tituloPelicula;
-                    // tiene = ictrmP->seleccionarPelicula(tituloPelicula);
-                    break;
+                        listpl = ictrCP->ListarTituloPeliculas();
+                        for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                            cout << "\n" << *it;
+                            cout << "\n";
+                        }
+                        cout << "Seleccionar Pelicula: " << endl;
+                        cin >> tituloPelicula;
+                        existePelicula = ictrCP->existePelicula(tituloPelicula);
+                        if(existePelicula == true ){
+                           //list<dtComentario*> coment;
+                           //existeComent = ictrCP->existeComentario(tituloPelicula);
+                            if(ictrCP->existeComentario(tituloPelicula)){
+                                cout << "Listo Comentarios de:" << tituloPelicula << endl;
+                                list<dtComentario*> dt1 = ictrCP->seleccionarPelicula(tituloPelicula);
+                                for (list<dtComentario*>::iterator it1 = dt1.begin(); it1 != dt1.end(); ++it1) {
+                                    cout << "\n" << "ID: " << (*it1)->getComentarioId()  << "  : " << (*it1)->getComentario();
+                                    cout << "\n";
+                                }
+                            }else{
+                                cout << "No tiene comentarios " << endl;
+                            }
+                        }else{
+                            cout << "No existe la pelicula o fue ingresada incorrectamente" << endl;
+                        }
+                        break;
                     case 6: // Crear reserva
 
                         break;

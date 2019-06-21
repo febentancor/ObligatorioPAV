@@ -2,7 +2,6 @@
 #define CODIGO_CTRCOMENTARPELICULA_H
 #include "IctrComentarPelicula.h"
 #include "Comentario.h"
-#include <IctrComentarPelicula.h>
 
 using namespace std;
 
@@ -11,6 +10,7 @@ public:
     list<string> ListarTituloPeliculas();
     bool existePelicula(string);
     list<dtComentario*> seleccionarPelicula(string);
+    bool existeComentario(string);
     void ingresarComentario();
 };
 

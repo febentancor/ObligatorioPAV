@@ -2,9 +2,10 @@
 #include "ManejadorPelicula.h"
 #include <list>
 #include <Pelicula.h>
-#include "Comentario.h"
+#include "dtComentario.h"
 #include  "dtCine.h"
 #include <iostream>
+#include <string>
 
 list<string> CtrComentarPelicula::ListarTituloPeliculas(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
@@ -20,24 +21,38 @@ bool CtrComentarPelicula::existePelicula(string titulo){
     bool existe = false;
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     list<Pelicula*> pelis = mP->getPeliculas();
-
     for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
-        if((*it)->getTitulo() == titulo){
-            existe == true;
+        if(titulo.compare((*it)->getTitulo()) == 0){
+            existe = true;
+            return existe;
         }
     }
     return existe;
+}
+bool CtrComentarPelicula::existeComentario(string titulo){
+    bool existe = false;
+    ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
+    Pelicula* peliculaSeleccionada = mP->buscarPelicula(titulo);
+    if(peliculaSeleccionada->getComentariosPeliculas().empty()){
+        return existe;
+    }else{
+        existe = true;
+        return existe;
+    }
 }
 
 list<dtComentario*> CtrComentarPelicula::seleccionarPelicula(string titulo){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     Pelicula* peliculaSeleccionada = mP->buscarPelicula(titulo);
-    list<dtComentario*> listaComentarios;
-
-    for(map<int, Comentario*>::iterator it= peliculaSeleccionada->getComentariosPeliculas().begin(); it!=peliculaSeleccionada->getComentariosPeliculas().end(); ++it){
-        //listaComentarios.push_back(*it->second);
-        dtComentario dtC = dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), (*it).second->getComentariosComentados() );
-        //listaComentarios.push_back(it->second);
+    std::list<dtComentario*> listaComentarios;
+    map<int, Comentario*> cP = peliculaSeleccionada->getComentariosPeliculas();
+    for(map<int, Comentario*>::iterator it=cP.begin(); it!=cP.end(); ++it){
+        Comentario* CC = (*it).second;
+        dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), (*it).second->getComentariosComentados() );
+        map<int,dtComentario*>pp;
+        //dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), pp );
+        //dtComentario* dtC = new dtComentario(0, "prueba", (*it).second->getUsuariosComentario(), pp );
+        listaComentarios.push_back(dtC);
     }
     return listaComentarios;
 }

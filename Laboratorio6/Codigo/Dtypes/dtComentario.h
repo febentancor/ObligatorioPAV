@@ -10,12 +10,12 @@ class dtComentario {
 private:
     int id;
     string comentario;
-    map<int,dtComentario*>dtcomentariosComentados;
+    map<int,dtComentario*>dtcomentariosComentados;//
     Usuario* usuarios;
 
 public:
     dtComentario();
-    dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> comentariosComentados);
+    dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> dtcomentariosComentados);
     int getComentarioId();
     void setComentarioId(int id);
     string getComentario();

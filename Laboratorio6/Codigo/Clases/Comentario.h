@@ -13,18 +13,19 @@ class Usuario;
 class Comentario {
 private:
     int id;
-    static int idauto;
+    static int idAuto;
     string comentario;
     Usuario* usuarios;
     map<int, Comentario*>comentariosComentados;
 public:
     Comentario();
-    Comentario(string comentario);
+    //dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> comentariosComentados);
+    Comentario(string comentario, Usuario* usuario, map<int, Comentario*> comentariosComentados);
     Usuario* getUsuariosComentario();
     void agregarUsuarioComentario(Usuario*);
     string getComentarios();
     void setUsuario(Usuario*);
-    static int getIdAuto();
+    static int getIdAutoC();
     string getNick();
     int getId();
     map <int, dtComentario*> getComentariosComentados();
