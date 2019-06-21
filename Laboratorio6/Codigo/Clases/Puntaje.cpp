@@ -20,3 +20,5 @@ void Puntaje::setUsuario(Usuario* u){
 string Puntaje::getNick(){
     return this->usuario->getNickname();
 }
+
+Puntaje::~Puntaje(){}

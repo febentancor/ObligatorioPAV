@@ -4,7 +4,6 @@
 
 #include "ManejadorPelicula.h"
 #include "ManejadorFunciones.h"
-#include "ManejadorSala.h"
 #include "ManejadorCine.h"
 #include "CtrEliminarPelicula.h"
 

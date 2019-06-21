@@ -33,6 +33,7 @@ public:
     void setDia(dtFecha);
     dtHorario getHora();
     void setHora(dtHorario);
+    string getTituloPelicula();
     static int getIdAuto();
     virtual ~Funcion();
 };
