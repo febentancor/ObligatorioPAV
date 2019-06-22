@@ -40,7 +40,11 @@ void ManejadorUsuario::eliminarUsuario(string usuario){
 }
 bool ManejadorUsuario::esAdmin(string usuario) {
     map<string,Usuario*>::iterator it= this->usuarios.find(usuario);
-    return (it->second->getEsAdmin()==true);
+    if(it!= this->usuarios.end()){
+        return (it->second->getEsAdmin()==true);
+    }else{
+        return  false;
+    }
 }
 
 ManejadorUsuario::~ManejadorUsuario(){}
