@@ -86,4 +86,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h Controladores/CtrEliminarPelicula.cpp Controladores/CtrEliminarPelicula.h Inrterfaces/IctrEliminarPelicula.h Manejadores/ManejadorCrearReserva.cpp Manejadores/ManejadorCrearReserva.h Dtypes/dtReloj.cpp Dtypes/dtReloj.h)
+        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h Controladores/CtrEliminarPelicula.cpp Controladores/CtrEliminarPelicula.h Inrterfaces/IctrEliminarPelicula.h Manejadores/ManejadorCrearReserva.cpp Manejadores/ManejadorCrearReserva.h Controladores/CtrReloj.cpp Controladores/CtrReloj.h Clases/Reloj.cpp Clases/Reloj.h Inrterfaces/IctrReloj.h)
