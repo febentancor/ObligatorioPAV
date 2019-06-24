@@ -5,22 +5,24 @@
 #ifndef CODIGO_RELOJ_H
 #define CODIGO_RELOJ_H
 
-#include "dtHorario.h"
+#include "dtHora.h"
 #include "dtFecha.h"
 #include <string>
 
 
 class Reloj {
 private:
-    dtHorario hora;
+    int d;
+    int m;
+    int a;
+    int h;
+    int min;
     dtFecha fecha;
 public:
     Reloj();
-    Reloj(dtFecha, dtHorario);
-    void setFecha(dtFecha);
-    dtFecha getFecha();
-    void setHora(dtHorario);
-    dtHorario getHora();
+    Reloj(int, int, int, int, int);
+    int getFecha();
+    int getHora();
 };
 
 

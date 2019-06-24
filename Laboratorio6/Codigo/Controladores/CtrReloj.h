@@ -13,7 +13,7 @@ using namespace std;
 class CtrReloj: public IctrReloj  {
 public:
     CtrReloj();
-    void ingresarReloj(dtFecha, dtHorario);
+    void ingresarReloj(dtFecha, dtHora);
     Reloj obtenerReloj();
 private:
     dtHorario dth;

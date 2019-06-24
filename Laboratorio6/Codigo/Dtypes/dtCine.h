@@ -6,6 +6,7 @@
 #define CODIGO_DTCINE_H
 #include <string>
 #include "dtDireccion.h"
+
 using namespace std;
 
 class dtCine {

@@ -12,7 +12,12 @@ using namespace std;
 
 CtrReloj::CtrReloj(){}
 
-void CtrReloj::ingresarReloj(dtFecha f, dtHorario d){}
+void CtrReloj::ingresarReloj(int d, int, m, int a, int h, int min){
+    new dtFecha
+
+
+}
+
 
 
 Reloj CtrReloj::obtenerReloj(){}

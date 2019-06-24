@@ -4,28 +4,28 @@
 
 #include "Reloj.h"
 #include "dtFecha.h"
-#include "dtHorario.h"
+#include "dtHora.h"
 
 using  namespace std;
 
 Reloj::Reloj() {}
-Reloj::Reloj(dtFecha f, dtHorario h) {
-    this->fecha=f;
-    this->hora=h;
+Reloj::Reloj(int d, int m, int a, int h, int min) {
+    this->d=d;
+    this->m=m;
+    this->a=a;
+    this->h=h;
+    this->min=min;
+    //new dtFecha(d,m,a);
+    //new dtHora(h,min);
 }
 
-void Reloj::setFecha(dtFecha f){
-    this->fecha=f;
-}
-dtFecha Reloj::getFecha() {
-    return this->fecha;
+
+int Reloj::getFecha() {
+    return d, m, a;
 }
 
-void Reloj::setHora(dtHorario h) {
-    this->hora=h;
-}
 
-dtHorario Reloj::getHora() {
-    return this->hora;
+int Reloj::getHora() {
+    return h, min;
 }
 
