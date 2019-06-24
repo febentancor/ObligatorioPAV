@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12.1)
+cmake_minimum_required(VERSION 3.12)
 project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -27,6 +27,8 @@ add_executable(Codigo
         Clases/Pelicula.h
         Clases/Puntaje.cpp
         Clases/Puntaje.h
+        Clases/Reloj.cpp
+        Clases/Reloj.h
         Clases/Reserva.cpp
         Clases/Reserva.h
         Clases/Sala.cpp
@@ -43,12 +45,18 @@ add_executable(Codigo
         Controladores/CtrComentarPelicula.h
         Controladores/CtrCrearReserva.cpp
         Controladores/CtrCrearReserva.h
+        Controladores/CtrEliminarPelicula.cpp
+        Controladores/CtrEliminarPelicula.h
         Controladores/CtrIniciarSesion.cpp
         Controladores/CtrIniciarSesion.h
         Controladores/CtrPuntuarPelicula.cpp
         Controladores/CtrPuntuarPelicula.h
-        Controladores/CtrVerComentarioYPuntaje.h
+        Controladores/CtrReloj.cpp
+        Controladores/CtrReloj.h
         Controladores/CtrVerComentarioYPuntaje.cpp
+        Controladores/CtrVerComentarioYPuntaje.h
+        Controladores/CtrVerinfoPelicula.cpp
+        Controladores/CtrVerinfoPelicula.h
         Dtypes/dtCine.cpp
         Dtypes/dtCine.h
         Dtypes/dtComentario.cpp
@@ -59,29 +67,36 @@ add_executable(Codigo
         Dtypes/dtFecha.h
         Dtypes/dtFuncion.cpp
         Dtypes/dtFuncion.h
+        Dtypes/dtHora.cpp
+        Dtypes/dtHora.h
         Dtypes/dtHorario.cpp
-        Dtypes/dtTarjetas.cpp
-        Dtypes/dtTarjetas.h
         Dtypes/dtHorario.h
         Dtypes/dtInfoPelicula.cpp
         Dtypes/dtInfoPelicula.h
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
+        Dtypes/dtPeliculaCompleto.cpp
+        Dtypes/dtPeliculaCompleto.h
+        Dtypes/dtPuntaje.cpp
+        Dtypes/dtPuntaje.h
         Dtypes/dtSala.cpp
         Dtypes/dtSala.h
-        Dtypes/dtPeliculaCompleto.h
-        Dtypes/dtPeliculaCompleto.cpp
-        Dtypes/dtPuntaje.h
-        Dtypes/dtPuntaje.cpp
+        Dtypes/dtTarjetas.cpp
+        Dtypes/dtTarjetas.h
         Inrterfaces/IctrAltaCine.h
         Inrterfaces/IctrAltaFuncion.h
         Inrterfaces/IctrComentarPelicula.h
         Inrterfaces/IctrCrearReserva.h
+        Inrterfaces/IctrEliminarPelicula.h
         Inrterfaces/IctrInicioSesion.h
         Inrterfaces/IctrPuntuarPelicula.h
+        Inrterfaces/IctrReloj.h
         Inrterfaces/IctrVerComentarioYPuntaje.h
+        Inrterfaces/IctrVerinfoPelicula.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
+        Manejadores/ManejadorCrearReserva.cpp
+        Manejadores/ManejadorCrearReserva.h
         Manejadores/ManejadorFunciones.cpp
         Manejadores/ManejadorFunciones.h
         Manejadores/ManejadorPelicula.cpp
@@ -90,4 +105,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp Manejadores/ManejadorFunciones.cpp Manejadores/ManejadorFunciones.h Dtypes/dtInfoPelicula.cpp Dtypes/dtInfoPelicula.h Inrterfaces/IctrVerinfoPelicula.h Controladores/CtrVerinfoPelicula.cpp Controladores/CtrVerinfoPelicula.h Controladores/CtrEliminarPelicula.cpp Controladores/CtrEliminarPelicula.h Inrterfaces/IctrEliminarPelicula.h Manejadores/ManejadorCrearReserva.cpp Manejadores/ManejadorCrearReserva.h Controladores/CtrReloj.cpp Controladores/CtrReloj.h Clases/Reloj.cpp Clases/Reloj.h Inrterfaces/IctrReloj.h Dtypes/dtHora.cpp Dtypes/dtHora.h)
+        main.cpp)

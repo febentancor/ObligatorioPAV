@@ -11,6 +11,7 @@ class Usuario{
         string contrasena;
         string urlFoto;
         bool esAdmin;
+        bool inicioSesion;
     public:
     Usuario();
     Usuario(string,string,string, bool);
@@ -22,6 +23,8 @@ class Usuario{
     void setUrlfoto(string urlfoto);
     void setEsAdmin(bool ok);
     bool getEsAdmin();
+    bool getInicioSesion();
+    void setInicioSesion(bool);
 
     ~Usuario();
 

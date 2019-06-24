@@ -17,5 +17,6 @@ public:
     list<string> listarPelicula();
 
     void eliminarPelicula(string);
+
 };
 #endif //CODIGO_CTRELIMINARPELICULA_H

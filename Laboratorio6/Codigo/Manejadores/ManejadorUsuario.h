@@ -20,6 +20,7 @@ public:
     bool existeUsuario(string);
     void eliminarUsuario(string);
     bool esAdmin(string);
+    bool invitado();
     virtual ~ManejadorUsuario();
 
 };

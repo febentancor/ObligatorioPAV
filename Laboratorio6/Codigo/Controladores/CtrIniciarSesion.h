@@ -17,6 +17,8 @@ public:
     void cargaPelicula();
     bool existeUsuario(string);
     bool esAdmin(string);
+    bool invitado();
+
 private:
     string nickName;
 };

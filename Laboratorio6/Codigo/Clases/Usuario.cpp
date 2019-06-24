@@ -31,4 +31,12 @@ bool Usuario::getEsAdmin() {
 void Usuario::setEsAdmin(bool ok) {
     this->esAdmin=ok;
 }
+
+bool Usuario::getInicioSesion() {
+    return inicioSesion;
+}
+
+void Usuario::setInicioSesion(bool){
+    this->inicioSesion=true;
+}
 Usuario::~Usuario(){}

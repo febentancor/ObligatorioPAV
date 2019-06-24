@@ -31,6 +31,7 @@ void ManejadorUsuario::agregarUsuario(Usuario* usuario){
 
 bool ManejadorUsuario::existeUsuario(string usuario){
     map<string,Usuario*>::iterator it = this->usuarios.find(usuario);
+    this->usuarios.end()->second->setInicioSesion(true);
     return (it != this->usuarios.end());
 }
 
@@ -46,5 +47,11 @@ bool ManejadorUsuario::esAdmin(string usuario) {
         return  false;
     }
 }
+
+bool ManejadorUsuario::invitado() {
+    ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
+    bool sesionActiva= mU->invitado();
+    return invitado();
+        }
 
 ManejadorUsuario::~ManejadorUsuario(){}

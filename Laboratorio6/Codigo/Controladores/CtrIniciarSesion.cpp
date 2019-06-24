@@ -32,8 +32,10 @@ void CtrIniciarSesion::iniciarSesion (){
 bool CtrIniciarSesion::existeUsuario(string u) {
     ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
     bool existe=mU->existeUsuario(u);
+
     if(!existe)
         throw invalid_argument ("ERROR: NO EXISTE EL USUARIO INDICADO\n");
+        nickName= "";
     return existe;
 }
 
@@ -45,6 +47,17 @@ bool CtrIniciarSesion::esAdmin(string usuario) {
     return esAdmin;
 
 }
+
+bool CtrIniciarSesion::invitado() {
+    ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
+
+    if(nickName == "") {
+
+        throw invalid_argument("DEBE INICIAR SESION\n");
+    }
+    return invitado();
+}
+
 
 void CtrIniciarSesion::cargaDatos(){
     Usuario* u = new Usuario("Gonzalo","123","jsjsjsj", false);
