@@ -113,5 +113,17 @@ map <int, Comentario*> Pelicula::getComentariosPeliculas(){
     return this->comentarios;
 }
 
+map<int, dtComentario*> Pelicula::getDTComentariosPeliculas(){
+
+    map<int,dtComentario*>retComentarios;
+    for(map<int, Comentario*>::iterator it = this->comentarios.begin() ; it != this->comentarios.end(); ++it) {
+        dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), (*it).second->getComentariosComentados());
+        retComentarios.insert(std::pair<int,dtComentario*>((*it).second->getId(), dtC));
+    }
+
+    return retComentarios;
+
+}
+
 
 
