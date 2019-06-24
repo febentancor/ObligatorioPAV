@@ -12,8 +12,8 @@ using namespace std;
 
 CtrReloj::CtrReloj(){}
 
-void CtrReloj::ingresarReloj(int d, int, m, int a, int h, int min){
-    new dtFecha
+void CtrReloj::ingresarReloj(dtFecha, dtHora){
+    //falta seguir estoy medio perdido con esto
 
 
 }
