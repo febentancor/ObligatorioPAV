@@ -15,7 +15,7 @@ Reloj::Reloj(dtFecha f, dtHorario h) {
 }
 
 void Reloj::setFecha(dtFecha f){
-    this->fecha=f
+    this->fecha=f;
 }
 dtFecha Reloj::getFecha() {
     return this->fecha;
