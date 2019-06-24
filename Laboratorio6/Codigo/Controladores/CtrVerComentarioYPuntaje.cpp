@@ -14,6 +14,10 @@
 #include "ManejadorCine.h"
 #include "ManejadorPelicula.h"
 #include <list>
+#include "string.h"
+#include <iostream>
+
+using namespace std;
 
 CtrVerComentarioYPuntaje::CtrVerComentarioYPuntaje() {}
 
@@ -33,8 +37,22 @@ list<dtPeliculaCompleto> CtrVerComentarioYPuntaje::seleccionarPeliculaV(string t
     list<dtPeliculaCompleto> dtpelis;
     for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
         if((*it)->getTitulo() == titulo){
-            peliculaCVerComentario=(*it);
-            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio(), (*it)->getDTComentariosPeliculas());
+            peliculaCVerComentario=(*it);//Obtengo le Pelicula en Memoria
+
+            //Creo un dtPuntaje por cada puntaje cargado y lo meto en un temporal
+            list<dtPuntaje*> puntajes;
+            //int inicio = peliculaCVerComentario->obtenerPuntajes().begin();
+            //int fin = peliculaCVerComentario->obtenerPuntajes().end();
+            list<Puntaje*> puntajesPelicula = peliculaCVerComentario->obtenerPuntajes();
+            for(list<Puntaje*>::iterator p= puntajesPelicula.begin(); p!=puntajesPelicula.end(); ++p){
+                //cout << "asdasdasd";
+               dtPuntaje* dtP = new dtPuntaje((*p)->getNick(), (*p)->getPuntos());
+               puntajes.push_back(dtP);
+            }
+            //string titulo = (*it)->getTitulo();
+            //float puntajePromedio = (*it)->puntajePromedio();
+            //map<int,dtComentario*> comentarios = (*it)->getDTComentariosPeliculas();
+            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio(), (*it)->getDTComentariosPeliculas(),puntajes);
             dtpelis.push_back(dt);
         }
     }

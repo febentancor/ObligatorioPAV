@@ -12,11 +12,12 @@ dtPeliculaCompleto::dtPeliculaCompleto(string titulo, float puntaje) {
     this->puntaje = puntaje;
 }
 
-dtPeliculaCompleto::dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario){
+dtPeliculaCompleto::dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario, list<dtPuntaje*> puntajes){
 
     this->titulo = titulo;
     this->puntaje = puntaje;
     this->comentarios = comentario;
+    this->listaPuntajes = puntajes;
 
 }
 

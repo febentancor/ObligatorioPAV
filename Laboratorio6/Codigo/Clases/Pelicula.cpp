@@ -43,18 +43,21 @@ bool Pelicula::tengoPuntaje() {
    Sesion* s= Sesion::getInstancia();
    string nick = s->getNickname();
    bool tiene=false;
-   list<Puntaje *>::iterator it = this->puntajes.begin();
-   while (!tiene && it!=this->puntajes.end()){
-       if((*it)->getNick()==nick) {
+
+   for(list<Puntaje*>::iterator p = this->puntajes.begin(); p!= this->puntajes.end(); ++p){
+       string valor = (*p)->getNick();
+       if(valor==nick) {
            tiene = true;
+           break;
        }
-   }
+
+    }
    return tiene;
 }
 float Pelicula::puntajePromedio() {
     int sumaPuntaje = 0;
     int cant = 0;
-    bool tiene=tengoPuntaje();
+    //bool tiene=tengoPuntaje();
     for (list<Puntaje *>::iterator it = this->puntajes.begin(); it != puntajes.end(); ++it) {
          cant++;
          sumaPuntaje = sumaPuntaje + (*it)->getPuntos();
@@ -123,6 +126,11 @@ map<int, dtComentario*> Pelicula::getDTComentariosPeliculas(){
 
     return retComentarios;
 
+}
+
+list<Puntaje*> Pelicula::obtenerPuntajes()
+{
+    return this->puntajes;
 }
 
 

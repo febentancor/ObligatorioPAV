@@ -72,5 +72,10 @@ void CtrIniciarSesion::cargaPelicula() {
     Comentario* C1 = new Comentario("la pelicula es una mierda",mU2,com);
     Pelicula* p1 = mP1->buscarPelicula("PELICULA1");
     p1->agregarComentario(C1);
+
+    Puntaje* puntaje = new Puntaje(2);
+    Usuario* usu = new Usuario("Prueba","test","test",true);
+    puntaje->setUsuario(usu);
+    p1->ingresarPuntaje(puntaje);
 }
 

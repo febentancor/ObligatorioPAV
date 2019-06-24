@@ -38,6 +38,7 @@ public:
     void ingresarCine(Cine*,int);
     list<Cine*> obternerCines();
     map<int, Comentario*> getComentariosPeliculas();
+    list<Puntaje*> obtenerPuntajes();
     map<int, dtComentario*> getDTComentariosPeliculas();
     void agregarComentario(Comentario*);
 };

@@ -24,7 +24,7 @@ private:
 public:
     dtPeliculaCompleto();
     dtPeliculaCompleto(string titulo, float puntaje);
-    dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario);
+    dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario, list<dtPuntaje*> listaPuntajes);
     string getTitulo() ;
 
     float getPunaje();
