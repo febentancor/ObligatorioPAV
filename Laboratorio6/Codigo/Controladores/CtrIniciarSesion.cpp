@@ -74,9 +74,3 @@ void CtrIniciarSesion::cargaPelicula() {
     p1->agregarComentario(C1);
 }
 
-void CtrIniciarSesion::cargaFinancieras() {
-   dtTarjetas* dt= new dtTarjetas;
-    dtTarjetas* dt2= new dtTarjetas;
-    dt->ingresarFinanciera(10,"Santander");
-    dt2->ingresarFinanciera(25, "BROU");
-}
