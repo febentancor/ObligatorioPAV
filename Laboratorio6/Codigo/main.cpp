@@ -249,9 +249,9 @@ int main() {
                             try {
                                 if (ictrAF->existeSala(AFidSala))
                                     listFu = ictrAF->seleccionarSala(AFidSala);
-                                cout << "\n---FUNCIONES DE LA SALA---";
-                                for (list<dtFuncion>::iterator it = listFu.begin(); it != listFu.end(); ++it) {
+                                cout << "\n\n\n\n---FUNCIONES DE LA SALA---";
 
+                                for (list<dtFuncion>::iterator it = listFu.begin(); it != listFu.end(); ++it) {
                                     cout << "\n Dia: " << (*it).getDia().getDia();
                                     cout << "\n Año: " << (*it).getDia().getAnio();
                                     cout << "\n Mes: " << (*it).getDia().getMes();

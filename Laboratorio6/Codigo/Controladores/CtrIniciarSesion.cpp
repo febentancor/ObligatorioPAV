@@ -5,6 +5,7 @@
 #include "CtrIniciarSesion.h"
 #include "ManejadorUsuario.h"
 #include "ManejadorPelicula.h"
+#include "ManejadorCine.h"
 #include "dtTarjetas.h"
 #include "Sesion.h"
 
@@ -73,3 +74,9 @@ void CtrIniciarSesion::cargaPelicula() {
     p1->agregarComentario(C1);
 }
 
+void CtrIniciarSesion::cargaFinancieras() {
+   dtTarjetas* dt= new dtTarjetas;
+    dtTarjetas* dt2= new dtTarjetas;
+    dt->ingresarFinanciera(10,"Santander");
+    dt2->ingresarFinanciera(25, "BROU");
+}

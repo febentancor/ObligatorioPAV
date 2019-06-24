@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
 project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
@@ -63,6 +63,8 @@ add_executable(Codigo
         Dtypes/dtTarjetas.cpp
         Dtypes/dtTarjetas.h
         Dtypes/dtHorario.h
+        Dtypes/dtInfoPelicula.cpp
+        Dtypes/dtInfoPelicula.h
         Dtypes/dtPelicula.cpp
         Dtypes/dtPelicula.h
         Dtypes/dtSala.cpp
@@ -80,6 +82,8 @@ add_executable(Codigo
         Inrterfaces/IctrVerComentarioYPuntaje.h
         Manejadores/ManejadorCine.cpp
         Manejadores/ManejadorCine.h
+        Manejadores/ManejadorFunciones.cpp
+        Manejadores/ManejadorFunciones.h
         Manejadores/ManejadorPelicula.cpp
         Manejadores/ManejadorPelicula.h
         Manejadores/ManejadorUsuario.cpp
