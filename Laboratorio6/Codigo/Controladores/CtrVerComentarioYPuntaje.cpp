@@ -34,9 +34,7 @@ list<dtPeliculaCompleto> CtrVerComentarioYPuntaje::seleccionarPeliculaV(string t
     for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
         if((*it)->getTitulo() == titulo){
             peliculaCVerComentario=(*it);
-            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio());
-            //dt.set(*it)->puntajePelicula()
-           // dt.setListaPuntajes((*it)->puntajePelicula);
+            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio(), (*it)->getDTComentariosPeliculas());
             dtpelis.push_back(dt);
         }
     }

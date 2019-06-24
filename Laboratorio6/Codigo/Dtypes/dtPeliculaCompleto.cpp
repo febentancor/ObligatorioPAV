@@ -12,6 +12,14 @@ dtPeliculaCompleto::dtPeliculaCompleto(string titulo, float puntaje) {
     this->puntaje = puntaje;
 }
 
+dtPeliculaCompleto::dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario){
+
+    this->titulo = titulo;
+    this->puntaje = puntaje;
+    this->comentarios = comentario;
+
+}
+
 string dtPeliculaCompleto::getTitulo(){
     return this->titulo;
 }
@@ -22,6 +30,10 @@ float dtPeliculaCompleto::getPunaje(){
 
 list<dtPuntaje*> dtPeliculaCompleto::getListaPuntajes(){
     return this->listaPuntajes;
+}
+
+map<int, dtComentario*> dtPeliculaCompleto::getComentarios(){
+    return this->comentarios;
 }
 
 dtPeliculaCompleto::~dtPeliculaCompleto() {}

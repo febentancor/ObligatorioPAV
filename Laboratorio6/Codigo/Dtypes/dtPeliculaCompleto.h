@@ -19,18 +19,19 @@ private:
     string titulo;
     float puntaje;
     list<dtPuntaje*> listaPuntajes;
-//    map<int, dtComentario*> comentarios;
+    map<int, dtComentario*> comentarios;
 
 public:
     dtPeliculaCompleto();
     dtPeliculaCompleto(string titulo, float puntaje);
+    dtPeliculaCompleto(string titulo, float puntaje, map<int, dtComentario*> comentario);
     string getTitulo() ;
 
     float getPunaje();
 
     list<dtPuntaje*> getListaPuntajes();
 
-//    map<int, dtComentario*> getComentarios();
+    map<int, dtComentario*> getComentarios();
 
     ~dtPeliculaCompleto();
 };
