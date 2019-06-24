@@ -17,10 +17,7 @@ public:
     dtInfoPelicula();
     dtInfoPelicula(string, string);
     string getPoster() ;
-    void setPoster(string poster);
-
     string getSinopsis();
-    void setSinopsis(string sinopsis);
     ~dtInfoPelicula();
 };
 

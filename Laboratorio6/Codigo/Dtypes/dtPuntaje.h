@@ -16,11 +16,8 @@ private:
 public:
     dtPuntaje();
     dtPuntaje(string nickname, int puntos);
-    string getNickname() ;
-    void setNickname(string nickname);
-    
+    string getNickname();
     float getPuntos();
-    void setPuntos(int punaje);
     ~dtPuntaje();
 };
 

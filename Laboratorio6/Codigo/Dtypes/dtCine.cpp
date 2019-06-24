@@ -11,16 +11,8 @@ int dtCine::getIdCine() {
     return idCine;
 }
 
-void dtCine::setIdCine(int idCine) {
-    this->idCine = idCine;
-}
-
 dtDireccion dtCine::getDireccion() {
     return direccion;
-}
-
-void dtCine::setDireccion(dtDireccion direccion) {
-   this->direccion=direccion;
 }
 
 dtCine::~dtCine() {}

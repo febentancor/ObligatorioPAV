@@ -11,16 +11,8 @@ string dtDireccion::getCalle() {
     return calle;
 }
 
-void dtDireccion::setCalle(string calle) {
-    dtDireccion::calle = calle;
-}
-
 int dtDireccion::getNumero() {
     return numero;
-}
-
-void dtDireccion::setNumero(int numero) {
-    this->numero = numero;
 }
 
 dtDireccion::~dtDireccion() {}

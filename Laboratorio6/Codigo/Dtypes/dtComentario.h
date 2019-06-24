@@ -17,9 +17,7 @@ public:
     dtComentario();
     dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> dtcomentariosComentados);
     int getComentarioId();
-    void setComentarioId(int id);
     string getComentario();
-    void setComentario(string comentario);
     virtual ~dtComentario();
 
 };

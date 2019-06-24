@@ -16,18 +16,9 @@ int dtTarjetas::getDescuento(){
     return this->descuento;
 }
 
-void dtTarjetas::setDescuento(int descuento){
-    this->descuento=descuento;
-}
-
 string dtTarjetas::getNombreBanco(){
     return this -> nombrebanco;
 }
-
-void dtTarjetas::setNombreBanco(string nombreBanco){
-    this->nombrebanco=nombreBanco;
-}
-
 
 void dtTarjetas::ingresarFinanciera(int descuento, string nombreBanco){
      tarjetas.insert(pair<string,int>(nombreBanco,descuento));

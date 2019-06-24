@@ -18,22 +18,10 @@ int dtFecha::getDia() {
     return dia;
 }
 
-void dtFecha::setDia(int dia) {
-    this->dia = dia;
-}
-
 int dtFecha::getMes() {
     return mes;
 }
 
-void dtFecha::setMes(int mes) {
-    this->mes = mes;
-}
-
 int dtFecha::getAnio() {
     return anio;
-}
-
-void dtFecha::setAnio(int anio) {
-    this->anio = anio;
 }

@@ -19,10 +19,7 @@ public:
     dtCine(int idCine, dtDireccion direccion);
 
     int getIdCine();
-    void setIdCine(int idCine);
-
     dtDireccion getDireccion();
-    void setDireccion(dtDireccion direccion);
 };
 
 

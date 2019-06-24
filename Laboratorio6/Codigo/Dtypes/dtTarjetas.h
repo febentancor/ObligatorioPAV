@@ -22,9 +22,7 @@ public:
     void ingresarFinanciera(int, string);
     int obtenerDescuento(string);
     int getDescuento();
-    void setDescuento(int);
     string getNombreBanco();
-    void setNombreBanco(string);
     bool existeBanco(string);
     ~dtTarjetas();
 };

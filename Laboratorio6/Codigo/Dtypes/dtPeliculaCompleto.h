@@ -7,7 +7,10 @@
 
 #include <string>
 #include "dtPuntaje.h"
+#include "dtComentario.h"
 #include <list>
+#include <map>
+
 using namespace std;
 
 
@@ -16,17 +19,18 @@ private:
     string titulo;
     float puntaje;
     list<dtPuntaje*> listaPuntajes;
+//    map<int, dtComentario*> comentarios;
+
 public:
     dtPeliculaCompleto();
     dtPeliculaCompleto(string titulo, float puntaje);
     string getTitulo() ;
-    void setTitulo(string titulo);
 
     float getPunaje();
-    void setPuntaje(float punaje);
 
     list<dtPuntaje*> getListaPuntajes();
-    void setListaPuntajes(list<dtPuntaje*> listaPuntaje);
+
+//    map<int, dtComentario*> getComentarios();
 
     ~dtPeliculaCompleto();
 };

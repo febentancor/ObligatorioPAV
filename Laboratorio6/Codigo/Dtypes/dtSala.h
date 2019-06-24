@@ -22,10 +22,7 @@ public:
     dtSala(int idSala, int capacidad);
 
     int getIdSala();
-    void setIdSala(int idSala);
-
     int getCapacidad();
-    void setCapacidad(int capacidad);
 };
 
 

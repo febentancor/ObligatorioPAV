@@ -20,13 +20,9 @@ public:
     dtFuncion(dtFecha, dtHorario);
 
     dtFecha getDia();
-    void setDia(dtFecha);
-
     dtHorario getHora();
-    void setHora(dtHorario);
 
     int getIdFuncion();
-    void setIdFuncion(int idFuncion);
     static int getIdAutoF();
 
 };

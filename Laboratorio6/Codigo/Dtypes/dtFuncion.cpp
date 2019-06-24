@@ -18,23 +18,13 @@ dtFuncion::dtFuncion(dtFecha dia, dtHorario horario) {
 dtFecha dtFuncion::getDia() {
     return this->dia;
 }
-void dtFuncion::setDia(dtFecha dia) {
-    this->dia=dia;
-}
 
 dtHorario dtFuncion::getHora() {
     return  this->horario;
 }
-void dtFuncion::setHora(dtHorario horario)  {
-    this->horario = horario;
-}
 
 int dtFuncion::getIdFuncion() {
     return this->idFuncion;
-}
-
-void dtFuncion::setIdFuncion(int idFuncion) {
-    this->idFuncion=idFuncion;
 }
 
 int dtFuncion::getIdAutoF() {

@@ -11,16 +11,8 @@ int dtSala::getIdSala() {
     return idSala;
 }
 
-void dtSala::setIdSala(int idSala) {
-    this->idSala = idSala;
-}
-
 int dtSala::getCapacidad() {
     return capacidad;
-}
-
-void dtSala::setCapacidad(int capacidad) {
-    this->capacidad=capacidad;
 }
 
 dtSala::~dtSala() {}

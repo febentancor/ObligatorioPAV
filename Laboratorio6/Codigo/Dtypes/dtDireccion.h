@@ -21,11 +21,7 @@ public:
 
     string getCalle();
 
-    void setCalle(string calle);
-
     int getNumero();
-
-    void setNumero(int numero);
 };
 
 

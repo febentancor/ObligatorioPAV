@@ -15,15 +15,8 @@ string dtInfoPelicula::getPoster() {
     return poster;
 }
 
-void dtInfoPelicula::setPoster(string poster) {
-    this->poster=poster;
-}
-
 string dtInfoPelicula::getSinopsis() {
     return sinopsis;
 }
 
-void dtInfoPelicula::setSinopsis(string sinopsis) {
-    this->sinopsis=sinopsis;
-}
 dtInfoPelicula::~dtInfoPelicula(){}

@@ -17,15 +17,9 @@ public:
 
     int getDia();
 
-    void setDia(int dia);
-
     int getMes();
 
-    void setMes(int mes);
-
     int getAnio();
-
-    void setAnio(int anio);
 
     virtual ~dtFecha();
 };

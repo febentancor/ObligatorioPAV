@@ -22,16 +22,9 @@ public:
     dtPelicula(string titulo, string sipnosis,string poster,float puntaje);
 
     string getTitulo();
-    void setTitulo(string titulo);
-
     string getSipnosis();
-    void setSipnosis(string sipnosis);
-
     string getPoster();
-    void setPoster(string poster);
-
     float getPuntaje();
-    void setPuntaje(float puntaje);
 };
 
 
