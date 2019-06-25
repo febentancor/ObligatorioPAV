@@ -51,6 +51,8 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
                 if( titulo == (*it3)->getTituloPelicula() ){
 
                     mF->eliminarFuncion((*it3)->getId());
+                    //eliminar la funcion
+                    delete (*it3);
 
                 }
 
@@ -59,7 +61,7 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
         }
 
     }
-
+    mP->eliminarPelicula(titulo);
     delete Pelicula;
 
 //    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
