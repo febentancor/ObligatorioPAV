@@ -41,8 +41,23 @@ map <int, dtComentario*> Comentario::getComentariosComentados(){
     return dtc1;
 }
 
+map <int, Comentario*> Comentario::getComentariosComentados2(){
+    map<int,Comentario*> dtc2;
+    //dtComentario* dtc = new dtComentario(this->id, this->comentario, this->usuarios, this->getComentariosComentados());
+    Comentario* dtc = new Comentario(this->comentario, this->usuarios, dtc2);
+    map<int,Comentario*> dtc1;
+    //int
+    dtc1.insert(std::pair<int,Comentario*>(this->id,dtc));
+    return dtc1;
+}
+
 int Comentario::getIdAutoC() {
     idAuto++;
     return idAuto;
+}
+
+
+void Comentario::comentarComentario(Comentario * comentario) {
+    comentariosComentados.insert(std::pair<int,Comentario*>(comentario->getId(),comentario));
 }
 Comentario::~Comentario(){}

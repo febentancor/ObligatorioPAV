@@ -19,7 +19,6 @@ private:
     map<int, Comentario*>comentariosComentados;
 public:
     Comentario();
-    //dtComentario(int id, string comentario, Usuario* usuario, map<int, dtComentario*> comentariosComentados);
     Comentario(string comentario, Usuario* usuario, map<int, Comentario*> comentariosComentados);
     Usuario* getUsuariosComentario();
     void agregarUsuarioComentario(Usuario*);
@@ -28,8 +27,10 @@ public:
     static int getIdAutoC();
     string getNick();
     int getId();
+    void comentarComentario (Comentario* comentario4);
     map <int, dtComentario*> getComentariosComentados();
-
+    map <int, Comentario*> getComentariosComentados2();
+    Comentario buscarComentario();
     ~Comentario();
 };
 

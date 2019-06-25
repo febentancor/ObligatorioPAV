@@ -12,6 +12,7 @@ public:
     list<dtComentario*> seleccionarPelicula(string);
     bool existeComentario(string);
     void ingresarComentario();
+    Comentario* buscarComentario(int idBuscar, map<int, Comentario*> comentado);
 };
 
 

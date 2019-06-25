@@ -3,6 +3,7 @@
 
 #include <string>
 #include <map>
+#include "Usuario.h"
 
 using namespace std;
 class Usuario;
@@ -19,7 +20,8 @@ public:
     int getComentarioId();
     string getComentario();
     virtual ~dtComentario();
-
+    string getNick();
+    Usuario* getDTUsuariosComentario();
 };
 
 

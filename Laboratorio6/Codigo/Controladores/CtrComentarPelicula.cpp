@@ -57,4 +57,22 @@ list<dtComentario*> CtrComentarPelicula::seleccionarPelicula(string titulo){
     return listaComentarios;
 }
 
+Comentario* CtrComentarPelicula::buscarComentario(int idBuscar, map<int, Comentario*> comentado) {
+
+    map<int, Comentario*>::iterator it = comentado.find(idBuscar);
+    if (it->first == idBuscar){
+        return it->second;
+    } else {
+        for (map<int,Comentario*>::iterator it1=comentado.begin(); it1!=comentado.end(); ++it1) {
+
+            map<int, Comentario*>::iterator it3 = (it1->second->getComentariosComentados2().begin());
+
+            if (it3 != it1->second->getComentariosComentados2().end()){
+                buscarComentario(idBuscar, it1->second->getComentariosComentados2());
+            }
+
+        }
+    }
+}
+
 void CtrComentarPelicula::ingresarComentario(){};

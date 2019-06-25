@@ -41,6 +41,7 @@ public:
     list<Puntaje*> obtenerPuntajes();
     map<int, dtComentario*> getDTComentariosPeliculas();
     void agregarComentario(Comentario*);
+    void comentarComentario(int id, Comentario* comentario);
 };
 
 

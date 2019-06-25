@@ -18,4 +18,12 @@ string dtComentario::getComentario() {
     return comentario;
 }
 
+Usuario* dtComentario::getDTUsuariosComentario() {
+    return this->usuarios;
+}
+
+string dtComentario::getNick(){
+    return this->usuarios->getNickname();
+}
+
 dtComentario::~dtComentario() {}
