@@ -22,6 +22,7 @@ void menu(){
     cout <<"\t7. Ver informacion Pelicula"<<endl;
     cout <<"\t8. Ver Comentarios y Puntajes de Pelicula"<<endl;
     cout <<"\t9. Eliminar Pelicula"<<endl;
+    cout <<"\t10.Modificar Reloj"<<endl;
     cout <<"\t99. Salir"<<endl;
     cout <<"\t______________________________________________" <<endl;
     cout <<"\t\t\t\t\t OPCION: ";

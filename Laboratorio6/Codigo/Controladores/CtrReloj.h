@@ -8,13 +8,14 @@
 #include "Reloj.h"
 #include <string>
 #include "IctrReloj.h"
+#include "dtReloj.h"
 
 using namespace std;
 class CtrReloj: public IctrReloj  {
 public:
     CtrReloj();
-    void ingresarReloj(dtFecha, dtHora);
-    Reloj obtenerReloj();
+    //void ingresarReloj(dtFecha, dtHora);
+    dtReloj* obtenerReloj();
 private:
     dtHorario dth;
     dtFecha dtf;

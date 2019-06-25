@@ -9,23 +9,23 @@
 using  namespace std;
 
 Reloj::Reloj() {}
-Reloj::Reloj(int d, int m, int a, int h, int min) {
-    this->d=d;
-    this->m=m;
-    this->a=a;
-    this->h=h;
-    this->min=min;
-    //new dtFecha(d,m,a);
-    //new dtHora(h,min);
+Reloj::Reloj(dtFecha fecha, dtHora hora) {
+
+    this->fecha=fecha;
+    this->hora=hora;
+}
+dtFecha Reloj::getFecha() {
+    return this->fecha;
+}
+void Reloj::setFecha(dtFecha fecha){
+    this->fecha=fecha;
 }
 
-
-int Reloj::getFecha() {
-    return d, m, a;
+dtHora Reloj::getHora() {
+    return this->hora;
 }
-
-
-int Reloj::getHora() {
-    return h, min;
+void Reloj::setHora(dtHora hora){
+    this->hora=hora;
 }
+Reloj::~Reloj() {}
 

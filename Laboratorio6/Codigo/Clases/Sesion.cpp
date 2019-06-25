@@ -24,6 +24,13 @@ bool Sesion::getInicioSesion() {
 void Sesion::setInicioSesion(bool){
     this->inicioSesion=true;
 }
+Reloj* Sesion::getReloj() {
+    return this->reloj;
+}
+
+void Sesion::setReloj(Reloj * r) {
+    this->reloj=reloj;
+}
 
 Sesion::~Sesion(){}
 

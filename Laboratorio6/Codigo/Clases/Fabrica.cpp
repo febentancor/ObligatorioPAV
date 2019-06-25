@@ -13,6 +13,7 @@
 #include "CtrCrearReserva.h"
 #include "CtrVerComentarioYPuntaje.h"
 #include "CtrEliminarPelicula.h"
+#include "CtrReloj.h"
 
 
 
@@ -58,4 +59,10 @@ IctrVerComentarioYPuntaje* Fabrica::getIncontrolador9() {
 IctrEliminarPelicula* Fabrica::getIcontrolador10() {
     return new CtrEliminarPelicula();
 }
+
+IctrReloj* Fabrica::getIcontrolador11() {
+    return new CtrReloj();
+}
+
+
 Fabrica::~Fabrica(){}

@@ -7,13 +7,13 @@
 
 #include "dtHorario.h"
 #include "dtFecha.h"
-#include "Reloj.h"
+#include "dtReloj.h"
 
 using namespace std;
 
 class IctrReloj{
 public:
-    virtual void ingresarReloj(dtFecha, dtHorario)=0;
-    virtual Reloj obtenerReloj()=0;
+    //virtual void ingresarReloj(dtFecha, dtHorario)=0;
+    virtual dtReloj* obtenerReloj()=0;
 };
 #endif //CODIGO_ICTRRELOJ_H

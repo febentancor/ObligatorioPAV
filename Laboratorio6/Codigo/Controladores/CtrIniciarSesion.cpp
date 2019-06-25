@@ -8,6 +8,9 @@
 #include "ManejadorCine.h"
 #include "dtTarjetas.h"
 #include "Sesion.h"
+#include "Reloj.h"
+#include "dtFecha.h"
+#include "dtHora.h"
 
 CtrIniciarSesion::CtrIniciarSesion(){}
 void CtrIniciarSesion::ingresarUsuario(string nickName){
@@ -95,4 +98,11 @@ void CtrIniciarSesion::cargaPelicula() {
     puntaje->setUsuario(usu);
     p1->ingresarPuntaje(puntaje);
 }
+void CtrIniciarSesion::cargarReloj(){
+    Sesion* s = Sesion::getInstancia();
 
+    dtHora h = dtHora(10,05);
+    dtFecha f= dtFecha(25,06,2019);
+    Reloj* r = new Reloj(f,h);
+    s->setReloj(r);
+}

@@ -2,6 +2,7 @@
 #include "Dtypes/dtDireccion.h"
 #include "Dtypes/dtFecha.h"
 #include "Dtypes/dtHorario.h"
+#include "dtReloj.h"
 #include "Clases/Fabrica.h"
 #include "Dtypes/dtPelicula.h"
 #include "Dtypes/dtPeliculaCompleto.h"
@@ -12,6 +13,7 @@
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
 #include "Inrterfaces/IctrComentarPelicula.h"
+#include "IctrReloj.h"
 #include "IctrEliminarPelicula.h"
 #include "IctrVerComentarioYPuntaje.h"
 #include "IctrVerinfoPelicula.h"
@@ -32,6 +34,7 @@ IctrVerinfoPelicula* ictrVP;
 IctrCrearReserva* ictrCR;
 IctrVerComentarioYPuntaje* ictrVCP;
 IctrEliminarPelicula* ictrEP;
+IctrReloj* ictrRL;
 
 
 
@@ -47,6 +50,7 @@ int main() {
     ictrCR = fabrica->getIncontrolador8();//Continene el controlador de crear reserva
     ictrVCP = fabrica->getIncontrolador9();//Contiene el controlador de ver comentarios y puntajes de pelicula
     ictrEP = fabrica->getIcontrolador10(); //Contiene el controlador de EliminarPelicula
+    ictrRL = fabrica->getIcontrolador11(); //Contiene el controlador de Modificar Reloj
 
     int opcion;
     bool existe = true;
@@ -60,6 +64,7 @@ int main() {
     int capacidadSalas;
     ictrIS->cargaDatos();
     ictrIS->cargaPelicula();
+    ictrIS->cargarReloj();
 
 
 
@@ -114,6 +119,9 @@ int main() {
     list<string> listCPP;
     string VCPtitulo;
     list<dtPeliculaCompleto> dtlistPC;
+
+    //Variable modificar reloj
+    dtReloj* reloj;
 
     menu();
     cin >> opcion;
@@ -515,6 +523,13 @@ int main() {
                 } catch (invalid_argument &e) {
                     cout << e.what() << endl;
                 }
+                break;
+            case 10:
+                cout << "+++++++++++ MODIFICAR RELOJ +++++++++++++" << endl;
+                reloj = ictrRL->obtenerReloj();
+                cout << "\n Fecha: " << reloj->getFecha().getDia();
+                cout << "/" << reloj->getFecha().getMes();
+                cout << "/" << reloj->getFecha().getAnio();
                 break;
             case 99: {
                 system("exit");

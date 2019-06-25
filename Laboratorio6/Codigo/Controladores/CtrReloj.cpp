@@ -5,19 +5,19 @@
 #include "CtrReloj.h"
 #include <string>
 #include "Reloj.h"
+#include "dtReloj.h"
 #include "dtFecha.h"
 #include "dtHorario.h"
+#include "Sesion.h"
 
 using namespace std;
 
 CtrReloj::CtrReloj(){}
 
-void CtrReloj::ingresarReloj(dtFecha, dtHora){
-    //falta seguir estoy medio perdido con esto
-
-
+dtReloj* CtrReloj::obtenerReloj(){
+    Sesion* s = Sesion::getInstancia();
+    dtFecha f = (s->getReloj()->getFecha());
+    dtHora h = (s->getReloj()->getHora());
+    dtReloj* r = new dtReloj(f,h);
+    return r;
 }
-
-
-
-Reloj CtrReloj::obtenerReloj(){}

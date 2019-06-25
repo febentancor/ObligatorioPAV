@@ -18,6 +18,7 @@ public:
     bool existeUsuario(string);
     bool esAdmin(string);
     bool invitado();
+    void cargarReloj();
 
 private:
     string nickName;

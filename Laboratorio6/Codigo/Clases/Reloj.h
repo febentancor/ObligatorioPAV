@@ -12,17 +12,16 @@
 
 class Reloj {
 private:
-    int d;
-    int m;
-    int a;
-    int h;
-    int min;
     dtFecha fecha;
+    dtHora hora;
 public:
     Reloj();
-    Reloj(int, int, int, int, int);
-    int getFecha();
-    int getHora();
+    Reloj(dtFecha,dtHora);
+    dtFecha getFecha();
+    void setFecha(dtFecha);
+    dtHora getHora();
+    void setHora(dtHora);
+    ~Reloj();
 };
 
 

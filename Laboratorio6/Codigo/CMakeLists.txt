@@ -105,4 +105,4 @@ add_executable(Codigo
         Manejadores/ManejadorUsuario.h
         UI/ui.cpp
         UI/ui.h
-        main.cpp)
+        main.cpp Dtypes/dtReloj.cpp Dtypes/dtReloj.h)

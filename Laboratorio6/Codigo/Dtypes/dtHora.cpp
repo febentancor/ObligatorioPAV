@@ -3,16 +3,19 @@
 //
 
 #include "dtHora.h"
+
 dtHora::dtHora() {}
 
 dtHora::dtHora(int h, int min) {
-
     this->h=h;
     this->min=min;
 
 }
 int dtHora::getHora(){
-    return h, min;
+    return this->h;
+}
+int dtHora::getMinuto(){
+    return this->min;
 }
 
 dtHora::~dtHora(){}

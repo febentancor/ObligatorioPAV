@@ -15,6 +15,7 @@
 #include "IctrCrearReserva.h"
 #include "IctrVerComentarioYPuntaje.h"
 #include "IctrEliminarPelicula.h"
+#include "IctrReloj.h"
 
 class Fabrica{
     private:
@@ -31,6 +32,7 @@ class Fabrica{
         IctrCrearReserva* getIncontrolador8();
         IctrVerComentarioYPuntaje* getIncontrolador9();
         IctrEliminarPelicula* getIcontrolador10();
+        IctrReloj* getIcontrolador11();
 
         ~Fabrica();
 };

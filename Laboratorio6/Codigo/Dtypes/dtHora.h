@@ -14,6 +14,7 @@ public:
     dtHora();
     dtHora(int h, int min);
     int getHora();
+    int getMinuto();
     virtual ~dtHora();
 };
 
