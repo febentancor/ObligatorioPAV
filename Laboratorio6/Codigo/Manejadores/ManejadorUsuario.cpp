@@ -37,7 +37,7 @@ bool ManejadorUsuario::existeUsuario(string usuario){
     for(map<string,Usuario*>::iterator it= this->usuarios.begin(); it!=this->usuarios.end(); ++it){
         if((*it).second->getNickname() == usuario){
             Usuario* usu =  (*it).second;
-            usu->setInicioSesion(true);
+           // usu->(true);
             encontro = true;
             break;
         }
@@ -53,6 +53,7 @@ void ManejadorUsuario::eliminarUsuario(string usuario){
 bool ManejadorUsuario::esAdmin(string usuario) {
     map<string,Usuario*>::iterator it= this->usuarios.find(usuario);
     if(it!= this->usuarios.end()){
+   //     it->second->setInicioSesion(true);
         return (it->second->getEsAdmin()==true);
     }else{
         return  false;

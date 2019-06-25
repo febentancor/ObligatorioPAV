@@ -16,6 +16,15 @@ string Sesion::getNickname(){
 void Sesion::setNickname(string nickname){
     this->nickname=nickname;
 }
+
+bool Sesion::getInicioSesion() {
+    return inicioSesion;
+}
+
+void Sesion::setInicioSesion(bool){
+    this->inicioSesion=true;
+}
+
 Sesion::~Sesion(){}
 
 

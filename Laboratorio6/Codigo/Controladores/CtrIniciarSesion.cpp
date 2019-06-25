@@ -27,6 +27,7 @@ bool CtrIniciarSesion::ingresarContrasena(string contrasena){
 void CtrIniciarSesion::iniciarSesion (){
     Sesion* s =Sesion::getInstancia();
     s->setNickname(this->nickName);
+    s->setInicioSesion(true);
 }
 
 bool CtrIniciarSesion::existeUsuario(string u) {
@@ -49,13 +50,16 @@ bool CtrIniciarSesion::esAdmin(string usuario) {
 }
 
 bool CtrIniciarSesion::invitado() {
-    ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
+    //ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
+    Sesion * s=Sesion::getInstancia();
+    bool invit= s->getInicioSesion();
 
-    if(nickName == "") {
+
+    if(invit==false) {
 
         throw invalid_argument("DEBE INICIAR SESION\n");
     }
-    return invitado();
+    return invit;
 }
 
 

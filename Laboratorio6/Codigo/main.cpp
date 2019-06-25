@@ -179,31 +179,35 @@ int main() {
             case 3:
                 cout << "+++++++++++PUNTUAR PELICULA+++++++++++++" << endl;
                 try {
-                    if (ictrIS->invitado())
-                        listpl = ictrmP->listarTituloPelicula();
-                    for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                        cout << "\n" << *it;
-                        cout << "\n";
-                    }
-                    cout << "Seleccionar Pelicula: " << endl;
-                    cin >> tituloPelicula;
-                    tiene = ictrmP->seleccionarPelicula(tituloPelicula);
-                    if (tiene) {
-                        verPuntaje = ictrmP->verPuntaje();
-                        cout << "El puntaje que tiene ingresado es:" << verPuntaje;
-                        cout << "\n";
-                        cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
-                        cin >> nuevoPuntaje;
-                        if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
-                            cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
+                    if(ictrIS->existeUsuario(usr)){
+                        if (ictrIS->invitado()==true)
+                            listpl = ictrmP->listarTituloPelicula();
+                        for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                            cout << "\n" << *it;
+                            cout << "\n";
+                        }
+                        cout << "Seleccionar Pelicula: " << endl;
+                        cin >> tituloPelicula;
+                        tiene = ictrmP->seleccionarPelicula(tituloPelicula);
+                        if (tiene) {
+                            verPuntaje = ictrmP->verPuntaje();
+                            cout << "El puntaje que tiene ingresado es:" << verPuntaje;
+                            cout << "\n";
+                            cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
+                            cin >> nuevoPuntaje;
+                            if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
+                                cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
+                                cin >> puntos;
+                                ictrmP->ingresarPuntaje(puntos);
+                            }
+                        } else {
+                            cout << "Ingresar puntaje a la Pelicula: " << endl;
                             cin >> puntos;
                             ictrmP->ingresarPuntaje(puntos);
                         }
-                    } else {
-                        cout << "Ingresar puntaje a la Pelicula: " << endl;
-                        cin >> puntos;
-                        ictrmP->ingresarPuntaje(puntos);
+
                     }
+
                 } catch (invalid_argument &e) {
                     cout << e.what() << endl;
                 }
