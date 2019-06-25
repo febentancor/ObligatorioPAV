@@ -48,10 +48,6 @@ bool ManejadorUsuario::esAdmin(string usuario) {
     }
 }
 
-bool ManejadorUsuario::invitado() {
-    ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
-    bool sesionActiva= mU->invitado();
-    return invitado();
-        }
+
 
 ManejadorUsuario::~ManejadorUsuario(){}
