@@ -30,9 +30,20 @@ void ManejadorUsuario::agregarUsuario(Usuario* usuario){
 }
 
 bool ManejadorUsuario::existeUsuario(string usuario){
-    map<string,Usuario*>::iterator it = this->usuarios.find(usuario);
-    this->usuarios.end()->second->setInicioSesion(true);
-    return (it != this->usuarios.end());
+    //map<string,Usuario*>::iterator it = this->usuarios.find(usuario);
+    //this->usuarios.end()->second->setInicioSesion(true);
+    //return (it != this->usuarios.end());
+    bool encontro = false;
+    for(map<string,Usuario*>::iterator it= this->usuarios.begin(); it!=this->usuarios.end(); ++it){
+        if((*it).second->getNickname() == usuario){
+            Usuario* usu =  (*it).second;
+            usu->setInicioSesion(true);
+            encontro = true;
+            break;
+        }
+    }
+
+    return encontro;
 }
 
 void ManejadorUsuario::eliminarUsuario(string usuario){
