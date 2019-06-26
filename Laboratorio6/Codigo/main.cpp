@@ -403,7 +403,7 @@ int main() {
                     cin >> cantidaddAsientos;
                     ictrCR->ingresarCantidadAsientos(cantidaddAsientos);
                     cout << "\n Ingresar Tipo de pago: " << endl;
-                    cout << "\n 0.Debito\n1.Credito\n " << endl;
+                    cout << "\n 0.Debito\n 1.Credito\n " << endl;
                     cin >> tipoPago;
                     ictrCR->ingresarTipoPago(tipoPago);
                     if (tipoPago == 0) {
@@ -413,6 +413,8 @@ int main() {
                     } else {
                         cout << "Ingrese Financiera" << endl;
                         cin >> financiera;
+                        idFuncion = ictrCR->obtDescuento(financiera);
+                        ictrCR->ingresarFinanciera(idFuncion);
                     }
                     cout << "Precio total: " << ictrCR->verPrecioTotal();
                     cout << "\n";
