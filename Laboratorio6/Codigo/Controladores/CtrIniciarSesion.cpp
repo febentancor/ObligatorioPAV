@@ -129,7 +129,7 @@ void CtrIniciarSesion::cargaPelicula() {
 void CtrIniciarSesion::cargarReloj(){
     Sesion* s = Sesion::getInstancia();
 
-    dtHora h = dtHora(10,05);
+    dtHora h = dtHora(10,51);
     dtFecha f= dtFecha(25,06,2019);
     Reloj* r = new Reloj(f,h);
     s->setReloj(r);

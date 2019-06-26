@@ -29,7 +29,7 @@ Reloj* Sesion::getReloj() {
 }
 
 void Sesion::setReloj(Reloj * r) {
-    this->reloj=reloj;
+    this->reloj=r;
 }
 
 Sesion::~Sesion(){}

@@ -58,4 +58,8 @@ void Funcion::setPelicula(Pelicula * p) {
 void Funcion::ingresarReserva(Reserva * fu, int id) {
     reservas.insert(std::pair<int,Reserva*>(id,fu));
 }
-Funcion::~Funcion() {}
+Funcion::~Funcion() {
+    //delete de cada reserva
+    for(map<int,Reserva*>::iterator it = reservas.begin(); it != reservas.end(); ++it)
+        delete((*it).second);
+}
