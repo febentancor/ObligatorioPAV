@@ -68,8 +68,6 @@ int main() {
     string pass;
     dtDireccion dir;
     int capacidadSalas;
-    ictrIS->cargaDatos();
-    ictrIS->cargaPelicula();
     ictrIS->cargarReloj();
 
 
@@ -629,6 +627,10 @@ int main() {
                 } else {
                     cout << "\n La fecha no fue modificada" << endl;
                 }
+                break;
+            case 11:
+                ictrIS->cargaDatos();
+                ictrIS->cargaPelicula();
                 break;
             case 99: {
                 system("exit");
