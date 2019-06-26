@@ -1,5 +1,5 @@
-#include "Usuario.h"
-#include "Comentario.h"
+#include "../Clases/Usuario.h"
+#include "../Clases/Comentario.h"
 #include <map>
 #include <iostream>
 

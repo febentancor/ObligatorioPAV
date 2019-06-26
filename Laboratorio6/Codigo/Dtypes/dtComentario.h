@@ -3,7 +3,7 @@
 
 #include <string>
 #include <map>
-#include "Usuario.h"
+#include "../Clases/Usuario.h"
 
 using namespace std;
 class Usuario;

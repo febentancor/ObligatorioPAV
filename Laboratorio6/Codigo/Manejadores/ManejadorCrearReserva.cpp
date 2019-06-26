@@ -2,8 +2,8 @@
 // Created by gsoto on 21/06/2019.
 //
 
-#include "ManejadorCrearReserva.h"
-#include "Reserva.h"
+#include "../Manejadores/ManejadorCrearReserva.h"
+#include "../Clases/Reserva.h"
 #include <map>
 #include <list>
 #include <string>

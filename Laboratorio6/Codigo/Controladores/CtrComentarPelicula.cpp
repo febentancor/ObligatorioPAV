@@ -1,11 +1,12 @@
-#include "CtrComentarPelicula.h"
-#include "ManejadorPelicula.h"
-#include <list>
-#include <Pelicula.h>
-#include "dtComentario.h"
-#include  "dtCine.h"
+#include "../Controladores/CtrComentarPelicula.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Clases/Pelicula.h"
+#include "../Dtypes/dtComentario.h"
+#include  "../Dtypes/dtCine.h"
 #include <iostream>
 #include <string>
+#include <list>
+
 
 list<string> CtrComentarPelicula::ListarTituloPeliculas(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();

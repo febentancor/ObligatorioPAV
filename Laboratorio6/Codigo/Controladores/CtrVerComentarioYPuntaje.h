@@ -5,8 +5,8 @@
 #ifndef CODIGO_CTRVERCOMENTERIOYPUNTAJE_H
 #define CODIGO_CTRVERCOMENTERIOYPUNTAJE_H
 
-#include "IctrVerComentarioYPuntaje.h"
-#include "Pelicula.h"
+#include "../Inrterfaces/IctrVerComentarioYPuntaje.h"
+#include "../Clases/Pelicula.h"
 
 
 class CtrVerComentarioYPuntaje: public IctrVerComentarioYPuntaje{

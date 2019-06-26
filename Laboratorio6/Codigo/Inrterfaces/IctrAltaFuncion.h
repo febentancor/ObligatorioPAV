@@ -5,9 +5,9 @@
 #ifndef CODIGO_ICTRALTAFUNCION_H
 #define CODIGO_ICTRALTAFUNCION_H
 
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
 #include <list>
 
 using namespace std;

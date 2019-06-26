@@ -5,7 +5,7 @@
 #ifndef CODIGO_DTSALA_H
 #define CODIGO_DTSALA_H
 
-#include "dtFuncion.h"
+#include "../Dtypes/dtFuncion.h"
 #include <list>
 #include <string>
 using namespace std;

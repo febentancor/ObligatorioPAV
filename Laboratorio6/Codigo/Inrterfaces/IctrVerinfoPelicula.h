@@ -5,10 +5,10 @@
 #ifndef CODIGO_ICTRVERINFOPELICULA_H
 #define CODIGO_ICTRVERINFOPELICULA_H
 
-#include "dtInfoPelicula.h"
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
+#include "../Dtypes/dtInfoPelicula.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
 #include <list>
 
 using namespace std;

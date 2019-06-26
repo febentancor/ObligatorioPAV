@@ -1,4 +1,4 @@
-#include "dtComentario.h"
+#include "../Dtypes/dtComentario.h"
 #include <map>
 
 dtComentario::dtComentario() {}

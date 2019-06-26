@@ -3,10 +3,11 @@
 //
 
 #include "CtrAltaCine.h"
-#include "ManejadorCine.h"
-#include "Sala.h"
-#include "dtDireccion.h"
-#include "Cine.h"
+#include "../Dtypes/dtDireccion.h"
+#include "../Controladores/CtrAltaFuncion.h"
+#include "../Clases/Cine.h"
+#include "../Clases/Sala.h"
+#include "../Manejadores/ManejadorCine.h"
 
 CtrAltaCine::CtrAltaCine(){}
 
@@ -19,7 +20,6 @@ void CtrAltaCine::ingresarCapacidad(int capSala){
     Sala* saAcine = new Sala(capSala);
     salaCine.push_back(saAcine);
 }
-
 
 void CtrAltaCine::darAltaCine (){
     Sala* s = new Sala(this->capacidad);

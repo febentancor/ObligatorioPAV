@@ -5,9 +5,9 @@
 #ifndef CODIGO_ICTRVERCOMENTARIOYPUNTAJE_H
 #define CODIGO_ICTRVERCOMENTARIOYPUNTAJE_H
 
-#include "dtInfoPelicula.h"
-#include "dtComentario.h"
-#include "dtPeliculaCompleto.h"
+#include "../Dtypes/dtInfoPelicula.h"
+#include "../Dtypes/dtComentario.h"
+#include "../Dtypes/dtPeliculaCompleto.h"
 #include <list>
 #include <map>
 

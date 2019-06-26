@@ -6,7 +6,7 @@
 #define CODIGO_CTRELIMINARPELICULA_H
 
 
-#include "IctrEliminarPelicula.h"
+#include "../Inrterfaces/IctrEliminarPelicula.h"
 
 class CtrEliminarPelicula: public IctrEliminarPelicula {
 public:

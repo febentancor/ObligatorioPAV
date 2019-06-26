@@ -5,7 +5,7 @@
 #ifndef CODIGO_MANEJADORFUNCIONES_H
 #define CODIGO_MANEJADORFUNCIONES_H
 
-#include "Funcion.h"
+#include "../Clases/Funcion.h"
 #include <list>
 #include <map>
 #include <string>

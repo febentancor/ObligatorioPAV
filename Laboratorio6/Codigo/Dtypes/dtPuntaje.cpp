@@ -2,7 +2,7 @@
 // Created by gsoto on 17/06/2019.
 //
 #include <list>
-#include "dtPuntaje.h"
+#include "../Dtypes/dtPuntaje.h"
 
 
 dtPuntaje::dtPuntaje() {}

@@ -2,7 +2,7 @@
 // Created by gsoto on 17/06/2019.
 //
 
-#include "dtCine.h"
+#include "../Dtypes/dtCine.h"
 
 dtCine::dtCine() {}
 dtCine::dtCine(int idCine, dtDireccion direccion) : idCine(idCine), direccion(direccion) {}

@@ -4,16 +4,16 @@
 
 
 #include "Fabrica.h"
-#include "CtrIniciarSesion.h"
-#include "CtrAltaCine.h"
-#include "CtrPuntuarPelicula.h"
-#include "CtrAltaFuncion.h"
-#include "CtrComentarPelicula.h"
-#include "CtrVerinfoPelicula.h"
-#include "CtrCrearReserva.h"
-#include "CtrVerComentarioYPuntaje.h"
-#include "CtrEliminarPelicula.h"
-#include "CtrReloj.h"
+#include "../Controladores/CtrIniciarSesion.h"
+#include "../Controladores/CtrAltaCine.h"
+#include "../Controladores/CtrPuntuarPelicula.h"
+#include "../Controladores/CtrAltaFuncion.h"
+#include "../Controladores/CtrComentarPelicula.h"
+#include "../Controladores/CtrVerinfoPelicula.h"
+#include "../Controladores/CtrCrearReserva.h"
+#include "../Controladores/CtrVerComentarioYPuntaje.h"
+#include "../Controladores/CtrEliminarPelicula.h"
+#include "../Controladores/CtrReloj.h"
 
 
 

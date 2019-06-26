@@ -1,6 +1,6 @@
 #ifndef CODIGO_PUNTAJE_H
 #define CODIGO_PUNTAJE_H
-#include "Usuario.h"
+#include "../Clases/Usuario.h"
 #include <map>
 #include <list>
 

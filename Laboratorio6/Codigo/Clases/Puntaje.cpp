@@ -1,5 +1,5 @@
-#include "Puntaje.h"
-#include "Usuario.h"
+#include "../Clases/Puntaje.h"
+#include "../Clases/Usuario.h"
 Puntaje::Puntaje() {};
 Puntaje::Puntaje(int puntos){
     this->puntos=puntos;

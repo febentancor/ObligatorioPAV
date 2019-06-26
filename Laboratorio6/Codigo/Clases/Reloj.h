@@ -5,8 +5,8 @@
 #ifndef CODIGO_RELOJ_H
 #define CODIGO_RELOJ_H
 
-#include "dtHora.h"
-#include "dtFecha.h"
+#include "../Dtypes/dtHora.h"
+#include "../Dtypes/dtFecha.h"
 #include <string>
 
 

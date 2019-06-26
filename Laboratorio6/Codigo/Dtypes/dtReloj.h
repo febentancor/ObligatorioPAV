@@ -5,8 +5,8 @@
 #ifndef CODIGO_DTRELOJ_H
 #define CODIGO_DTRELOJ_H
 
-#include "dtHora.h"
-#include "dtFecha.h"
+#include "../Dtypes/dtHora.h"
+#include "../Dtypes/dtFecha.h"
 
 class dtReloj {
 private:

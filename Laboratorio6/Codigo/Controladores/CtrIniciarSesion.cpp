@@ -2,16 +2,16 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include "CtrIniciarSesion.h"
-#include "ManejadorUsuario.h"
-#include "ManejadorPelicula.h"
-#include "ManejadorCine.h"
-#include "ManejadorFunciones.h"
-#include "dtTarjetas.h"
-#include "Sesion.h"
-#include "Reloj.h"
-#include "dtFecha.h"
-#include "dtHora.h"
+#include "../Controladores/CtrIniciarSesion.h"
+#include "../Manejadores/ManejadorUsuario.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Dtypes/dtTarjetas.h"
+#include "../Clases/Sesion.h"
+#include "../Clases/Reloj.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHora.h"
 
 CtrIniciarSesion::CtrIniciarSesion(){}
 void CtrIniciarSesion::ingresarUsuario(string nickName){
@@ -57,7 +57,6 @@ bool CtrIniciarSesion::invitado() {
     //ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
     Sesion * s=Sesion::getInstancia();
     bool invit= s->getInicioSesion();
-
 
     if(invit==false) {
 

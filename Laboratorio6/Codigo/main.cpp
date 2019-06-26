@@ -2,28 +2,30 @@
 #include "Dtypes/dtDireccion.h"
 #include "Dtypes/dtFecha.h"
 #include "Dtypes/dtHorario.h"
-#include "dtReloj.h"
+#include "Dtypes/dtReloj.h"
 #include "Clases/Fabrica.h"
 #include "Dtypes/dtPelicula.h"
 #include "Dtypes/dtPeliculaCompleto.h"
 #include "Dtypes/dtPuntaje.h"
-#include "dtTarjetas.h"
+#include "Dtypes/dtTarjetas.h"
 #include "Inrterfaces/IctrInicioSesion.h"
 #include "Inrterfaces/IctrAltaCine.h"
 #include "Inrterfaces/IctrPuntuarPelicula.h"
 #include "Inrterfaces/IctrAltaFuncion.h"
 #include "Inrterfaces/IctrComentarPelicula.h"
-#include "IctrReloj.h"
-#include "IctrEliminarPelicula.h"
-#include "IctrVerComentarioYPuntaje.h"
-#include "IctrVerinfoPelicula.h"
-#include "IctrCrearReserva.h"
-#include "string.h"
+#include "Inrterfaces/IctrReloj.h"
+#include "Inrterfaces/IctrEliminarPelicula.h"
+#include "Inrterfaces/IctrVerComentarioYPuntaje.h"
+#include "Inrterfaces/IctrVerinfoPelicula.h"
+#include "Inrterfaces/IctrCrearReserva.h"
 #include "UI/ui.h"
+#include <string.h>
 #include <list>
-#include "Sesion.h"
-#include "Comentario.h"
 #include <map>
+
+//esto esta mal
+#include "Clases/Sesion.h"
+#include "Clases/Comentario.h"
 
 
 

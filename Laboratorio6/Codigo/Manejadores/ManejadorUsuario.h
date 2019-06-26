@@ -1,6 +1,6 @@
 #ifndef CODIGO_MANEJADORUSUARIO_H
 #define CODIGO_MANEJADORUSUARIO_H
-#include "Usuario.h"
+#include "../Clases/Usuario.h"
 #include <map>
 #include <list>
 #include <string>

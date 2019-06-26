@@ -2,7 +2,7 @@
 // Created by gsoto on 17/06/2019.
 //
 
-#include "dtPelicula.h"
+#include "../Dtypes/dtPelicula.h"
 
 dtPelicula::dtPelicula() {}
 dtPelicula::dtPelicula(string titulo, string sipnosis, string poster, float puntaje) : titulo(titulo), sipnosis(sipnosis), poster(poster), puntaje(puntaje){}

@@ -2,11 +2,11 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include "Pelicula.h"
+#include "../Clases/Pelicula.h"
 #include <list>
-#include "Sesion.h"
-#include "Puntaje.h"
-#include "ManejadorPelicula.h"
+#include "../Clases/Sesion.h"
+#include "../Clases/Puntaje.h"
+#include "../Manejadores/ManejadorPelicula.h"
 
 
 Pelicula::Pelicula() {}

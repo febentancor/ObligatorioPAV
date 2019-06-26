@@ -4,9 +4,9 @@
 
 #include "dtReloj.h"
 
-#include "Reloj.h"
-#include "dtFecha.h"
-#include "dtHora.h"
+#include "../Clases/Reloj.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHora.h"
 
 using  namespace std;
 

@@ -3,7 +3,7 @@
 
 #include <map>
 #include <list>
-#include "dtComentario.h"
+#include "../Dtypes/dtComentario.h"
 
 
 using namespace std;

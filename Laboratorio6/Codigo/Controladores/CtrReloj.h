@@ -5,12 +5,12 @@
 #ifndef CODIGO_CTRRELOJ_H
 #define CODIGO_CTRRELOJ_H
 
-#include "Reloj.h"
+#include "../Clases/Reloj.h"
 #include <string>
-#include "IctrReloj.h"
-#include "dtReloj.h"
-#include "dtFecha.h"
-#include "dtHora.h"
+#include "../Inrterfaces/IctrReloj.h"
+#include "../Dtypes/dtReloj.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHora.h"
 
 using namespace std;
 class CtrReloj: public IctrReloj  {

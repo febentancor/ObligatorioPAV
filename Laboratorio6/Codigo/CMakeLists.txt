@@ -3,12 +3,6 @@ project(Codigo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(Clases)
-include_directories(Controladores)
-include_directories(Dtypes)
-include_directories(Inrterfaces)
-include_directories(Manejadores)
-include_directories(UI)
 
 add_executable(Codigo
         Clases/Cine.cpp

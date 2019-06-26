@@ -6,9 +6,9 @@
 #define CODIGO_ICTRRELOJ_H
 
 
-#include "dtFecha.h"
-#include "dtReloj.h"
-#include "dtHora.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtReloj.h"
+#include "../Dtypes/dtHora.h"
 
 using namespace std;
 

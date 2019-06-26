@@ -5,15 +5,15 @@
 #ifndef CODIGO_CTRHACERRESERVA_H
 #define CODIGO_CTRHACERRESERVA_H
 
-#include "dtInfoPelicula.h"
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
-#include "dtTarjetas.h"
+#include "../Dtypes/dtInfoPelicula.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
+#include "../Dtypes/dtTarjetas.h"
 #include <list>
-#include "IctrCrearReserva.h"
-#include "Pelicula.h"
-#include "Funcion.h"
+#include "../Inrterfaces/IctrCrearReserva.h"
+#include "../Clases/Pelicula.h"
+#include "../Clases/Funcion.h"
 
 class CtrCrearReserva : public IctrCrearReserva{
 public:

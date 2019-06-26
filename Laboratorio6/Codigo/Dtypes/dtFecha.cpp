@@ -2,7 +2,7 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include "dtFecha.h"
+#include "../Dtypes/dtFecha.h"
 dtFecha::dtFecha() {}
 dtFecha::dtFecha(int dia, int mes, int anio) {
     this->dia=dia;

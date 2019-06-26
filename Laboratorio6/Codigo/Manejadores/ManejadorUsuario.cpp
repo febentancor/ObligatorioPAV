@@ -1,6 +1,6 @@
-#include "Usuario.h"
+#include "../Clases/Usuario.h"
+#include "../Manejadores/ManejadorUsuario.h"
 #include <list>
-#include "ManejadorUsuario.h"
 using namespace std;
 
 ManejadorUsuario* ManejadorUsuario::instancia = NULL;

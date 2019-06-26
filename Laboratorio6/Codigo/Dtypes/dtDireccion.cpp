@@ -2,7 +2,7 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include "dtDireccion.h"
+#include "../Dtypes/dtDireccion.h"
 
 dtDireccion::dtDireccion() {}
 dtDireccion::dtDireccion(string calle, int numero) : calle(calle), numero(numero) {}

@@ -6,11 +6,11 @@
 #define CODIGO_FUNCION_H
 
 
-#include <dtHorario.h>
-#include "Pelicula.h"
-#include "dtFecha.h"
-#include "dtHorario.h"
-#include "Reserva.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Clases/Pelicula.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Clases/Reserva.h"
 
 class Funcion {
 private:

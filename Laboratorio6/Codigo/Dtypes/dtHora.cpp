@@ -2,7 +2,7 @@
 // Created by mrodriguez on 24/06/19.
 //
 
-#include "dtHora.h"
+#include "../Dtypes/dtHora.h"
 
 dtHora::dtHora() {}
 

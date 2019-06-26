@@ -5,9 +5,9 @@
 #ifndef CODIGO_CTRALTACINE_H
 #define CODIGO_CTRALTACINE_H
 
-#include "IctrAltaCine.h"
-#include "dtDireccion.h"
-#include "Sala.h"
+#include "../Inrterfaces/IctrAltaCine.h"
+#include "../Dtypes/dtDireccion.h"
+#include "../Clases/Sala.h"
 #include <string.h>
 
 using namespace std;

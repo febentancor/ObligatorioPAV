@@ -2,22 +2,21 @@
 // Created by yokad on 6/17/2019.
 //
 
-#include "CtrCrearReserva.h"
-#include "Sesion.h"
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
-#include "dtHorario.h"
-#include "dtFecha.h"
-#include "dtFuncion.h"
-#include "dtTarjetas.h"
-#include "ManejadorFunciones.h"
-#include "ManejadorCine.h"
-#include "ManejadorPelicula.h"
-#include "ManejadorCrearReserva.h"
-#include "Debito.h"
-#include "Credito.h"
-
+#include "../Controladores/CtrCrearReserva.h"
+#include "../Clases/Sesion.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtFuncion.h"
+#include "../Dtypes/dtTarjetas.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Manejadores/ManejadorCrearReserva.h"
+#include "../Clases/Debito.h"
+#include "../Clases/Credito.h"
 #include <list>
 
 CtrCrearReserva::CtrCrearReserva() {}

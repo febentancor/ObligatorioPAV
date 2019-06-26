@@ -5,10 +5,9 @@
 #ifndef CODIGO_CINE_H
 #define CODIGO_CINE_H
 
-#include "Sala.h"
-#include "dtDireccion.h"
+#include "../Clases/Sala.h"
+#include "../Dtypes/dtDireccion.h"
 #include <map>
-#include <dtDireccion.h>
 
 class Cine {
 

@@ -5,11 +5,12 @@
 #ifndef CODIGO_DTPELICULACOMPLETO_H
 #define CODIGO_DTPELICULACOMPLETO_H
 
-#include <string>
-#include "dtPuntaje.h"
-#include "dtComentario.h"
+
+#include "../Dtypes/dtPuntaje.h"
+#include "../Dtypes/dtComentario.h"
 #include <list>
 #include <map>
+#include <string>
 
 using namespace std;
 

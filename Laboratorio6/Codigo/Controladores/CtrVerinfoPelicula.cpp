@@ -2,17 +2,17 @@
 // Created by gsoto on 20/06/2019.
 //
 
-#include "CtrVerinfoPelicula.h"
-#include "Sesion.h"
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
-#include "dtHorario.h"
-#include "dtFecha.h"
-#include "dtFuncion.h"
-#include "ManejadorFunciones.h"
-#include "ManejadorCine.h"
-#include "ManejadorPelicula.h"
+#include "../Controladores/CtrVerinfoPelicula.h"
+#include "../Clases/Sesion.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtFuncion.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Manejadores/ManejadorPelicula.h"
 #include <list>
 
 CtrVerinfoPelicula::CtrVerinfoPelicula() {}

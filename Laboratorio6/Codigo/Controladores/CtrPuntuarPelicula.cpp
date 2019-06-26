@@ -2,12 +2,12 @@
 // Created by yokad on 6/13/2019.
 //
 
-#include "CtrPuntuarPelicula.h"
-#include <ManejadorPelicula.h>
-#include <ManejadorUsuario.h>
-#include "Sesion.h"
+#include "../Controladores/CtrPuntuarPelicula.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Manejadores/ManejadorUsuario.h"
+#include "../Clases/Sesion.h"
+#include "../Clases/Puntaje.h"
 #include <list>
-#include "Puntaje.h"
 
 CtrPuntuarPelicula::CtrPuntuarPelicula(){}
 

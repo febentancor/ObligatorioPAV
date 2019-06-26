@@ -1,9 +1,10 @@
 //
 // Created by gsoto on 17/06/2019.
 //
+
+#include "../Dtypes/dtPeliculaCompleto.h"
+#include "../Dtypes/dtPuntaje.h"
 #include <list>
-#include "dtPeliculaCompleto.h"
-#include "dtPuntaje.h"
 
 dtPeliculaCompleto::dtPeliculaCompleto() {}
 

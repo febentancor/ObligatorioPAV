@@ -2,9 +2,9 @@
 // Created by yokad on 6/22/2019.
 //
 
-#include "Reloj.h"
-#include "dtFecha.h"
-#include "dtHora.h"
+#include "../Clases/Reloj.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHora.h"
 
 using  namespace std;
 

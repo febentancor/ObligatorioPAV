@@ -2,7 +2,7 @@
 // Created by gsoto on 19/06/2019.
 //
 
-#include "dtInfoPelicula.h"
+#include "../Dtypes/dtInfoPelicula.h"
 
 dtInfoPelicula::dtInfoPelicula() {}
 

@@ -2,7 +2,7 @@
 // Created by gsoto on 17/06/2019.
 //
 
-#include "dtSala.h"
+#include "../Dtypes/dtSala.h"
 
 dtSala::dtSala() {}
 dtSala::dtSala(int idSala, int capacidad) : idSala(idSala), capacidad(capacidad) {}

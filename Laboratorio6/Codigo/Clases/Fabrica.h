@@ -5,17 +5,17 @@
 #ifndef CODIGO_FABRICA_H
 #define CODIGO_FABRICA_H
 
-#include "IctrComentarPelicula.h"
+#include "../Inrterfaces/IctrComentarPelicula.h"
 
-#include "IctrInicioSesion.h"
-#include "IctrAltaCine.h"
-#include "IctrPuntuarPelicula.h"
-#include "IctrAltaFuncion.h"
-#include "IctrVerinfoPelicula.h"
-#include "IctrCrearReserva.h"
-#include "IctrVerComentarioYPuntaje.h"
-#include "IctrEliminarPelicula.h"
-#include "IctrReloj.h"
+#include "../Inrterfaces/IctrInicioSesion.h"
+#include "../Inrterfaces/IctrAltaCine.h"
+#include "../Inrterfaces/IctrPuntuarPelicula.h"
+#include "../Inrterfaces/IctrAltaFuncion.h"
+#include "../Inrterfaces/IctrVerinfoPelicula.h"
+#include "../Inrterfaces/IctrCrearReserva.h"
+#include "../Inrterfaces/IctrVerComentarioYPuntaje.h"
+#include "../Inrterfaces/IctrEliminarPelicula.h"
+#include "../Inrterfaces/IctrReloj.h"
 
 class Fabrica{
     private:

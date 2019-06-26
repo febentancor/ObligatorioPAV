@@ -5,7 +5,7 @@
 #ifndef CODIGO_SALA_H
 #define CODIGO_SALA_H
 
-#include "Funcion.h"
+#include "../Clases/Funcion.h"
 #include <map>
 using  namespace std;
 

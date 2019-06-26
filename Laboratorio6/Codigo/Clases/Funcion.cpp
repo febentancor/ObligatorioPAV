@@ -1,9 +1,9 @@
 //
 // Created by yokad on 6/4/2019.
 //
-#include "dtFecha.h"
-#include "Funcion.h"
-#include "dtHorario.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Clases/Funcion.h"
+#include "../Dtypes/dtHorario.h"
 
 Funcion::Funcion(){}
 int Funcion::idAutoF=-1;

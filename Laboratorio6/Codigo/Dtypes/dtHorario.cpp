@@ -2,7 +2,7 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include "dtHorario.h"
+#include "../Dtypes/dtHorario.h"
 
 
 dtHorario::dtHorario() {}

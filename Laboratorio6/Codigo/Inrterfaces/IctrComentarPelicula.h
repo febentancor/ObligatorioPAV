@@ -5,8 +5,8 @@
 #define CODIGO_ICTRCOMENTARPELICULA_H
 #include <string>
 #include <list>
-#include "dtComentario.h"
-#include "Comentario.h"
+#include "../Dtypes/dtComentario.h"
+#include "../Clases/Comentario.h"
 
 using namespace std;
 class IctrComentarPelicula {

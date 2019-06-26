@@ -4,8 +4,9 @@
 
 #ifndef CODIGO_DTCINE_H
 #define CODIGO_DTCINE_H
+
+#include "../Dtypes/dtDireccion.h"
 #include <string>
-#include "dtDireccion.h"
 
 using namespace std;
 

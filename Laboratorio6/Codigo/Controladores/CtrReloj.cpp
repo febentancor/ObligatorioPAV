@@ -2,13 +2,13 @@
 // Created by yokad on 6/22/2019.
 //
 
-#include "CtrReloj.h"
+#include "../Controladores/CtrReloj.h"
 #include <string>
-#include "Reloj.h"
-#include "dtReloj.h"
-#include "dtFecha.h"
-#include "dtHorario.h"
-#include "Sesion.h"
+#include "../Clases/Reloj.h"
+#include "../Dtypes/dtReloj.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Clases/Sesion.h"
 
 using namespace std;
 

@@ -7,9 +7,9 @@
 
 #include <map>
 #include <list>
-#include "Puntaje.h"
-#include "dtFecha.h"
-#include "Comentario.h"
+#include "../Clases/Puntaje.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Clases/Comentario.h"
 class Cine;
 using namespace std;
 

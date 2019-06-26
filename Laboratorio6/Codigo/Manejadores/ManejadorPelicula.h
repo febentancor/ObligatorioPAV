@@ -8,7 +8,7 @@
 #include <map>
 #include <list>
 #include <string>
-#include "Pelicula.h"
+#include "../Clases/Pelicula.h"
 using  namespace std;
 
 

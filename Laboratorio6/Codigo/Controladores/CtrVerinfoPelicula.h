@@ -5,8 +5,8 @@
 #ifndef CODIGO_VERINFOPELICULA_H
 #define CODIGO_VERINFOPELICULA_H
 
-#include "IctrVerinfoPelicula.h"
-#include "Pelicula.h"
+#include "../Inrterfaces/IctrVerinfoPelicula.h"
+#include "../Clases/Pelicula.h"
 
 
 class CtrVerinfoPelicula: public IctrVerinfoPelicula{

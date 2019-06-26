@@ -2,7 +2,7 @@
 // Created by yokad on 6/4/2019.
 //
 
-#include "Sala.h"
+#include "../Clases/Sala.h"
 Sala::Sala() {}
 int Sala::idAuto=-1;
 Sala::Sala(int capacidad) {

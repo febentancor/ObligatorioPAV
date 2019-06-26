@@ -5,8 +5,8 @@
 #ifndef CODIGO_DTFUNCION_H
 #define CODIGO_DTFUNCION_H
 
-#include "dtFecha.h"
-#include "dtHorario.h"
+#include "../Dtypes/dtFecha.h"
+#include "../Dtypes/dtHorario.h"
 
 class dtFuncion {
 private:

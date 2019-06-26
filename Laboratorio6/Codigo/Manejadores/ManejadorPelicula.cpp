@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include "ManejadorPelicula.h"
-#include "Pelicula.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Clases/Pelicula.h"
 #include <map>
 #include <list>
 #include <string>

@@ -3,7 +3,7 @@
 //
 
 #include "Cine.h"
-#include "dtDireccion.h"
+#include "../Dtypes/dtDireccion.h"
 
 
 Cine::Cine() {}

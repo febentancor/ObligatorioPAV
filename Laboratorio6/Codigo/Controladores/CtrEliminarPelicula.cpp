@@ -2,10 +2,10 @@
 // Created by gon on 20/06/19.
 //
 
-#include "ManejadorPelicula.h"
-#include "ManejadorFunciones.h"
-#include "ManejadorCine.h"
-#include "CtrEliminarPelicula.h"
+#include "../Manejadores/ManejadorPelicula.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Controladores/CtrEliminarPelicula.h"
 
 CtrEliminarPelicula::CtrEliminarPelicula() {}
 

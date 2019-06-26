@@ -5,7 +5,7 @@
 #ifndef CODIGO_MANEJADORCREARRESERVA_H
 #define CODIGO_MANEJADORCREARRESERVA_H
 
-#include "Reserva.h"
+#include "../Clases/Reserva.h"
 #include <list>
 #include <map>
 #include <string>

@@ -1,15 +1,17 @@
 //
 // Created by gsoto on 17/06/2019.
 //
-#include "CtrPuntuarPelicula.h"
-#include "CtrAltaFuncion.h"
-#include "Sesion.h"
-#include "dtPelicula.h"
-#include "dtCine.h"
+#include "../Controladores/CtrPuntuarPelicula.h"
+#include "../Controladores/CtrAltaFuncion.h"
+#include "../Clases/Sesion.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Dtypes/dtFecha.h"
 #include <list>
-#include "ManejadorCine.h"
-#include "ManejadorFunciones.h"
-#include "dtFecha.h"
+
+
 CtrAltaFuncion::CtrAltaFuncion() {}
 
 list<dtPelicula> CtrAltaFuncion:: listarPeliculas(){

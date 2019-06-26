@@ -2,8 +2,8 @@
 // Created by yokad on 6/18/2019.
 //
 
-#include "ManejadorFunciones.h"
-#include "Funcion.h"
+#include "../Manejadores/ManejadorFunciones.h"
+#include "../Clases/Funcion.h"
 #include <map>
 #include <list>
 #include <string>

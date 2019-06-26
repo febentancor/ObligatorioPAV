@@ -4,13 +4,13 @@
 
 #ifndef CODIGO_CTRALTAFUNCION_H
 #define CODIGO_CTRALTAFUNCION_H
-#include "dtPelicula.h"
-#include "dtCine.h"
-#include "dtSala.h"
-#include "dtFuncion.h"
-#include "Cine.h"
+#include "../Dtypes/dtPelicula.h"
+#include "../Dtypes/dtCine.h"
+#include "../Dtypes/dtSala.h"
+#include "../Dtypes/dtFuncion.h"
+#include "../Inrterfaces/IctrAltaFuncion.h"
+#include "../Clases/Cine.h"
 #include <list>
-#include "IctrAltaFuncion.h"
 
 class CtrAltaFuncion: public IctrAltaFuncion {
 

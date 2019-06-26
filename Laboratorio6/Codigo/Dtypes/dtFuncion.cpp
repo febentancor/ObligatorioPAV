@@ -2,9 +2,9 @@
 // Created by gsoto on 17/06/2019.
 //
 
-#include "dtFuncion.h"
-#include "dtHorario.h"
-#include "dtFecha.h"
+#include "../Dtypes/dtFuncion.h"
+#include "../Dtypes/dtHorario.h"
+#include "../Dtypes/dtFecha.h"
 
 dtFuncion::dtFuncion() {}
 //int dtFuncion::idAutoF=-1;

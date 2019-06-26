@@ -2,7 +2,7 @@
 // Created by yokad on 6/20/2019.
 //
 
-#include "dtTarjetas.h"
+#include "../Dtypes/dtTarjetas.h"
 #include <map>
 #include <string>
 using  namespace std;

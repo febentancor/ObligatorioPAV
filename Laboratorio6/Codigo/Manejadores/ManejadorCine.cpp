@@ -2,8 +2,8 @@
 // Created by yokad on 6/6/2019.
 //
 
-#include "ManejadorCine.h"
-#include "Cine.h"
+#include "../Manejadores/ManejadorCine.h"
+#include "../Clases/Cine.h"
 #include <map>
 #include <list>
 #include <string>

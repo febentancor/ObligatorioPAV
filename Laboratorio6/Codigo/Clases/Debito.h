@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <string>
-#include "Reserva.h"
+#include "../Clases/Reserva.h"
 using namespace std;
 
 class Debito : public  Reserva{

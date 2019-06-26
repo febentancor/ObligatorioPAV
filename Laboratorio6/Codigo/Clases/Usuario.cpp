@@ -1,4 +1,5 @@
-#include "Usuario.h"
+#include "../Clases/Usuario.h"
+
 Usuario::Usuario(){}
 Usuario::Usuario(string nickname,string contrasena,string urlFoto, bool esAdmin){
     this->nickname=nickname;

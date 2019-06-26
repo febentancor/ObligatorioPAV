@@ -1,7 +1,7 @@
 #ifndef CODIGO_SESION_H
 #define CODIGO_SESION_H
 
-#include "Reloj.h"
+#include "../Clases/Reloj.h"
 #include <string>
 
 using namespace std;
