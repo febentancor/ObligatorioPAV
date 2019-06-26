@@ -78,6 +78,7 @@ void CtrIniciarSesion::cargaDatos(){
 
 void CtrIniciarSesion::cargaPelicula() {
 
+    //GSM - agrego testing
     Pelicula* p = new Pelicula("PELICULA1","TERROR","HOLA");
 
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();

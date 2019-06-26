@@ -60,9 +60,7 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
 
                     int a = (*it3)->getId();
 
-                    mF->eliminarFuncion((*it3)->getId());
-                    //eliminar la funcion
-                    delete (*it3);
+                    mF->eliminarFuncion(a);
 
                 }
 
@@ -71,7 +69,7 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
         }
 
     }
+
     mP->eliminarPelicula(titulo);
-    delete Pelicula;
 
 }
