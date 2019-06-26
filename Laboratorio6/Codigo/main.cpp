@@ -278,6 +278,7 @@ int main() {
                                 cout << "\n\n\n\n---FUNCIONES DE LA SALA---";
 
                                 for (list<dtFuncion>::iterator it = listFu.begin(); it != listFu.end(); ++it) {
+                                    cout << "\n idFuncion: " << (*it).getIdFuncion();
                                     cout << "\n Dia: " << (*it).getDia().getDia();
                                     cout << "\n Año: " << (*it).getDia().getAnio();
                                     cout << "\n Mes: " << (*it).getDia().getMes();
@@ -519,9 +520,10 @@ int main() {
                 dtlistFuV = ictrVP->seleccionarCine(VCid);
                 cout << "\n ---Informacion del las Funciones--- " << endl;
                 for (list<dtFuncion>::iterator it3 = dtlistFuV.begin(); it3 != dtlistFuV.end(); ++it3) {
-                    cout << "\n Dia: " << (*it3).getDia().getDia();
-                    cout << "\n Mes: " << (*it3).getDia().getMes();
-                    cout << "\n Anio: " << (*it3).getDia().getAnio();
+                    cout << "\n idFuncion: " << (*it3).getIdFuncion();
+                    cout << "\n Fecha: " << (*it3).getDia().getDia();
+                    cout << "/" << (*it3).getDia().getMes();
+                    cout << "/ " << (*it3).getDia().getAnio();
                     cout << "\n Hora de comienzo: " << (*it3).getHora().getHoraCominezo();
                     cout << "\n Hora de fin: " << (*it3).getHora().getHoraFin();
                     cout << "\n";

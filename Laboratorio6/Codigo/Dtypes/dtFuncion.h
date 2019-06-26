@@ -23,7 +23,7 @@ public:
     dtHorario getHora();
 
     int getIdFuncion();
-    static int getIdAutoF();
+    //static int getIdAutoF();
 
 };
 

@@ -9,7 +9,7 @@
 #include <list>
 #include "ManejadorCine.h"
 #include "ManejadorFunciones.h"
-
+#include "dtFecha.h"
 CtrAltaFuncion::CtrAltaFuncion() {}
 
 list<dtPelicula> CtrAltaFuncion:: listarPeliculas(){
@@ -90,8 +90,10 @@ list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
             this->salaFuncion=(*it1);
             list<Funcion *> fun = ((*it1)->getFuncion());
             for (list<Funcion *>::iterator it2 = fun.begin(); it2 != fun.end(); ++it2) {
-                dtFuncion dt = dtFuncion((*it2)->getDia(), (*it2)->getHora(),(*it2)->getId());
-                dtfunciones.push_back(dt);
+                if(MayorAReloj((*it2)->getDia())) {
+                    dtFuncion dt = dtFuncion((*it2)->getDia(), (*it2)->getHora(), (*it2)->getId());
+                    dtfunciones.push_back(dt);
+                }
             }
         }
     }
@@ -145,3 +147,14 @@ void CtrAltaFuncion::darAltaFuncion (){
     ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
     mF->agregarFuncion(f);
 };
+
+
+bool CtrAltaFuncion::MayorAReloj(dtFecha f){
+    Sesion* s = Sesion::getInstancia();
+    dtFecha fechaReloj = (s->getReloj()->getFecha());
+
+    if(f.getAnio()<fechaReloj.getAnio()){
+        return false;
+    }
+    return true;
+}

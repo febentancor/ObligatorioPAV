@@ -26,6 +26,7 @@ public:
     bool existeTitulo(string);
     bool existeCine(int);
     bool existeSala(int);
+    bool MayorAReloj(dtFecha);
 
 private:
     string tituloFuncion;
