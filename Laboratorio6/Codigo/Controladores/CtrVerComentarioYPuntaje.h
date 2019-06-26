@@ -14,6 +14,7 @@ public:
     CtrVerComentarioYPuntaje();
     list<string> listarPeliculas();
     list<dtPeliculaCompleto> seleccionarPeliculaV(string);
+    void imprimircmtcmtdo(map<int,dtComentario*>);
 private:
     Pelicula* peliculaCVerComentario;
 };

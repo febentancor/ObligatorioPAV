@@ -73,6 +73,9 @@ void CtrIniciarSesion::cargaDatos(){
     Usuario* v = new Usuario("Admin","333","jsjsjsj", true);
     ManejadorUsuario* mV = ManejadorUsuario::getInstancia();
     mV -> agregarUsuario(v);
+    Usuario* w = new Usuario("Messi","123","jsjsjsj", true);
+    ManejadorUsuario* mW = ManejadorUsuario::getInstancia();
+    mW -> agregarUsuario(w);
 };
 
 void CtrIniciarSesion::cargaPelicula() {
@@ -84,10 +87,10 @@ void CtrIniciarSesion::cargaPelicula() {
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP1 -> agregarPelicula(pe);
 
-    Sesion* s = Sesion::getInstancia();
-    string t = s->getNickname();
+   // Sesion* s = Sesion::getInstancia();
+   // string t = s->getNickname();
     ManejadorUsuario* mU1 = ManejadorUsuario::getInstancia();
-    Usuario* mU2 = mU1->buscarUsuario(t);
+    Usuario* mU2 = mU1->buscarUsuario("Gonzalo");
     map<int, Comentario*>com;
     Comentario* C1 = new Comentario("la pelicula es una mierda",mU2,com);
     Pelicula* p1 = mP1->buscarPelicula("PELICULA1");

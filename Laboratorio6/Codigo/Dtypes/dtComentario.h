@@ -11,7 +11,7 @@ class dtComentario {
 private:
     int id;
     string comentario;
-    map<int,dtComentario*>dtcomentariosComentados;//
+    map<int, dtComentario*>dtcomentariosComentados;//
     Usuario* usuarios;
 
 public:
@@ -22,6 +22,7 @@ public:
     virtual ~dtComentario();
     string getNick();
     Usuario* getDTUsuariosComentario();
+    map<int, dtComentario*> getdtComentComentado();
 };
 
 

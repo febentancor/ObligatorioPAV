@@ -25,5 +25,8 @@ Usuario* dtComentario::getDTUsuariosComentario() {
 string dtComentario::getNick(){
     return this->usuarios->getNickname();
 }
+map<int, dtComentario*> dtComentario::getdtComentComentado(){
+    return this->dtcomentariosComentados;
+}
 
 dtComentario::~dtComentario() {}

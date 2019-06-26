@@ -59,3 +59,18 @@ list<dtPeliculaCompleto> CtrVerComentarioYPuntaje::seleccionarPeliculaV(string t
     return dtpelis;
 }
 
+void CtrVerComentarioYPuntaje::imprimircmtcmtdo(map<int,dtComentario*> comentarioscomentados){
+    for (map<int,dtComentario*>::iterator it = comentarioscomentados.begin(); it!=comentarioscomentados.end(); ++it){
+
+        dtComentario* c = it->second;
+        cout << "\n" << "ID: " << c->getComentarioId() << " " << c->getNick() << ": " << c->getComentario() ;
+        cout << "\n";
+        if (!c->getdtComentComentado().empty()){
+            imprimircmtcmtdo(c->getdtComentComentado());
+        }
+    }
+
+    return;
+}
+
+

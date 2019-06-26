@@ -30,6 +30,7 @@ public:
     void comentarComentario (Comentario* comentario4);
     map <int, dtComentario*> getComentariosComentados();
     map <int, Comentario*> getComentariosComentados2();
+    map <int, dtComentario*> getdtComentariosComentados();
     Comentario buscarComentario();
     ~Comentario();
 };

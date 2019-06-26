@@ -41,6 +41,7 @@ bool CtrComentarPelicula::existeComentario(string titulo){
     }
 }
 
+
 list<dtComentario*> CtrComentarPelicula::seleccionarPelicula(string titulo){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     Pelicula* peliculaSeleccionada = mP->buscarPelicula(titulo);
@@ -48,7 +49,7 @@ list<dtComentario*> CtrComentarPelicula::seleccionarPelicula(string titulo){
     map<int, Comentario*> cP = peliculaSeleccionada->getComentariosPeliculas();
     for(map<int, Comentario*>::iterator it=cP.begin(); it!=cP.end(); ++it){
         Comentario* CC = (*it).second;
-        dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), (*it).second->getComentariosComentados() );
+        dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), (*it).second->getdtComentariosComentados() );
         map<int,dtComentario*>pp;
         //dtComentario* dtC = new dtComentario((*it).second->getId(), (*it).second->getComentarios(), (*it).second->getUsuariosComentario(), pp );
         //dtComentario* dtC = new dtComentario(0, "prueba", (*it).second->getUsuariosComentario(), pp );
@@ -74,5 +75,8 @@ Comentario* CtrComentarPelicula::buscarComentario(int idBuscar, map<int, Comenta
         }
     }
 }
+
+
+
 
 void CtrComentarPelicula::ingresarComentario(){};

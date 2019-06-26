@@ -21,6 +21,10 @@
 #include "string.h"
 #include "UI/ui.h"
 #include <list>
+#include "Sesion.h"
+#include "Comentario.h"
+#include <map>
+
 
 
 using namespace std;
@@ -317,37 +321,91 @@ int main() {
 
                 break;
             case 5: //comentarpelicula();
-                try {
-                    if (ictrIS->invitado());
+                cout << "+++++++++++COMENTAR PELICULA+++++++++++++"<<endl;
+                listpl = ictrCP->ListarTituloPeliculas();
+                for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
+                    cout << "\n" << *it;
+                    cout << "\n";
+                }
+                cout << "Seleccionar Pelicula: " << endl;
+                cin >> tituloPelicula;
+                existePelicula = ictrCP->existePelicula(tituloPelicula);
+                if(existePelicula == true ){
+                    //list<dtComentario*> coment;
+                    //existeComent = ictrCP->existeComentario(tituloPelicula);
+                    if(ictrCP->existeComentario(tituloPelicula)){
+                        cout << "Listo Comentarios de:" << tituloPelicula << endl;
+                        list<dtComentario*> dt1 = ictrCP->seleccionarPelicula(tituloPelicula);
 
-                    cout << "+++++++++++COMENTAR PELICULA+++++++++++++" << endl;
-                    listpl = ictrCP->ListarTituloPeliculas();
-                    for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
-                        cout << "\n" << *it;
-                        cout << "\n";
-                    }
-                    cout << "Seleccionar Pelicula: " << endl;
-                    cin >> tituloPelicula;
-                    existePelicula = ictrCP->existePelicula(tituloPelicula);
-                    if (existePelicula == true) {
-                        //list<dtComentario*> coment;
-                        //existeComent = ictrCP->existeComentario(tituloPelicula);
-                        if (ictrCP->existeComentario(tituloPelicula)) {
-                            cout << "Listo Comentarios de:" << tituloPelicula << endl;
-                            list<dtComentario *> dt1 = ictrCP->seleccionarPelicula(tituloPelicula);
-                            for (list<dtComentario *>::iterator it1 = dt1.begin(); it1 != dt1.end(); ++it1) {
-                                cout << "\n" << "ID: " << (*it1)->getComentarioId() << "  : "
-                                     << (*it1)->getComentario();
-                                cout << "\n";
+                        for (list<dtComentario*>::iterator it1 = dt1.begin(); it1 != dt1.end(); ++it1) {
+                            cout << "\n" << "ID: " << (*it1)->getComentarioId() << " " << (*it1)->getNick() << ": " << (*it1)->getComentario() ;
+                            cout << "\n";
+                            map<int, dtComentario*> com1 =(*it1)->getdtComentComentado();
+                            if (com1.empty()){
+                                cout << "no tiene comentarios comentados" << "\n";
+                            } else{
+                                cout << "tiene comentarios comentados" << "\n";
+
+
+                                ictrVCP->imprimircmtcmtdo((*it1)->getdtComentComentado());
                             }
-                        } else {
-                            cout << "No tiene comentarios " << endl;
                         }
-                    } else {
-                        cout << "No existe la pelicula o fue ingresada incorrectamente" << endl;
+                        cout << "1 -Comentario nuevo " << endl;
+                        cout << "2 -Comentar comentario " << endl;
+                        int opcionComentar;
+                        cin >> opcionComentar;
+                        if (opcionComentar == 1){
+                            string nuevoComentario;
+                            cout << "Ingrese comentario para " <<tituloPelicula<< " : ";
+                            cin >> nuevoComentario;
+
+                            Sesion* s = Sesion::getInstancia();
+                            string t = s->getNickname();
+                            ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
+                            Usuario* UsrC = mU->buscarUsuario(t);
+                            map<int, Comentario*>com;
+
+
+                            Comentario* C1 = new Comentario(nuevoComentario,UsrC,com);
+                            ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
+                            Pelicula* p1 = mP1->buscarPelicula(tituloPelicula);
+                            p1->agregarComentario(C1);
+
+                        }
+                        if (opcionComentar == 2){
+
+                            ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
+                            Pelicula* p1 = mP1->buscarPelicula(tituloPelicula);
+                            Sesion* s = Sesion::getInstancia();
+                            string t = s->getNickname();
+                            ManejadorUsuario* mU = ManejadorUsuario::getInstancia();
+                            Usuario* UsrC = mU->buscarUsuario(t);
+                            map<int, Comentario*>com2;
+                            string nuevaRespuesta;
+                            int idResponder;
+                            cout << "Ingrese ID del comentario a responder: " << endl;
+                            cin >> idResponder;
+
+                            Comentario* c1 = ictrCP->buscarComentario(idResponder, p1->getComentariosPeliculas());
+                            cout <<"" << c1->getComentarios();
+                            cout << "Ingrese comentario a responder: " << endl;
+                            cin >> nuevaRespuesta;
+                            Comentario* c2 = new Comentario(nuevaRespuesta, UsrC, com2);
+                            c1->comentarComentario(c2);
+                            cout << "" << c2->getComentarios();
+                            //cout << "Ingrese comentario para " <<tituloPelicula<< " : ";
+                            //cin >> nuevaRespuesta;
+
+
+
+                        }
+
+
+                    }else{
+                        cout << "No tiene comentarios " << endl;
                     }
-                } catch (invalid_argument &e) {
-                    cout << e.what() << endl;
+                }else{
+                    cout << "No existe la pelicula o fue ingresada incorrectamente" << endl;
                 }
                 break;
 
