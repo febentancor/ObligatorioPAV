@@ -51,6 +51,8 @@ add_executable(Codigo
         Controladores/CtrVerComentarioYPuntaje.h
         Controladores/CtrVerinfoPelicula.cpp
         Controladores/CtrVerinfoPelicula.h
+        Controladores/CtrCargarDatos.cpp
+        Controladores/CtrCargarDatos.h
         Dtypes/dtCine.cpp
         Dtypes/dtCine.h
         Dtypes/dtComentario.cpp
