@@ -18,7 +18,7 @@ class IctrVerComentarioYPuntaje{
 public:
     virtual list<string> listarPeliculas()=0;
     virtual list<dtPeliculaCompleto> seleccionarPeliculaV(string)=0;
-    virtual void imprimircmtcmtdo(map<int, dtComentario*>)=0;
+    virtual void imprimircmtcmtdo(map<int, dtComentario*>, int)=0;
 };
 
 #endif //CODIGO_ICTRVERCOMENTARIOYPUNTAJE_H

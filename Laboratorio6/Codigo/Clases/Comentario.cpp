@@ -43,13 +43,14 @@ map <int, dtComentario*> Comentario::getComentariosComentados(){
 
 
 map <int, Comentario*> Comentario::getComentariosComentados2(){
-    map<int,Comentario*> dtc2;
-    //dtComentario* dtc = new dtComentario(this->id, this->comentario, this->usuarios, this->getComentariosComentados());
-    Comentario* dtc = new Comentario(this->comentario, this->usuarios, dtc2);
-    map<int,Comentario*> dtc1;
-    //int
-    dtc1.insert(std::pair<int,Comentario*>(this->id,dtc));
-    return dtc1;
+//    map<int,Comentario*> dtc2;
+//    //dtComentario* dtc = new dtComentario(this->id, this->comentario, this->usuarios, this->getComentariosComentados());
+//    Comentario* dtc = new Comentario(this->comentario, this->usuarios, dtc2);
+//    map<int,Comentario*> dtc1;
+//    //int
+//    dtc1.insert(std::pair<int,Comentario*>(this->id,dtc));
+//    return dtc1;
+    return this->comentariosComentados;
 }
 map <int,dtComentario*> Comentario::getdtComentariosComentados(){
     map<int,dtComentario*> dtc1;

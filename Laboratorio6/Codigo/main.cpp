@@ -345,12 +345,12 @@ int main() {
                             cout << "\n";
                             map<int, dtComentario*> com1 =(*it1)->getdtComentComentado();
                             if (com1.empty()){
-                                cout << "no tiene comentarios comentados" << "\n";
+                              //  cout << "no tiene comentarios comentados" << "\n";
                             } else{
-                                cout << "tiene comentarios comentados" << "\n";
+                               // cout << "tiene comentarios comentados" << "\n";
 
 
-                                ictrVCP->imprimircmtcmtdo((*it1)->getdtComentComentado());
+                                ictrVCP->imprimircmtcmtdo((*it1)->getdtComentComentado(), 0);
                             }
                         }
                         cout << "1 -Comentario nuevo " << endl;
@@ -390,7 +390,7 @@ int main() {
                             cin >> idResponder;
 
                             Comentario* c1 = ictrCP->buscarComentario(idResponder, p1->getComentariosPeliculas());
-                            cout <<"" << c1->getComentarios();
+//                            cout <<"" << c1->getComentarios();
                             cout << "Ingrese comentario a responder: " << endl;
                             cin >> nuevaRespuesta;
                             Comentario* c2 = new Comentario(nuevaRespuesta, UsrC, com2);
