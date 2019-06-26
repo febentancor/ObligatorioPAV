@@ -16,8 +16,8 @@ public:
     virtual void ingresarUsuario(string)=0;
     virtual bool ingresarContrasena(string)=0;
     virtual void iniciarSesion ()=0;
-    virtual  void cargaDatos()=0;
-    virtual void cargaPelicula()=0;
+//    virtual  void cargaDatos()=0;
+//    virtual void cargaPelicula()=0;
     virtual bool existeUsuario(string)=0;
     virtual bool esAdmin(string)=0;
     virtual bool invitado()=0;

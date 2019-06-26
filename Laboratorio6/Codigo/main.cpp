@@ -41,6 +41,7 @@ IctrCrearReserva* ictrCR;
 IctrVerComentarioYPuntaje* ictrVCP;
 IctrEliminarPelicula* ictrEP;
 IctrReloj* ictrRL;
+IctrCargarDatos* ictrCD;
 
 
 
@@ -57,6 +58,7 @@ int main() {
     ictrVCP = fabrica->getIncontrolador9();//Contiene el controlador de ver comentarios y puntajes de pelicula
     ictrEP = fabrica->getIcontrolador10(); //Contiene el controlador de EliminarPelicula
     ictrRL = fabrica->getIcontrolador11(); //Contiene el controlador de Modificar Reloj
+    ictrCD = fabrica->getIcontrolador12(); //Contiene el controlador de CargarDatos
 
     int opcion;
     bool existe = true;
@@ -68,8 +70,6 @@ int main() {
     string pass;
     dtDireccion dir;
     int capacidadSalas;
-    ictrIS->cargaDatos();
-    ictrIS->cargaPelicula();
     ictrIS->cargarReloj();
 
 
@@ -629,6 +629,9 @@ int main() {
                 } else {
                     cout << "\n La fecha no fue modificada" << endl;
                 }
+                break;
+            case 11:
+                ictrCD->cargarDatosPrueba();
                 break;
             case 99: {
                 system("exit");

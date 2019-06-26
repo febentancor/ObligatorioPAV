@@ -13,8 +13,8 @@ public:
     void ingresarUsuario(string);
     bool ingresarContrasena(string);
     void iniciarSesion ();
-    void cargaDatos();
-    void cargaPelicula();
+    //void cargaDatos();
+    //void cargaPelicula();
     bool existeUsuario(string);
     bool esAdmin(string);
     bool invitado();

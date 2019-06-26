@@ -16,6 +16,7 @@
 #include "../Inrterfaces/IctrVerComentarioYPuntaje.h"
 #include "../Inrterfaces/IctrEliminarPelicula.h"
 #include "../Inrterfaces/IctrReloj.h"
+#include "../Inrterfaces/IctrCargaDatos.h"
 
 class Fabrica{
     private:
@@ -33,6 +34,7 @@ class Fabrica{
         IctrVerComentarioYPuntaje* getIncontrolador9();
         IctrEliminarPelicula* getIcontrolador10();
         IctrReloj* getIcontrolador11();
+        IctrCargarDatos* getIcontrolador12();
 
         ~Fabrica();
 };

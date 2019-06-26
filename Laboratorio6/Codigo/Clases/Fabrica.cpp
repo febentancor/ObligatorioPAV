@@ -14,6 +14,7 @@
 #include "../Controladores/CtrVerComentarioYPuntaje.h"
 #include "../Controladores/CtrEliminarPelicula.h"
 #include "../Controladores/CtrReloj.h"
+#include "../Controladores/CtrCargarDatos.h"
 
 
 
@@ -62,6 +63,9 @@ IctrEliminarPelicula* Fabrica::getIcontrolador10() {
 
 IctrReloj* Fabrica::getIcontrolador11() {
     return new CtrReloj();
+}
+IctrCargarDatos* Fabrica::getIcontrolador12() {
+    return new CtrCargarDatos();
 }
 
 
