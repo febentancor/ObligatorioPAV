@@ -21,3 +21,8 @@ dtReloj* CtrReloj::obtenerReloj(){
     dtReloj* r = new dtReloj(f,h);
     return r;
 }
+void CtrReloj::ingresarReloj(dtFecha fec, dtHora hor){
+    Sesion* s = Sesion::getInstancia();
+    Reloj* r = new Reloj(fec,hor);
+    s->setReloj(r);
+}

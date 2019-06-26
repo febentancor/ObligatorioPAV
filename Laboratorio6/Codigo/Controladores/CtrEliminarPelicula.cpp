@@ -32,7 +32,9 @@ list<string> CtrEliminarPelicula::listarPelicula(){
     for(list<Pelicula*>::iterator it= pelis.begin(); it!=pelis.end(); ++it){
         titulos.push_back((*it)->getTitulo());
     }
+
     return titulos;
+
 }
 
 void CtrEliminarPelicula::eliminarPelicula(string titulo){
@@ -42,15 +44,23 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
 
     Pelicula* Pelicula = mP->buscarPelicula(titulo);
 
-    for (list<Cine*>::iterator it = Pelicula->obternerCines().begin(); it != Pelicula->obternerCines().end(); ++it){
+    list<Cine*> lstCine = Pelicula->obternerCines();
 
-        for (list<Sala*>::iterator it2 = (*it)->getSalas().begin(); it2 != (*it)->getSalas().end(); ++it2){
+    for (list<Cine*>::iterator it = lstCine.begin(); it != lstCine.end(); ++it){
 
-            for (list<Funcion*>::iterator it3 = (*it2)->getFuncion().begin(); it3 != (*it2)->getFuncion().end(); ++it3){
+        list<Sala*> lstSalas = (*it)->getSalas();
+
+        for (list<Sala*>::iterator it2 = lstSalas.begin(); it2 != lstSalas.end(); ++it2){
+
+            list<Funcion*> lstFunc = (*it2)->getFuncion();
+
+            for (list<Funcion*>::iterator it3 = lstFunc.begin(); it3 != lstFunc.end(); ++it3){
 
                 if( titulo == (*it3)->getTituloPelicula() ){
 
-                    mF->eliminarFuncion((*it3)->getId());
+                    int a = (*it3)->getId();
+
+                    mF->eliminarFuncion(a);
 
                 }
 
@@ -60,11 +70,6 @@ void CtrEliminarPelicula::eliminarPelicula(string titulo){
 
     }
 
-    delete Pelicula;
-
-//    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
-//    list<Pelicula*> lPel = mF->
-
-
+    mP->eliminarPelicula(titulo);
 
 }

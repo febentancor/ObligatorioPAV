@@ -126,6 +126,9 @@ int main() {
 
     //Variable modificar reloj
     dtReloj* reloj;
+    int hora;
+    int minutos;
+    dtHora horaTotal;
 
     menu();
     cin >> opcion;
@@ -458,7 +461,7 @@ int main() {
                     cin >> cantidaddAsientos;
                     ictrCR->ingresarCantidadAsientos(cantidaddAsientos);
                     cout << "\n Ingresar Tipo de pago: " << endl;
-                    cout << "\n 0.Debito\n1.Credito\n " << endl;
+                    cout << "\n 0.Debito\n 1.Credito\n " << endl;
                     cin >> tipoPago;
                     ictrCR->ingresarTipoPago(tipoPago);
                     if (tipoPago == 0) {
@@ -468,6 +471,8 @@ int main() {
                     } else {
                         cout << "Ingrese Financiera" << endl;
                         cin >> financiera;
+                        idFuncion = ictrCR->obtDescuento(financiera);
+                        ictrCR->ingresarFinanciera(idFuncion);
                     }
                     cout << "Precio total: " << ictrCR->verPrecioTotal();
                     cout << "\n";
@@ -588,6 +593,30 @@ int main() {
                 cout << "\n Fecha: " << reloj->getFecha().getDia();
                 cout << "/" << reloj->getFecha().getMes();
                 cout << "/" << reloj->getFecha().getAnio();
+                cout << "\n";
+                cout << " Hora: " << reloj->getHora().getHora();
+                cout << ":" << reloj->getHora().getMinuto();
+                cout << "\n";
+                cout << "Desea modificar la hora (y/n)" << endl;
+                cin >> NombreBanco;
+                if (NombreBanco == "y" || NombreBanco == "Y") {
+                    cout << "\n Ingresar Dia: " << endl;
+                    cin >> dia;
+                    cout << "\n Ingresar Mes: " << endl;
+                    cin >> mes;
+                    cout << "\n Ingresar Anio: " << endl;
+                    cin >> anio;
+                    fechaF = dtFecha(dia, mes, anio);
+                    cout << "\n Ingresar hora: " << endl;
+                    cin >> hora;
+                    cout << "\n Ingresar minutos: " << endl;
+                    cin >> minutos;
+                    horaTotal = dtHora(hora,minutos);
+                    ictrRL->ingresarReloj(fechaF,horaTotal);
+                    cout << "\n La fecha fue ingresada" << endl;
+                } else {
+                    cout << "\n La fecha no fue modificada" << endl;
+                }
                 break;
             case 99: {
                 system("exit");

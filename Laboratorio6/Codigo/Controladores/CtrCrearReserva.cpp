@@ -66,7 +66,7 @@ list<dtFuncion> CtrCrearReserva::seleccionarCineC(int idCine){
             for(list<Sala*>::iterator it1=s.begin();it1!=s.end(); ++it1){
                 list<Funcion*> f = (*it1)->getFuncion();
                 for(list<Funcion*>::iterator it2=f.begin();it2!=f.end(); ++it2) {
-                    dtFuncion dt = dtFuncion((*it2)->getDia(),(*it2)->getHora());
+                    dtFuncion dt = dtFuncion((*it2)->getDia(),(*it2)->getHora(),(*it2)->getId());
                     dtfun.push_back(dt);
                 }
             }
@@ -103,12 +103,13 @@ float CtrCrearReserva::verPrecioTotal(){
     float precio = 0;
     float des;
     int precioFuncion=funcionReserva->getPrecioFuncion();
-    if(tipoPago==1){
+    if(tipoPago==0){
         precio = precioFuncion * CantAsisentos;
     }
     else{
         precio = precioFuncion * CantAsisentos;
-        des = (precio * 100)/descuento;
+        des= (precio * descuento);
+        des = des/100;
         precio = precio - des;
     }
     this->precioTotal=precio;

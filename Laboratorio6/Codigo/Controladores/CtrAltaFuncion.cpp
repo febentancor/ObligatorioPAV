@@ -90,7 +90,7 @@ list<dtFuncion> CtrAltaFuncion::seleccionarSala(int idSala){
             this->salaFuncion=(*it1);
             list<Funcion *> fun = ((*it1)->getFuncion());
             for (list<Funcion *>::iterator it2 = fun.begin(); it2 != fun.end(); ++it2) {
-                dtFuncion dt = dtFuncion((*it2)->getDia(), (*it2)->getHora());
+                dtFuncion dt = dtFuncion((*it2)->getDia(), (*it2)->getHora(),(*it2)->getId());
                 dtfunciones.push_back(dt);
             }
         }

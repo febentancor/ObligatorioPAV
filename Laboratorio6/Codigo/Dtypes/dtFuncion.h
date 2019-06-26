@@ -11,13 +11,13 @@
 class dtFuncion {
 private:
     int idFuncion;
-    static int idAutoF;
+    //static int idAutoF;
     dtFecha dia;
     dtHorario horario;
 public:
     virtual ~dtFuncion();
     dtFuncion();
-    dtFuncion(dtFecha, dtHorario);
+    dtFuncion(dtFecha, dtHorario,int);
 
     dtFecha getDia();
     dtHorario getHora();

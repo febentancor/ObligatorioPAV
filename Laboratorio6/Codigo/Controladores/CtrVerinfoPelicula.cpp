@@ -60,7 +60,7 @@ list<dtFuncion> CtrVerinfoPelicula::seleccionarCine(int idCine){
             for(list<Sala*>::iterator it1=s.begin();it1!=s.end(); ++it1){
                 list<Funcion*> f = (*it1)->getFuncion();
                 for(list<Funcion*>::iterator it2=f.begin();it2!=f.end(); ++it2) {
-                    dtFuncion dt = dtFuncion((*it2)->getDia(),(*it2)->getHora());
+                    dtFuncion dt = dtFuncion((*it2)->getDia(),(*it2)->getHora(),(*it2)->getId());
                     dtfun.push_back(dt);
                 }
             }

@@ -6,6 +6,7 @@
 #include <list>
 #include "Sesion.h"
 #include "Puntaje.h"
+#include "ManejadorPelicula.h"
 
 
 Pelicula::Pelicula() {}
@@ -103,6 +104,8 @@ void Pelicula::agregarComentario(Comentario* comentario){
 }
 Pelicula::~Pelicula(){
 
+    ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
+
     //delete de cada comentario
     for(map<int, Comentario*>::iterator it = comentarios.begin() ; it != comentarios.end(); ++it)
         delete (*it).second;
@@ -110,6 +113,8 @@ Pelicula::~Pelicula(){
     //delete de cada puntaje
     for(list<Puntaje*>::iterator it = puntajes.begin() ; it != puntajes.end(); ++it)
         delete (*it);
+
+    mP->eliminarPelicula(this->getTitulo());
 
 }
 map <int, Comentario*> Pelicula::getComentariosPeliculas(){

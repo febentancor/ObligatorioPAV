@@ -6,6 +6,7 @@
 #include "ManejadorUsuario.h"
 #include "ManejadorPelicula.h"
 #include "ManejadorCine.h"
+#include "ManejadorFunciones.h"
 #include "dtTarjetas.h"
 #include "Sesion.h"
 #include "Reloj.h"
@@ -79,9 +80,37 @@ void CtrIniciarSesion::cargaDatos(){
 };
 
 void CtrIniciarSesion::cargaPelicula() {
+
+    //GSM - agrego testing
     Pelicula* p = new Pelicula("PELICULA1","TERROR","HOLA");
+
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
     mP -> agregarPelicula(p);
+
+    dtDireccion dtD = dtDireccion("CALLE1", 1234);
+    Sala* sa = new Sala(20);
+    Sala* sa2 = new Sala(30);
+    Cine* c = new Cine(dtD);
+    c->agregarSala(sa);
+    c->agregarSala(sa2);
+
+    p->ingresarCine(c, c->getId());
+
+    dtFecha dtF = dtFecha(10, 10, 2010);
+    dtHorario dtH = dtHorario("15hs", "18hs");
+    Funcion* fun  = new Funcion(dtF, dtH, 100);
+
+    fun->setPelicula(p);
+
+    sa->ingresarFuncion(fun->getId(), fun);
+
+    ManejadorFunciones* mF = ManejadorFunciones::getInstancia();
+    mF->agregarFuncion(fun);
+
+    ManejadorCine* mC = ManejadorCine::getInstancia();
+    mC->agregarCine(c);
+
+    //////////////////////////////////////////////////////////////
 
     Pelicula* pe = new Pelicula("PELICULA2","TERROR","HOLA");
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
@@ -104,7 +133,7 @@ void CtrIniciarSesion::cargaPelicula() {
 void CtrIniciarSesion::cargarReloj(){
     Sesion* s = Sesion::getInstancia();
 
-    dtHora h = dtHora(10,05);
+    dtHora h = dtHora(10,51);
     dtFecha f= dtFecha(25,06,2019);
     Reloj* r = new Reloj(f,h);
     s->setReloj(r);
