@@ -59,8 +59,30 @@
     ManejadorPelicula* mP1 = ManejadorPelicula::getInstancia();
     mP1 -> agregarPelicula(pe);
 
-   // Sesion* s = Sesion::getInstancia();
-   // string t = s->getNickname();
+    dtDireccion dtD1 = dtDireccion("CALLECINE2", 9999);
+    Sala* sa1 = new Sala(40);
+    Sala* sa12 = new Sala(100);
+    Cine* c2 = new Cine(dtD);
+
+    c2->agregarSala(sa1);
+    c2->agregarSala(sa12);
+
+    pe->ingresarCine(c2, c2->getId());
+
+    dtF = dtFecha(20, 10, 2000);
+    dtH = dtHorario("20hs", "22hs");
+    Funcion* fun2  = new Funcion(dtF, dtH, 100);
+
+    fun2->setPelicula(pe);
+
+    sa1->ingresarFuncion(fun2->getId(), fun2);
+
+    mF->agregarFuncion(fun2);
+
+    mC->agregarCine(c2);
+
+    //////////////////////////////////////////////////////////////
+
     ManejadorUsuario* mU1 = ManejadorUsuario::getInstancia();
     Usuario* mU2 = mU1->buscarUsuario("Gonzalo");
     map<int, Comentario*>com;
@@ -68,10 +90,24 @@
     Pelicula* p1 = mP1->buscarPelicula("PELICULA1");
     p1->agregarComentario(C1);
 
+    Comentario* C2 = new Comentario("AAA", mU2, com);
+    C1->comentarComentario(C2);
 
+    Comentario* C3 = new Comentario("BBB", mU2, com);
+    C2->comentarComentario(C3);
+
+    Comentario* C4 = new Comentario("CCC", mU2, com);
+    C3->comentarComentario(C4);
+
+    Comentario* C5 = new Comentario("DDD", mU2, com);
+    C4->comentarComentario(C5);
+
+    Comentario* C6 = new Comentario("BBB1", mU2, com);
+    C3->comentarComentario(C6);
 
     Puntaje* puntaje = new Puntaje(2);
     Usuario* usu = new Usuario("Prueba","test","test",true);
     puntaje->setUsuario(usu);
     p1->ingresarPuntaje(puntaje);
+
 }
