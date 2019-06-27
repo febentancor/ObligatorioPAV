@@ -23,9 +23,7 @@
 #include <list>
 #include <map>
 
-//esto esta mal
-#include "Clases/Sesion.h"
-#include "Clases/Comentario.h"
+
 
 
 
@@ -366,46 +364,20 @@ int main() {
                                     string nuevoComentario;
                                     cout << "Ingrese comentario para " << tituloPelicula << " : ";
                                     cin >> nuevoComentario;
-
-                                    Sesion *s = Sesion::getInstancia();
-                                    string t = s->getNickname();
-                                    ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
-                                    Usuario *UsrC = mU->buscarUsuario(t);
-                                    map<int, Comentario *> com;
-
-
-                                    Comentario *C1 = new Comentario(nuevoComentario, UsrC, com);
-                                    ManejadorPelicula *mP1 = ManejadorPelicula::getInstancia();
-                                    Pelicula *p1 = mP1->buscarPelicula(tituloPelicula);
-                                    p1->agregarComentario(C1);
+                                    ictrCP->ingresarComentario(nuevoComentario, tituloPelicula);
 
                                 }
                                 if (opcionComentar == 2) {
 
-                                    ManejadorPelicula *mP1 = ManejadorPelicula::getInstancia();
-                                    Pelicula *p1 = mP1->buscarPelicula(tituloPelicula);
-                                    Sesion *s = Sesion::getInstancia();
-                                    string t = s->getNickname();
-                                    ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
-                                    Usuario *UsrC = mU->buscarUsuario(t);
-                                    map<int, Comentario *> com2;
+
+
                                     string nuevaRespuesta;
                                     int idResponder;
                                     cout << "Ingrese ID del comentario a responder: " << endl;
                                     cin >> idResponder;
-
-                                    Comentario *c1 = ictrCP->buscarComentario(idResponder,
-                                                                              p1->getComentariosPeliculas());
-//                            cout <<"" << c1->getComentarios();
                                     cout << "Ingrese comentario a responder: " << endl;
                                     cin >> nuevaRespuesta;
-                                    Comentario *c2 = new Comentario(nuevaRespuesta, UsrC, com2);
-                                    c1->comentarComentario(c2);
-                                    cout << "" << c2->getComentarios();
-                                    //cout << "Ingrese comentario para " <<tituloPelicula<< " : ";
-                                    //cin >> nuevaRespuesta;
-
-
+                                    ictrCP->comentarComentario(idResponder, nuevaRespuesta, tituloPelicula);
 
                                 }
 

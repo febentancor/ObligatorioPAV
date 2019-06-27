@@ -13,7 +13,8 @@ public:
     bool existeComentario(string);
     void ingresarComentario();
     Comentario* buscarComentario(int idBuscar, map<int, Comentario*> comentado);
-
+    void ingresarComentario(string nuevoComentario, string tituloPelicula);
+    void comentarComentario(int idResponder, string nuevaRespuesta, string tituloPelicula);
 };
 
 

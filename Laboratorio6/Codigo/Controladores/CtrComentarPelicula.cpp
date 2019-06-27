@@ -6,7 +6,9 @@
 #include <iostream>
 #include <string>
 #include <list>
-
+#include "../Clases/Sesion.h"
+#include  "../Manejadores/ManejadorUsuario.h"
+#include "../Clases/Comentario.h"
 
 list<string> CtrComentarPelicula::ListarTituloPeliculas(){
     ManejadorPelicula* mP = ManejadorPelicula::getInstancia();
@@ -82,7 +84,35 @@ Comentario* CtrComentarPelicula::buscarComentario(int idBuscar, map<int, Comenta
     }
 }
 
+void CtrComentarPelicula::ingresarComentario(string nuevoComentario, string tituloPelicula){
 
+    Sesion *s = Sesion::getInstancia();
+    string t = s->getNickname();
+    ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
+    Usuario *UsrC = mU->buscarUsuario(t);
+    map<int, Comentario *> com;
+    Comentario *C1 = new Comentario(nuevoComentario, UsrC, com);
+    ManejadorPelicula *mP1 = ManejadorPelicula::getInstancia();
+    Pelicula *p1 = mP1->buscarPelicula(tituloPelicula);
+    p1->agregarComentario(C1);
+}
+
+void CtrComentarPelicula::comentarComentario(int idResponder, string nuevaRespuesta, string tituloPelicula) {
+
+    ManejadorPelicula *mP1 = ManejadorPelicula::getInstancia();
+    Pelicula *p1 = mP1->buscarPelicula(tituloPelicula);
+    Sesion *s = Sesion::getInstancia();
+    string t = s->getNickname();
+    ManejadorUsuario *mU = ManejadorUsuario::getInstancia();
+    Usuario *UsrC = mU->buscarUsuario(t);
+    map<int, Comentario *> com2;
+    Comentario *c1 = buscarComentario(idResponder, p1->getComentariosPeliculas());
+
+    Comentario * c2 = new Comentario(nuevaRespuesta, UsrC, com2);
+
+    c1->comentarComentario(c2);
+
+}
 
 
 void CtrComentarPelicula::ingresarComentario(){};

@@ -16,6 +16,8 @@ public:
     virtual list<dtComentario*> seleccionarPelicula(string)=0;
     virtual  bool existeComentario(string)=0;
     virtual Comentario* buscarComentario(int , map<int, Comentario*>)=0;
+    virtual void ingresarComentario(string nuevoComentario, string tituloPelicula)=0;
+    virtual void comentarComentario(int idResponder, string nuevaRespuesta, string tituloPelicula)=0;
 
 };
 #endif //CODIGO_ICTRCOMENTARPELICULA_H

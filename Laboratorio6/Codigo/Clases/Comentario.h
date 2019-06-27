@@ -32,6 +32,7 @@ public:
     map <int, Comentario*> getComentariosComentados2();
     map <int, dtComentario*> getdtComentariosComentados();
     Comentario buscarComentario();
+
     ~Comentario();
 };
 

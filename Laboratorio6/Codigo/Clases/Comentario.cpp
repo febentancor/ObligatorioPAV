@@ -67,8 +67,6 @@ int Comentario::getIdAutoC() {
     idAuto++;
     return idAuto;
 }
-
-
 void Comentario::comentarComentario(Comentario * comentario) {
     comentariosComentados.insert(std::pair<int,Comentario*>(comentario->getId(),comentario));
 }
