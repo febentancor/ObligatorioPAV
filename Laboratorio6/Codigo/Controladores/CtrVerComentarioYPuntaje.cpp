@@ -52,7 +52,10 @@ list<dtPeliculaCompleto> CtrVerComentarioYPuntaje::seleccionarPeliculaV(string t
             //string titulo = (*it)->getTitulo();
             //float puntajePromedio = (*it)->puntajePromedio();
             //map<int,dtComentario*> comentarios = (*it)->getDTComentariosPeliculas();
-            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio(), (*it)->getDTComentariosPeliculas(),puntajes);
+            map<int, dtComentario*> comentariosPelicula = peliculaCVerComentario->getDTComentariosPeliculas();
+
+            dtPeliculaCompleto dt = dtPeliculaCompleto((*it)->getTitulo(),(*it)->puntajePromedio(), comentariosPelicula, puntajes);
+
             dtpelis.push_back(dt);
         }
     }

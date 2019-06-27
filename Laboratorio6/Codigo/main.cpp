@@ -369,8 +369,6 @@ int main() {
                                 }
                                 if (opcionComentar == 2) {
 
-
-
                                     string nuevaRespuesta;
                                     int idResponder;
                                     cout << "Ingrese ID del comentario a responder: " << endl;
@@ -541,6 +539,25 @@ int main() {
                         cout << "\n";
                     }
 
+                    cout << "\n Comentarios: " << endl;
+
+                    map<int, dtComentario*> dt1 = (*it1).getComentarios();
+
+                    for (map<int, dtComentario*>::iterator it3 = dt1.begin(); it3 != dt1.end(); ++it3) {
+
+                        cout << "\n" << " ID: " << (*it3).second->getComentarioId() << " " << (*it3).second->getNick() << ": " << (*it3).second->getComentario();
+
+                        cout << "\n";
+
+                        map<int, dtComentario *> com1 = (*it3).second->getdtComentComentado();
+
+                        if (!com1.empty()) {
+
+                            ictrVCP->imprimircmtcmtdo((*it3).second->getdtComentComentado(), 0);
+
+                        }
+
+                    }
 
                 }
 
@@ -571,6 +588,7 @@ int main() {
                     cout << e.what() << endl;
                 }
                 break;
+
             case 10:
                 cout << "+++++++++++ MODIFICAR RELOJ +++++++++++++" << endl;
                 reloj = ictrRL->obtenerReloj();
