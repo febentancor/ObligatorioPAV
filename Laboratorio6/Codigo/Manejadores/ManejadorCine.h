@@ -6,7 +6,6 @@
 #define CODIGO_MANEJADORCINE_H
 
 #include "../Clases/Cine.h"
-#include "../Clases/Cine.h"
 #include <map>
 #include <list>
 #include <string>
