@@ -62,7 +62,7 @@
     dtDireccion dtD1 = dtDireccion("CALLECINE2", 9999);
     Sala* sa1 = new Sala(40);
     Sala* sa12 = new Sala(100);
-    Cine* c2 = new Cine(dtD);
+    Cine* c2 = new Cine(dtD1);
 
     c2->agregarSala(sa1);
     c2->agregarSala(sa12);
