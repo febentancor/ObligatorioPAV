@@ -47,9 +47,11 @@ bool CtrIniciarSesion::existeUsuario(string u) {
 bool CtrIniciarSesion::esAdmin(string usuario) {
     ManejadorUsuario* mU= ManejadorUsuario::getInstancia();
     bool esAdmin = mU->esAdmin(usuario);
-    if(!esAdmin)
+    if(!esAdmin){
+        system("clear");
         throw invalid_argument ("ERROR: NO ERES ADMINISTRADOR");
-    return esAdmin;
+    }
+        return esAdmin;
 
 }
 

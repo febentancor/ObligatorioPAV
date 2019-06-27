@@ -135,6 +135,7 @@ int main() {
     while (opcion != 99) {
         switch (opcion) {
             case 1:
+                system("clear");
                 cout << "+++++++++++INCIAR SESION+++++++++++++" << endl;
                 cout << "Ingreses Usuario: " << endl;
                 cin >> usr;
@@ -150,16 +151,15 @@ int main() {
                         } catch (invalid_argument &a) {
                             cout << a.what() << endl;
                         }
-                    };
+                    }
                 } catch (invalid_argument &e) {
                     cout << e.what() << endl;
                 }
-
                 break;
 
             case 2:
+                system("clear");
                 cout << "+++++++++++ALTA CINE+++++++++++++" << endl;
-
                 try {
                     ictrIS->esAdmin(usr);
 
@@ -174,6 +174,7 @@ int main() {
                     cin >> capacidadSalas;
                     ictrAC->ingresarCapacidad(capacidadSalas);
                     while (masSala) {
+                        system("clear");
                         cout << "Desea ingresar otra sala y/n: " << endl;
                         cin >> resAcine;
                         if (resAcine == "y" || resAcine == "Y") {
@@ -192,10 +193,11 @@ int main() {
                 break;
 
             case 3:
+                system("clear");
                 cout << "+++++++++++PUNTUAR PELICULA+++++++++++++" << endl;
                 try {
-                        if (ictrIS->invitado()){
-                            listpl = ictrmP->listarTituloPelicula();
+                    if (ictrIS->invitado()){
+                        listpl = ictrmP->listarTituloPelicula();
                         for (list<string>::iterator it = listpl.begin(); it != listpl.end(); ++it) {
                             cout << "\n" << *it;
                             cout << "\n";
@@ -210,12 +212,12 @@ int main() {
                             cout << "Desea ingresar un nuevo puntaje a esta pelicula(y/n)" << endl;
                             cin >> nuevoPuntaje;
                             if (nuevoPuntaje == "y" || nuevoPuntaje == "Y") {
-                                cout << "Ingresar nuevo puntaje a la Pelicula: " << endl;
+                                cout << "\nIngresar nuevo puntaje a la Pelicula: " << endl;
                                 cin >> puntos;
                                 ictrmP->ingresarPuntaje(puntos);
                             }
                         } else {
-                            cout << "Ingresar puntaje a la Pelicula: " << endl;
+                            cout << "\nIngresar puntaje a la Pelicula: " << endl;
                             cin >> puntos;
                             ictrmP->ingresarPuntaje(puntos);
                         }
@@ -229,6 +231,7 @@ int main() {
                 break;
 
             case 4:
+                system("clear");
                 cout << "+++++++++++ALTA FUNCION+++++++++++++" << endl;
                 try {
                     ictrIS->esAdmin(usr);
@@ -323,7 +326,8 @@ int main() {
                 }
 
                 break;
-            case 5: //comentarpelicula();
+            case 5:
+                system("clear");
                 cout << "+++++++++++COMENTAR PELICULA+++++++++++++\n"<<endl;
                 try {
                     if (ictrIS->invitado()) {
@@ -336,8 +340,7 @@ int main() {
                         cin >> tituloPelicula;
                         existePelicula = ictrCP->existePelicula(tituloPelicula);
                         if (existePelicula == true) {
-                            //list<dtComentario*> coment;
-                            //existeComent = ictrCP->existeComentario(tituloPelicula);
+
                             if (ictrCP->existeComentario(tituloPelicula)) {
                                 cout << "Listo Comentarios de:" << tituloPelicula << endl;
                                 list<dtComentario *> dt1 = ictrCP->seleccionarPelicula(tituloPelicula);
@@ -393,7 +396,8 @@ int main() {
                 break;
 
             case 6:
-                cout << "++++++++++++CREAR RESERVA++++++++++++++++++++++++++++++++\n" << endl;
+                system("clear");
+                cout << "+++++++++++++++++++CREAR RESERVA++++++++++++++++++++++++\n" << endl;
                 cout<<"\n"<<endl;
                 try {
                     if (ictrIS->invitado());
@@ -470,6 +474,7 @@ int main() {
                 break;
 
             case 7:
+                system("clear");
                 cout << "+++++++++++VER INFORMACION DE LA PELICULA+++++++++++++" << endl;
                 listVIP = ictrVP->listarPeliculas();
                 for (list<string>::iterator it = listVIP.begin(); it != listVIP.end(); ++it) {
@@ -512,7 +517,7 @@ int main() {
                 break;
 
             case 8:
-
+                system("clear");
                 cout << "+++++++++++VER COMENTARIOS Y PUNTAJES DE PELICULA+++++++++++++" << endl;
                 listCPP = ictrVCP->listarPeliculas();
                 for (list<string>::iterator it = listCPP.begin(); it != listCPP.end(); ++it) {
@@ -560,10 +565,10 @@ int main() {
                     }
 
                 }
-
                 break;
 
-            case 9: //ELIMINAR PELICULA
+            case 9:
+                system("clear");
                 try {
                     if (ictrIS->esAdmin(usr));
                     string EPtitulo;
@@ -590,6 +595,7 @@ int main() {
                 break;
 
             case 10:
+                system("clear");
                 cout << "+++++++++++ MODIFICAR RELOJ +++++++++++++" << endl;
                 reloj = ictrRL->obtenerReloj();
                 cout << "\n Fecha: " << reloj->getFecha().getDia();
@@ -621,13 +627,16 @@ int main() {
                 }
                 break;
             case 11:
+                system("clear");
                 ictrCD->cargarDatosPrueba();
                 break;
-            case 99: {
-                system("exit");
-                cout << "SALIENDO..." << endl;
-                break;
-            }
+            case 99:
+                system("clear");{
+            cout << "SALIENDO..." << endl;
+            system("exit");
+
+            break;
+        }
 
             default:
                 cout << "OPCIÓN INCORRECTA" << endl;
