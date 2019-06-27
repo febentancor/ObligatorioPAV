@@ -82,7 +82,11 @@ Comentario* CtrComentarPelicula::buscarComentario(int idBuscar, map<int, Comenta
 
         }
     }
+
+    return NULL;
+
 }
+
 
 void CtrComentarPelicula::ingresarComentario(string nuevoComentario, string tituloPelicula){
 
@@ -108,9 +112,15 @@ void CtrComentarPelicula::comentarComentario(int idResponder, string nuevaRespue
     map<int, Comentario *> com2;
     Comentario *c1 = buscarComentario(idResponder, p1->getComentariosPeliculas());
 
-    Comentario * c2 = new Comentario(nuevaRespuesta, UsrC, com2);
+    if(c1 != NULL) {
 
-    c1->comentarComentario(c2);
+        Comentario *c2 = new Comentario(nuevaRespuesta, UsrC, com2);
+
+        c1->comentarComentario(c2);
+
+    }
+    else
+        cout << "No se encontro el id seleccionado" << endl;
 
 }
 
